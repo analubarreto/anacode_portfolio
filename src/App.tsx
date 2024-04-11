@@ -25,13 +25,16 @@ const DarkTheme = {
 }
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    font-size: 10px;
+  }
+  
   body {
     background-color: ${(props: any) => props.theme.body};
     color: ${(props: any) => props.theme.text};
     transition: all 0.25s linear;
     font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+    font-weight: 300;
   }
 `;
 
