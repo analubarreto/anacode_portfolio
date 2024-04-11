@@ -8,11 +8,14 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'pt-br',
-    debug: true,
-    interpolation: {
-      escapeValue: false,
+    backend: {
+      loadPath: './src/locales/{{lng}}/{{ns}}.json' // path to your translation files
     },
+    lng: "pt_br",
+    fallbackLng: "en",
+    interpolation: {
+      escapeValue: false
+    }
   });
 
 export default i18n;
