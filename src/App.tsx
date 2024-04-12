@@ -25,6 +25,18 @@ const DarkTheme = {
 }
 
 const GlobalStyle = createGlobalStyle`
+  :root {
+    --mobile-sm: 375px;
+    --mobile: 425px;
+    --mobile-lg: 640px;
+    --tablet-sm: 768px;
+    --lablet: 1024px;
+    --desktop-xs: 1280px;
+    --desktop-sm: 1440px;
+    --desktop: 1920px;
+    --desktop-lg: 2560px;
+  }
+
   html {
     font-size: 10px;
   }

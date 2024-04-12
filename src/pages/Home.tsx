@@ -21,12 +21,26 @@ const Title = styled.div`
 
   .main-title {
     display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
 
     h1 {
-      font-size: 12.8rem;
+      font-size: 4.8rem;
+
+      @media (min-width: 768px) {
+        font-size: 12.8rem;
+      }
     }
     span {
-      font-size: 3.2rem;
+      font-size: 2.4rem;
+
+      @media (min-width: 768px) {
+        font-size: 3.2rem;
+      }
+      
       &:first-child {
         margin-right: 1.6rem;
         align-self: flex-start;
@@ -38,17 +52,28 @@ const Title = styled.div`
     }
   }
   h3 {
-    font-size: 3.2rem;
-    letter-spacing: 0.2rem;
+    font-size: 1.4rem;
+    letter-spacing: 0rem;
+
+    @media (min-width: 768px) {
+      font-size: 3.2rem;
+      letter-spacing: 0.2rem;
+    }
   }
 `
 
 const Image = styled.div<{ theme: string }>`
   background-color: ${({ theme }) => theme.element};
-  width: 29rem;
-  height: 29rem;
   border-radius: 50%;
-  margin-bottom: 6rem;
+  width: 21.6rem;
+  height: 21.6rem;
+  margin-bottom: 3.8rem;
+
+  @media (min-width: 768px) {
+    width: 29rem;
+    height: 29rem;
+    margin-bottom: 6rem;
+  }
    
   img {
     border-radius: 50%;
