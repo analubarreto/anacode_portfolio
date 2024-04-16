@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/jest-globals';
 import '@testing-library/jest-dom';
+import HomeContent from '../HomeContent';
 
 describe('Home', () => {
   it('should render Home page', () => {
@@ -13,5 +14,6 @@ describe('Home', () => {
 
     expect(title).toBeInTheDocument();
     expect(h3).toBeInTheDocument();
+
   });
 });
