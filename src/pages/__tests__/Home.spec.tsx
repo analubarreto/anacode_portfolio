@@ -3,12 +3,15 @@ import '@testing-library/jest-dom/jest-globals';
 import '@testing-library/jest-dom';
 import Home from '../Home';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
 describe('Home', () => {
   it('should render Home page', () => {
     render(
       <Router>
-        <Home />
+        <ThemeProvider theme={{}}>
+          <Home />
+        </ThemeProvider>
       </Router>
     );
 
