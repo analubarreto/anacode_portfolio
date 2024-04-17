@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 import { Moon, Sun } from "@phosphor-icons/react";
-import { useTheme } from 'styled-components';
+import { useTheme } from '@/hooks/useTheme';
 import Navigation from '@/components/Header/Navigation';
 import LanguageToggle from '@/components/Header/LanguageToggle';
+
+type HeaderProps = {
+  themeToggle: () => void;
+}
 
 const HeaderMain = styled.header`
   position: absolute;
@@ -14,7 +18,7 @@ const HeaderMain = styled.header`
   width: 100vw;
 `;
 
-const Title = styled.div<{ theme: string }>`
+const Title = styled.div<{ theme: any }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,21 +34,21 @@ const Title = styled.div<{ theme: string }>`
   button {
     background-color: transparent;
     border: none;
-    color: #000;
+    color: ${({ theme }) => theme.text};
     cursor: pointer;
     font-size: 1.6rem;
     margin-left: 1.6rem;
   }
 `;
 
-const Header = (): JSX.Element => {
-  const { theme, themeToggler } = useTheme();
+const Header = ({ themeToggle }: HeaderProps): JSX.Element => {
+  const { theme } = useTheme();
 
   return (
     <HeaderMain>
       <Title>
-        <button onClick={themeToggler}>
-          {theme === 'light' ? <Moon size={30} /> : <Sun size={30} />}
+        <button onClick={themeToggle}>
+          {theme.name === 'light' ? <Moon size={30} /> : <Sun size={30} />}
         </button>
         <Navigation />
         <LanguageToggle />

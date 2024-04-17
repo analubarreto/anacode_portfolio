@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '@/hooks/useTheme';
 
-const Main = styled.main<{ theme: string }>`
+const Main = styled.main<{ theme: any }>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +10,7 @@ const Main = styled.main<{ theme: string }>`
   height: 100vh;
   width: 100vw;
 
-  background-image: ${({ theme }) => theme === 'light' ? "url('/images/bg-dark-mode.webp')" : "url('/images/bg-light-mode.webp')"};
+  background-image: ${({ theme }) => theme.backgroundImage};
   background-size: cover;
 `;
 
@@ -62,7 +63,7 @@ const Title = styled.div`
   }
 `
 
-const Image = styled.div<{ theme: string }>`
+const Image = styled.div<{ theme: any }>`
   background-color: ${({ theme }) => theme.element};
   border-radius: 50%;
   width: 21.6rem;
@@ -83,10 +84,11 @@ const Image = styled.div<{ theme: string }>`
 
 const HomeContent = (): JSX.Element => {
   const { t } = useTranslation();
+  const { theme } = useTheme();
 
   return (
-    <Main>
-      <Image>
+    <Main theme={theme}>
+      <Image theme={theme}>
         <img src='/images/ana_cartoon.webp' alt='Ana Code' />
       </Image>
       <Title>

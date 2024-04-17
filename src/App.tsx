@@ -3,26 +3,7 @@ import './App.css'
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Home from '@/pages/Home';
 import { useTheme } from '@/hooks/useTheme';
-
-const LigthTheme = {
-  body: '#ECECF4',
-  text: '#192140',
-  shadow: '#511D7E',
-  element: '#737ABC',
-  selectedElement: '#511D7E',
-  tag: '#B44BA7',
-  timelineElement: '#9C9EAE ',
-}
-
-const DarkTheme = {
-  body: '#192140',
-  text: '#ECECF4',
-  shadow: '#ECECF4',
-  element: '#737ABC',
-  selectedElement: '#B44BA7',
-  tag: '#ECECF4',
-  timelineElement: '#9C9EAE ',
-}
+import Header from '@/components/Header/index';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -42,8 +23,8 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    background-color: ${(props: any) => props.theme.body};
-    color: ${(props: any) => props.theme.text};
+    background-color: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
     transition: all 0.25s linear;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
@@ -51,11 +32,12 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-  const { theme } = useTheme();
+  const { theme, themeToggle } = useTheme();
 
   return (
-    <ThemeProvider theme={theme === 'light' ? LigthTheme : DarkTheme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
+      <Header themeToggle={themeToggle} />
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -64,5 +46,4 @@ function App() {
     </ThemeProvider>
   )
 }
-
 export default App
