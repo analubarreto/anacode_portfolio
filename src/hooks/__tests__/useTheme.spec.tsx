@@ -9,33 +9,36 @@ describe('useTheme', () => {
   test('should initialize with light theme', () => {
     const { result } = renderHook(() => useTheme());
 
-    expect(result.current.theme).toBe('light');
+    expect(result.current.theme.name).toBe('light');
   });
 
   test('should toggle theme between light and dark', () => {
     const { result } = renderHook(() => useTheme());
 
     act(() => {
-      result.current.themeToggler();
+      result.current.themeToggle();
     });
 
-    expect(result.current.theme).toBe('dark');
+    expect(result.current.theme.name).toBe('dark');
 
     act(() => {
-      result.current.themeToggler();
+      result.current.themeToggle();
     });
 
-    expect(result.current.theme).toBe('light');
+    expect(result.current.theme.name).toBe('light');
   });
 
-  // test('should persist theme in local storage', () => {
-  //   const { result } = renderHook(() => useTheme());
+  test('should persist theme in local storage', () => {
+    const { result } = renderHook(() => useTheme());
 
-  //   act(() => {
-  //     result.current.themeToggler();
-  //   });
+    act(() => {
+      result.current.themeToggle();
+    });
 
-  //   expect(result.current.theme).toBe('dark');
-  //   expect(window.localStorage.gettestem('theme')).toBe('dark');
-  // });
+    const storedTheme = window.localStorage.getItem('theme');
+
+    console.log(storedTheme);
+    expect(result.current.theme.name).toBe('dark');
+    expect(storedTheme && storedTheme).toBe('dark');
+  });
 });
