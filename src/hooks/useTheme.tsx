@@ -10,7 +10,7 @@ export const useTheme = () => {
     selectedElement: '#511D7E',
     tag: '#B44BA7',
     timelineElement: '#9C9EAE ',
-    backgroundImage: "url('/images/bg-light-mode.webp')",
+    backgroundImage: "url('/images/bg-light-mode.svg')",
   }
   
   const DarkTheme = {
@@ -22,7 +22,7 @@ export const useTheme = () => {
     selectedElement: '#B44BA7',
     tag: '#ECECF4',
     timelineElement: '#9C9EAE ',
-    backgroundImage: "url('/images/bg-dark-mode.webp')",
+    backgroundImage: "url('/images/bg-dark-mode.svg')",
   }
 
   const [theme, setTheme] = useState(LightTheme);

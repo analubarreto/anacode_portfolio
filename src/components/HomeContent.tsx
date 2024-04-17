@@ -9,7 +9,6 @@ const Main = styled.main<{ theme: any }>`
   justify-content: center;
   height: 100vh;
   width: 100vw;
-
   background-image: ${({ theme }) => theme.backgroundImage};
   background-size: cover;
 `;
