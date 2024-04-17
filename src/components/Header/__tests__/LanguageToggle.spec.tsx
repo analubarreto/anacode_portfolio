@@ -36,18 +36,4 @@ describe('LanguageToggle', () => {
       expect(button).toBeInTheDocument();
     });
   });
-
-  // test('changes language when button is clicked', async () => {
-  //   const { getByText } = render(
-  //     <I18nextProvider i18n={i18n}>
-  //       <LanguageToggle />
-  //     </I18nextProvider>
-  //   );
-  
-  //   fireEvent.click(getByText('EN'));
-  
-  //   await waitFor(() => {
-  //     expect(i18n.changeLanguage).toHaveBeenCalledWith('en');
-  //   });
-  // });
 });
