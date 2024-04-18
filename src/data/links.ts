@@ -4,25 +4,25 @@ export const links: Link[] = [
   {
     id: 1,
     name: 'Home',
-    href: '#home',
+    href: '/',
     isUnderConstruction: false,
   },
   {
     id: 2,
     name: 'Experience',
-    href: '#experience',
+    href: '/experience',
     isUnderConstruction: false,
   },
   {
     id: 3,
     name: 'Projects',
-    href: '#projects',
+    href: '/projects',
     isUnderConstruction: false,
   },
   {
     id: 4,
     name: 'Blog',
-    href: '#blog',
+    href: '/blog',
     isUnderConstruction: true,
   },
 ]

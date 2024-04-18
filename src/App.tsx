@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Home from '@/pages/Home';
+import Blog from '@/pages/Blog';
 import { useTheme } from '@/hooks/useTheme';
 import Header from '@/components/Header/index';
 
@@ -28,6 +29,8 @@ const GlobalStyle = createGlobalStyle`
     transition: all 0.25s linear;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
+    background-image: ${({ theme }) => theme.backgroundImage};
+    background-size: cover;
   }
 `;
 
@@ -41,6 +44,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route  path="/blog" element={<Blog />} />
         </Routes>
       </Router>
     </ThemeProvider>

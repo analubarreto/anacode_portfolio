@@ -9,8 +9,6 @@ const Main = styled.main<{ theme: any }>`
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background-image: ${({ theme }) => theme.backgroundImage};
-  background-size: cover;
 `;
 
 const Title = styled.div`
@@ -81,7 +79,7 @@ const Image = styled.div<{ theme: any }>`
   }
 `;
 
-const HomeContent = (): JSX.Element => {
+const Home = (): JSX.Element => {
   const { t } = useTranslation();
   const { theme } = useTheme();
 
@@ -102,4 +100,4 @@ const HomeContent = (): JSX.Element => {
   )
 }
 
-export default HomeContent
+export default Home

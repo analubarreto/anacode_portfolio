@@ -1,12 +1,14 @@
+//@ts-ignore
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/jest-globals';
 import '@testing-library/jest-dom';
-import HomeContent from '../HomeContent';
+import Welcome from '../Welcome';
 
 describe('Home', () => {
   it('should render Home page', () => {
     render(
-      <HomeContent />
+      <Welcome />
     );
 
     const title = screen.getByText('Ana Code');
