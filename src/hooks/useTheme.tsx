@@ -5,24 +5,26 @@ export const useTheme = () => {
     name: 'light',
     body: '#ECECF4',
     text: '#192140',
-    shadow: '#511D7E',
-    element: '#737ABC',
-    selectedElement: '#511D7E',
-    tag: '#B44BA7',
+    subtext: '#F05672',
+    shadow: '#F05672',
+    element: '#F05672',
+    selectedElement: '#F28498',
+    tag: '#F8D5B4',
+    tagText: '#192140',
     timelineElement: '#9C9EAE ',
-    backgroundImage: "url('/images/bg-light-mode.svg')",
   }
   
   const DarkTheme = {
     name: 'dark',
     body: '#192140',
     text: '#ECECF4',
+    subtext: '#F28498',
     shadow: '#ECECF4',
-    element: '#737ABC',
-    selectedElement: '#B44BA7',
+    element: '#F05672',
+    selectedElement: '#F28498',
     tag: '#ECECF4',
+    tagText: '#192140',
     timelineElement: '#9C9EAE ',
-    backgroundImage: "url('/images/bg-dark-mode.svg')",
   }
 
   const [theme, setTheme] = useState(LightTheme);

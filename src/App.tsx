@@ -27,10 +27,16 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     transition: all 0.25s linear;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    background-image: ${({ theme }) => theme.backgroundImage};
-    background-size: cover;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+
+    h1, h2 {
+      font-family: "Alice", serif;
+    }
+
+    h3, h4, h5, h6, p {
+      font-family: "Montserrat", sans-serif;
+    }
   }
 `;
 

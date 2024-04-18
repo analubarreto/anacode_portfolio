@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '@/hooks/useTheme';
+import Button from '@/components/Button';
 
 const Main = styled.main<{ theme: any }>`
   display: flex;
@@ -9,6 +10,11 @@ const Main = styled.main<{ theme: any }>`
   justify-content: center;
   height: 100vh;
   width: 100vw;
+  padding: 1.6rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 const Title = styled.div`
@@ -52,30 +58,41 @@ const Title = styled.div`
   h3 {
     font-size: 1.4rem;
     letter-spacing: 0rem;
+    color: ${({ theme }) => theme.subtext};
 
     @media (min-width: 768px) {
-      font-size: 3.2rem;
+      font-size: 2.1rem;
       letter-spacing: 0.2rem;
     }
   }
-`
+`;
 
-const Image = styled.div<{ theme: any }>`
-  background-color: ${({ theme }) => theme.element};
-  border-radius: 50%;
-  width: 21.6rem;
-  height: 21.6rem;
-  margin-bottom: 3.8rem;
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  @media (min-width: 768px) {
-    width: 29rem;
-    height: 29rem;
-    margin-bottom: 6rem;
+  p {
+    font-size: 1.4rem;
+    color: ${({ theme }) => theme.text};
+    padding: 0 1.6rem;
+
+    @media (min-width: 768px) {
+      font-size: 2.1rem;
+      padding: 0 6.4rem;
+      width: 60rem;
+    }
   }
-   
-  img {
-    border-radius: 50%;
-    margin-bottom: 4rem;
+
+  &:last-child {
+    margin-left: 0;
+    margin-top: 3rem;
+
+    @media (min-width: 768px) {
+      margin-left: 3rem;
+      margin-top: 0;
+    }
   }
 `;
 
@@ -83,19 +100,25 @@ const Home = (): JSX.Element => {
   const { t } = useTranslation();
   const { theme } = useTheme();
 
+  const handleSendEmail = () => {
+    window.location.href = 'mailto:anacodesoft@gmail.com'
+  }
+
   return (
     <Main theme={theme}>
-      <Image theme={theme}>
-        <img src='/images/ana_cartoon.webp' alt='Ana Code' />
-      </Image>
-      <Title>
-        <div className='main-title'>
-          <span>{'<h3>'}</span>
-          <h1>Ana Code</h1>
-          <span>{'</h3>'}</span>
-        </div>
-        <h3>{ t('Unblocking your digital potential') }</h3>
-      </Title>
+      <Section>
+        <img src='/images/logo.svg' alt='Ana Code' />
+        <Title>
+          <div className='main-title'>
+            <h1>Ana Code</h1>
+          </div>
+          <h3>{ t('Unblocking your digital potential').toUpperCase() }</h3>
+        </Title>
+      </Section>
+      <Section>
+        <p>{ t('Presentation') }</p>
+        <Button onBtnClick={handleSendEmail}>{ t('Contact us') }</Button>
+      </Section>
     </Main>
   )
 }

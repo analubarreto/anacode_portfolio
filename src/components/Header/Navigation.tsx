@@ -25,7 +25,7 @@ const Nav = styled.nav<{ theme: string }>`
         font-size: 1rem;
         text-transform: uppercase;
         background: ${({ theme }) => theme.tag};
-        color: ${({ theme }) => theme.body};
+        color: ${({ theme }) => theme.tagText};
         padding: 0.5rem 1rem;
         border-radius: 1.4rem;
         position: absolute;
