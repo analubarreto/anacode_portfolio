@@ -5,17 +5,16 @@ import '@testing-library/jest-dom/jest-globals';
 import '@testing-library/jest-dom';
 import Welcome from '../Welcome';
 
-describe('Home', () => {
-  it('should render Home page', () => {
-    render(
-      <Welcome />
-    );
+describe('Welcome', () => {
+  test('should render the Welcome component with the correct title and subtitle', () => {
+    render(<Welcome />);
 
-    const title = screen.getByText('Ana Code');
-    const h3 = screen.getByText('Unblocking your digital potential');
+    const mainTitle = screen.getByTestId('main-title');
+    const title = screen.getByTestId('title');
+    const subtitle = screen.getByTestId('subtitle');
 
-    expect(title).toBeInTheDocument();
-    expect(h3).toBeInTheDocument();
-
+    expect(mainTitle).toBeInTheDocument();
+    expect(title).toHaveTextContent('Ana Code');
+    expect(subtitle).toHaveTextContent('UNBLOCKING YOUR DIGITAL POTENTIAL');
   });
 });

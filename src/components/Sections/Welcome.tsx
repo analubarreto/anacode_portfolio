@@ -109,10 +109,10 @@ const Home = (): JSX.Element => {
       <Section>
         <img src='/images/logo.svg' alt='Ana Code' />
         <Title>
-          <div className='main-title'>
-            <h1>Ana Code</h1>
+          <div className='main-title' data-testid='main-title'>
+            <h1 data-testid='title'>Ana Code</h1>
           </div>
-          <h3>{ t('Unblocking your digital potential').toUpperCase() }</h3>
+          <h3 data-testid='subtitle'>{ t('Unblocking your digital potential').toUpperCase() }</h3>
         </Title>
       </Section>
       <Section>
