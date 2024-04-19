@@ -12,6 +12,8 @@ export const useTheme = () => {
     tag: '#F8D5B4',
     tagText: '#192140',
     timelineElement: '#9C9EAE ',
+    menuBackground: '#192140',
+    menuText: '#ECECF4',
   }
   
   const DarkTheme = {
@@ -22,9 +24,11 @@ export const useTheme = () => {
     shadow: '#ECECF4',
     element: '#F05672',
     selectedElement: '#F28498',
-    tag: '#ECECF4',
+    tag: '#F8D5B4',
     tagText: '#192140',
     timelineElement: '#9C9EAE ',
+    menuBackground: '#ECECF4',
+    menuText: '#192140',
   }
 
   const [theme, setTheme] = useState(LightTheme);

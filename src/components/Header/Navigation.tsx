@@ -6,11 +6,16 @@ import { useState, useMemo, useEffect } from 'react';
 const Nav = styled.nav<{ theme: string }>`
   ul {
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
     list-style: none;
-    font-family: 'Alef', sans-serif;
-    letter-spacing: 0.23rem;
-    margin-top: 2rem;
-    position: relative;
+    margin-top: 5rem;
+
+    @media (min-width: 768px) {
+      gap: 0;
+      flex-direction: row;
+      margin-top: 2rem;
+    }
 
     li {
       margin-right: 1.6rem;
@@ -18,29 +23,35 @@ const Nav = styled.nav<{ theme: string }>`
 
     section {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+
+      @media (min-width: 768px) {
+        flex-direction: column;
+      }
 
       span {
-        letter-spacing: 0;
         font-size: 1rem;
         text-transform: uppercase;
         background: ${({ theme }) => theme.tag};
         color: ${({ theme }) => theme.tagText};
         padding: 0.5rem 1rem;
         border-radius: 1.4rem;
-        position: absolute;
-        top: 3rem;
-        margin-left: 0.5rem;
         width: max-content;
+        height: max-content;
+
+        @media (min-width: 768px) {
+          margin-left: 0.5rem;
+          bottom: 0;
+        }
       }
     }
   }
 `;
 
 const Link = styled.a<{ theme: string, $isActive: boolean }>`
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.menuText};
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   position: relative;
 
   &:after {
@@ -50,12 +61,21 @@ const Link = styled.a<{ theme: string, $isActive: boolean }>`
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: ${({ theme, $isActive }) => $isActive ? theme.text : 'transparent'};
+    background-color: ${({ theme, $isActive }) => $isActive ? theme.menuText : 'transparent'};
     transition: background-color 0.3s ease;
+
+    @media (min-width: 768px) {
+      background-color: ${({ theme, $isActive }) => $isActive ? theme.text : 'transparent'};
+    }
   }
 
   &:hover:after {
     background-color: ${({ theme }) => theme.text};
+  }
+
+  @media (min-width: 768px) {
+    color: ${({ theme }) => theme.text};
+    font-size: 1.6rem;
   }
 `;
 
@@ -78,8 +98,8 @@ const Navigation = (): JSX.Element => {
       <ul>
         {
           links.map(link => (
-            <section>
-              <li key={link.id}>
+            <section key={link.id}>
+              <li>
                 <Link href={link.href} $isActive={activeLink === link.id}>
                   {t(link.name).toUpperCase()}
                 </Link>

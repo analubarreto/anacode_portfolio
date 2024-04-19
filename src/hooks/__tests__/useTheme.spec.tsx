@@ -37,7 +37,6 @@ describe('useTheme', () => {
 
     const storedTheme = window.localStorage.getItem('theme');
 
-    console.log(storedTheme);
     expect(result.current.theme.name).toBe('dark');
     expect(storedTheme && storedTheme).toBe('dark');
   });

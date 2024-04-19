@@ -5,6 +5,8 @@ import Home from '@/pages/Home';
 import Blog from '@/pages/Blog';
 import { useTheme } from '@/hooks/useTheme';
 import Header from '@/components/Header/index';
+import HamburgerMenu from '@/components/Header/HamburgerMenu';
+import { useState } from 'react';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -42,11 +44,13 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   const { theme, themeToggle } = useTheme();
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Header themeToggle={themeToggle} />
+      <HamburgerMenu isOpen={isOpen} onClickMenu={() => setIsOpen(!isOpen)} />
+      <Header themeToggle={themeToggle} showMenu={isOpen} />
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
