@@ -10,9 +10,8 @@ import Projects from '@/components/Sections/Projects';
 const Main = styled.main<{ theme: any }>`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
+  width: 100%;
+  overflow-y: scroll;
 `;
 
 const Home = (): JSX.Element => {
@@ -22,8 +21,8 @@ const Home = (): JSX.Element => {
   return (
     <Main>
       <Welcome />
-      {/* <Experience />
-      <Projects /> */}
+      <Experience />
+      <Projects />
     </Main>
   )
 }

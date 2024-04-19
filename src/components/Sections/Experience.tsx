@@ -5,14 +5,16 @@ import styled from 'styled-components';
 // import { useTheme } from '@/hooks/useTheme';
 
 const Main = styled.main<{ theme: any }>`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: ${({ theme }) => theme.body};
-  color: ${({ theme }) => theme.text};
+  &.main-experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
+  }
 `;
 
 const Experience = (): JSX.Element => {
@@ -20,7 +22,7 @@ const Experience = (): JSX.Element => {
   // const { theme } = useTheme();
 
   return (
-    <Main>
+    <Main className='main-experience'>
       <img src="/images/ana_code_logo.svg" alt="loading" />
       <p>Experience</p>
     </Main>

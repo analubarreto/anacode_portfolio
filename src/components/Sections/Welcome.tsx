@@ -4,16 +4,18 @@ import { useTheme } from '@/hooks/useTheme';
 import Button from '@/components/Button';
 
 const Main = styled.main<{ theme: any }>`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  padding: 1.6rem;
+  &.main-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 1.6rem;
 
-  @media (min-width: 1024px) {
-    flex-direction: row;
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
   }
 `;
 
@@ -107,16 +109,18 @@ const Section = styled.section`
   }
 `;
 
-const Home = (): JSX.Element => {
+const Welcome = (): JSX.Element => {
   const { t } = useTranslation();
   const { theme } = useTheme();
+
+  console.log('Welcome')
 
   const handleSendEmail = () => {
     window.location.href = 'mailto:anacodesoft@gmail.com'
   }
 
   return (
-    <Main theme={theme}>
+    <Main className='main-welcome' theme={theme}>
       <Section>
         <img src='/images/logo.svg' alt='Ana Code' />
         <Title>
@@ -134,4 +138,4 @@ const Home = (): JSX.Element => {
   )
 }
 
-export default Home
+export default Welcome
