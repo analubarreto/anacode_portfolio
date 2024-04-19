@@ -11,7 +11,7 @@ const Nav = styled.nav<{ theme: string }>`
     list-style: none;
     margin-top: 6rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       gap: 0;
       flex-direction: row;
       margin-top: 2rem;
@@ -21,7 +21,7 @@ const Nav = styled.nav<{ theme: string }>`
       margin-right: 1rem;
       width: max-content;
 
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
         margin-right: 1.6rem;
       }
     }
@@ -31,7 +31,7 @@ const Nav = styled.nav<{ theme: string }>`
       flex-direction: row;
       margin-right: 3rem;
 
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
         flex-direction: column;
       }
 
@@ -45,7 +45,7 @@ const Nav = styled.nav<{ theme: string }>`
         width: max-content;
         height: max-content;
 
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
           margin-left: 0.5rem;
           bottom: 0;
         }
@@ -70,7 +70,7 @@ const Link = styled.a<{ theme: string, $isActive: boolean }>`
     background-color: ${({ theme, $isActive }) => $isActive ? theme.menuText : 'transparent'};
     transition: background-color 0.3s ease;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       background-color: ${({ theme, $isActive }) => $isActive ? theme.text : 'transparent'};
     }
   }
@@ -79,7 +79,7 @@ const Link = styled.a<{ theme: string, $isActive: boolean }>`
     background-color: ${({ theme }) => theme.text};
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     color: ${({ theme }) => theme.text};
     font-size: 1.6rem;
   }

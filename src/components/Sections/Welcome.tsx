@@ -12,7 +12,7 @@ const Main = styled.main<{ theme: any }>`
   width: 100vw;
   padding: 1.6rem;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     flex-direction: row;
   }
 `;
@@ -27,21 +27,21 @@ const Title = styled.div`
     display: flex;
     flex-direction: column;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       flex-direction: row;
     }
 
     h1 {
       font-size: 4.8rem;
 
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
         font-size: 12.8rem;
       }
     }
     span {
       font-size: 2.4rem;
 
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
         font-size: 3.2rem;
       }
       
@@ -60,7 +60,7 @@ const Title = styled.div`
     letter-spacing: 0rem;
     color: ${({ theme }) => theme.subtext};
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       font-size: 2.1rem;
       letter-spacing: 0.2rem;
     }
@@ -73,12 +73,23 @@ const Section = styled.section`
   align-items: center;
   justify-content: center;
 
+  img {
+    width: 14rem;
+    height: 12.5rem;
+    margin-bottom: 3rem;
+
+    @media (min-width: 1024px) {
+      width: 27.2rem;
+      height: 24.4rem;
+    }
+  }
+
   p {
     font-size: 1.4rem;
     color: ${({ theme }) => theme.text};
     padding: 0 1.6rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       font-size: 2.1rem;
       padding: 0 6.4rem;
       width: 60rem;
@@ -89,7 +100,7 @@ const Section = styled.section`
     margin-left: 0;
     margin-top: 3rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       margin-left: 3rem;
       margin-top: 0;
     }
