@@ -12,24 +12,25 @@
     "test:w": "jest --watch"
   },
   "dependencies": {
-    "@phosphor-icons/react": "^2.1.4",
+    "@phosphor-icons/react": "^2.1.5",
     "@types/node": "^20.12.7",
     "classnames": "^2.5.1",
-    "framer-motion": "^11.0.28",
-    "i18next": "^23.11.1",
+    "framer-motion": "^11.1.7",
+    "i18next": "^23.11.2",
     "i18next-browser-languagedetector": "^7.2.1",
-    "i18next-http-backend": "^2.5.0",
+    "i18next-http-backend": "^2.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^14.1.0",
     "react-router-dom": "^6.22.3",
+    "react-scroll": "^1.9.0",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.3.1",
     "@types/jest": "^29.5.12",
-    "@types/react": "^18.2.77",
+    "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
@@ -45,6 +46,6 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
     "uuid": "^9.0.1",
-    "vite": "^5.2.8"
+    "vite": "^5.2.9"
   }
 }
