@@ -4,6 +4,10 @@ import styled from 'styled-components';
 // import { useTranslation } from 'react-i18next';
 // import { useTheme } from '@/hooks/useTheme';
 
+type ExperienceProps = {
+  id: string;
+};
+
 const Main = styled.main<{ theme: any }>`
   &.main-experience {
     display: flex;
@@ -17,12 +21,12 @@ const Main = styled.main<{ theme: any }>`
   }
 `;
 
-const Experience = (): JSX.Element => {
+const Experience = ({ id }: ExperienceProps): JSX.Element => {
   // const { t } = useTranslation();
   // const { theme } = useTheme();
 
   return (
-    <Main className='main-experience'>
+    <Main id={id} className='main-experience'>
       <img src="/images/ana_code_logo.svg" alt="loading" />
       <p>Experience</p>
     </Main>

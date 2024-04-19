@@ -49,9 +49,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <HamburgerMenu isOpen={isOpen} onClickMenu={() => setIsOpen(!isOpen)} />
-      <Header themeToggle={themeToggle} showMenu={isOpen} themeName={theme.name} />
       <Router>
+        <HamburgerMenu isOpen={isOpen} onClickMenu={() => setIsOpen(!isOpen)} />
+        <Header themeToggle={themeToggle} showMenu={isOpen} themeName={theme.name} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route  path="/blog" element={<Blog />} />

@@ -4,6 +4,10 @@ import styled from 'styled-components';
 // import { useTranslation } from 'react-i18next';
 // import { useTheme } from '@/hooks/useTheme';
 
+type ProjectsProps = {
+  id: string;
+};
+
 const Main = styled.main<{ theme: any }>`
   &.main-projects {
     display: flex;
@@ -17,12 +21,12 @@ const Main = styled.main<{ theme: any }>`
   }
 `;
 
-const Projects = (): JSX.Element => {
+const Projects = ({ id }: ProjectsProps): JSX.Element => {
   // const { t } = useTranslation();
   // const { theme } = useTheme();
 
   return (
-    <Main className='main-projects'>
+    <Main id={id} className='main-projects'>
       <p>Projects</p>
     </Main>
   )

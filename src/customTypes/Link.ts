@@ -3,4 +3,5 @@ export type Link = {
   name: string;
   href: string;
   isUnderConstruction: boolean;
+  isScroll: boolean;
 }

@@ -1,7 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { links } from '@/data/links';
 import { useState, useMemo, useEffect } from 'react';
+//@ts-ignore
+import { Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Nav = styled.nav<{ theme: string }>`
   ul {
@@ -54,11 +57,12 @@ const Nav = styled.nav<{ theme: string }>`
   }
 `;
 
-const Link = styled.a<{ theme: string, $isActive: boolean }>`
+const linkStyles = css<{ theme: string, $isActive: boolean }>`
   color: ${({ theme }) => theme.menuText};
   text-decoration: none;
   font-size: 1.4rem;
   position: relative;
+  cursor: pointer;
 
   &:after {
     content: '';
@@ -85,6 +89,14 @@ const Link = styled.a<{ theme: string, $isActive: boolean }>`
   }
 `;
 
+const Link = styled(RouterLink)<{ theme: string, $isActive: boolean }>`
+  ${linkStyles}
+`;
+
+const LinkScroll = styled(ScrollLink)<{ theme: string, $isActive: boolean }>`
+  ${linkStyles}
+`;
+
 const Navigation = (): JSX.Element => {
   const { t } = useTranslation();
   const [activeLink, setActiveLink] = useState(1);
@@ -105,11 +117,25 @@ const Navigation = (): JSX.Element => {
         {
           links.map(link => (
             <section key={link.id}>
-              <li>
-                <Link href={link.href} $isActive={activeLink === link.id}>
-                  {t(link.name).toUpperCase()}
-                </Link>
-              </li>
+              {
+                link.isScroll ? (
+                  <LinkScroll
+                    to={link.href}
+                    smooth={true}
+                    duration={500}
+                    $isActive={activeLink === link.id}
+                  >
+                    {t(link.name)}
+                  </LinkScroll>
+                ) : (
+                  <Link
+                    to={link.href}
+                    $isActive={activeLink === link.id}
+                  >
+                    {t(link.name)}
+                  </Link>
+                )
+              }
 
               {
                 link.isUnderConstruction && <span>{t('Under construction')}</span>

@@ -21,8 +21,8 @@ const Home = (): JSX.Element => {
   return (
     <Main>
       <Welcome />
-      <Experience />
-      <Projects />
+      <Experience id="experience" />
+      <Projects id="projects" />
     </Main>
   )
 }
