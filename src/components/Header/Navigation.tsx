@@ -9,7 +9,7 @@ const Nav = styled.nav<{ theme: string }>`
     flex-direction: column;
     gap: 2rem;
     list-style: none;
-    margin-top: 5rem;
+    margin-top: 6rem;
 
     @media (min-width: 768px) {
       gap: 0;
@@ -18,12 +18,18 @@ const Nav = styled.nav<{ theme: string }>`
     }
 
     li {
-      margin-right: 1.6rem;
+      margin-right: 1rem;
+      width: max-content;
+
+      @media (min-width: 768px) {
+        margin-right: 1.6rem;
+      }
     }
 
     section {
       display: flex;
       flex-direction: row;
+      margin-right: 3rem;
 
       @media (min-width: 768px) {
         flex-direction: column;

@@ -12,7 +12,7 @@ export const useTheme = () => {
     tag: '#F8D5B4',
     tagText: '#192140',
     timelineElement: '#9C9EAE ',
-    menuBackground: '#192140',
+    menuBackground: '#192140ef',
     menuText: '#ECECF4',
   }
   
@@ -27,7 +27,7 @@ export const useTheme = () => {
     tag: '#F8D5B4',
     tagText: '#192140',
     timelineElement: '#9C9EAE ',
-    menuBackground: '#ECECF4',
+    menuBackground: '#ececf4ef',
     menuText: '#192140',
   }
 

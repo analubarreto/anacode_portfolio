@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Moon, Sun } from '@phosphor-icons/react';
-import { useTheme } from '@/hooks/useTheme';
 import Navigation from '@/components/Header/Navigation';
 import LanguageToggle from '@/components/Header/LanguageToggle';
 import { t } from 'i18next';
@@ -8,6 +7,7 @@ import { t } from 'i18next';
 type HeaderProps = {
   themeToggle: () => void;
   showMenu: boolean;
+  themeName: string;
 }
 
 const HeaderMain = styled.header<{ $showMenu: boolean }>`
@@ -17,6 +17,7 @@ const HeaderMain = styled.header<{ $showMenu: boolean }>`
   transform: translateX(${({ $showMenu }) => ($showMenu ? '0' : '-100%')});
   background-color: ${({ theme }) => theme.menuBackground};
   height: 100vh;
+  width: 25rem;
 
   @media (min-width: 768px) {
     top: 0;
@@ -83,15 +84,13 @@ const Title = styled.div<{ theme: any }>`
   }
 `;
 
-const Header = ({ themeToggle, showMenu }: HeaderProps): JSX.Element => {
-  const { theme } = useTheme();
-  
+const Header = ({ themeToggle, showMenu, themeName }: HeaderProps): JSX.Element => {  
   return (
     <HeaderMain $showMenu={showMenu}>
       <Title>
         <button onClick={themeToggle}>
-          { theme.name === 'light' ? <Moon size={30} /> : <Sun size={30} /> }
-          <span>{ theme.name === 'light' ? t('Dark Mode') : t('Light Mode') }</span>
+          { themeName === 'light' ? <Moon size={30} /> : <Sun size={30} /> }
+          <span>{ themeName === 'light' ? t('Dark Mode') : t('Light Mode') }</span>
         </button>
         <Navigation />
         <LanguageToggle />

@@ -16,6 +16,7 @@ const Button = styled.button<{ theme: string, $isActive: boolean }>`
   font-size: 1.6rem;
   font-weight: ${({ $isActive }) => $isActive ? 'bold' : 'normal' };
   transition: font-weight 0.3s ease-in-out;
+  margin-top: 1rem;
 
   @media (min-width: 768px) {
     margin-left: 1.6rem;
