@@ -52,7 +52,7 @@ const MenuIcon = styled.button<{ $open: boolean }>`
 
 const HamburguerMenu = ({ isOpen, onClickMenu }: HamburguerMenuType) => {
   return (
-    <MenuIcon $open={isOpen} onClick={onClickMenu}>
+    <MenuIcon $open={isOpen} onClick={onClickMenu} data-testid='menu-icon'>
       <div className="menu-lines" />
       <div className="menu-lines" />
       <div className="menu-lines" />
