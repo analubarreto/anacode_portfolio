@@ -2,9 +2,8 @@ import styled, { css } from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { links } from '@/data/links';
 import { useState, useMemo, useEffect } from 'react';
-//@ts-ignore
-import { Link as ScrollLink } from 'react-scroll';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { Link as LinkType } from '@/customTypes/Link';
 
 const Nav = styled.nav<{ theme: string }>`
   ul {
@@ -79,10 +78,6 @@ const linkStyles = css<{ theme: string, $isActive: boolean }>`
     }
   }
 
-  &:hover:after {
-    background-color: ${({ theme }) => theme.text};
-  }
-
   @media (min-width: 1024px) {
     color: ${({ theme }) => theme.text};
     font-size: 1.6rem;
@@ -93,7 +88,7 @@ const Link = styled(RouterLink)<{ theme: string, $isActive: boolean }>`
   ${linkStyles}
 `;
 
-const LinkScroll = styled(ScrollLink)<{ theme: string, $isActive: boolean }>`
+const LinkScroll = styled.a<{ theme: string, $isActive: boolean }>`
   ${linkStyles}
 `;
 
@@ -101,16 +96,17 @@ const Navigation = (): JSX.Element => {
   const { t } = useTranslation();
   const [activeLink, setActiveLink] = useState(1);
 
-  const linkList = useMemo(() => links, []);
+  const currentLocation = useLocation().pathname;
+  const useLinkScroll = (link: LinkType) => link.elementId && currentLocation === '/';
 
-  useEffect(() => {
-    const currentPath = window.location.pathname;
-    const currentLink = linkList.find(link => link.href === currentPath);
-    if (currentLink) {
-      setActiveLink(currentLink.id);
-    }
-  })
+  const linkScrollHref = useMemo(() => {
+    return (link: LinkType) => useLinkScroll(link) ? `#${link.elementId}` : link.href;
+  }, [currentLocation]);
 
+  const handleLinkClick = (id: number) => () => {
+    setActiveLink(id);
+  };
+  
   return (
     <Nav>
       <ul>
@@ -118,11 +114,10 @@ const Navigation = (): JSX.Element => {
           links.map(link => (
             <section key={link.id}>
               {
-                link.isScroll ? (
+                useLinkScroll(link) ? (
                   <LinkScroll
-                    to={link.href}
-                    smooth={true}
-                    duration={500}
+                    href={linkScrollHref(link)}
+                    onClick={handleLinkClick(link.id)}
                     $isActive={activeLink === link.id}
                   >
                     {t(link.name)}
@@ -131,6 +126,7 @@ const Navigation = (): JSX.Element => {
                   <Link
                     to={link.href}
                     $isActive={activeLink === link.id}
+                    onClick={handleLinkClick(link.id)}
                   >
                     {t(link.name)}
                   </Link>

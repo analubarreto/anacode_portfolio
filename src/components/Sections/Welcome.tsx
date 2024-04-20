@@ -3,6 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { useTheme } from '@/hooks/useTheme';
 import Button from '@/components/Button';
 
+type WelcomeProps = {
+  id: string;
+};
+
 const Main = styled.main<{ theme: any }>`
   &.main-welcome {
     display: flex;
@@ -109,7 +113,7 @@ const Section = styled.section`
   }
 `;
 
-const Welcome = (): JSX.Element => {
+const Welcome = ({ id }: WelcomeProps): JSX.Element => {
   const { t } = useTranslation();
   const { theme } = useTheme();
 
@@ -118,7 +122,7 @@ const Welcome = (): JSX.Element => {
   }
 
   return (
-    <Main className='main-welcome' theme={theme}>
+    <Main className='main-welcome' theme={theme} id={id}>
       <Section>
         <img src='/images/logo.svg' alt='Ana Code' />
         <Title>

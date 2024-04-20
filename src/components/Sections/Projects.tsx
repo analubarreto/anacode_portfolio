@@ -15,7 +15,7 @@ const Main = styled.main<{ theme: any }>`
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    min-width: 100vw;
+    width: 100vw;
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
   }
