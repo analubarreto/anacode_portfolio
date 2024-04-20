@@ -113,8 +113,6 @@ const Welcome = (): JSX.Element => {
   const { t } = useTranslation();
   const { theme } = useTheme();
 
-  console.log('Welcome')
-
   const handleSendEmail = () => {
     window.location.href = 'mailto:anacodesoft@gmail.com'
   }
