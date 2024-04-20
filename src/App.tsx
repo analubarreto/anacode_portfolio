@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   const { theme, themeToggle } = useTheme();
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <ThemeProvider theme={theme}>
