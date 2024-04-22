@@ -54,7 +54,7 @@ const ProvidersWrapper = ({ children }: ProvidersWrapperProps): JSX.Element => {
       <HamburgerMenu isOpen={isOpen} onClickMenu={() => setIsOpen(!isOpen)} />
       <ActiveLinkProvider>
         <HomeSectionsProvider>
-          <Header themeToggle={themeToggle} showMenu={isOpen} themeName={theme.name} />
+          <Header themeToggle={themeToggle} showMenu={isOpen} themeName={theme.name} closeMenu={() => setIsOpen(false)} />
           {children}
         </HomeSectionsProvider>
       </ActiveLinkProvider>

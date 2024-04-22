@@ -7,7 +7,11 @@ import { Nav, Link, LinkScroll } from '@/components/Header/styles/Navigation.sty
 import { useActiveLink } from '@/contexts/ActiveLinkContext';
 import { useMainRef } from '@/contexts/HomeSectionsContext';
 
-const Navigation = (): JSX.Element => {
+type NavigationProps = {
+  closeMenu: () => void;
+}
+
+const Navigation = ({ closeMenu }: NavigationProps): JSX.Element => {
   const { t } = useTranslation();
   const [activeLink, setActiveLink] = useActiveLink();
   const [isOnTop, setIsOnTop] = useState(true);
@@ -22,6 +26,7 @@ const Navigation = (): JSX.Element => {
 
   const handleLinkClick = (id: number) => () => {
     setActiveLink(id);
+    closeMenu();
   };
 
   useEffect(() => {

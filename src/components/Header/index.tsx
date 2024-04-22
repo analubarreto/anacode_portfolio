@@ -5,6 +5,7 @@ import LanguageToggle from '@/components/Header/LanguageToggle';
 import { t } from 'i18next';
 
 type HeaderProps = {
+  closeMenu: () => void;
   themeToggle: () => void;
   showMenu: boolean;
   themeName: string;
@@ -80,7 +81,7 @@ const Title = styled.div<{ theme: any }>`
   }
 `;
 
-const Header = ({ themeToggle, showMenu, themeName }: HeaderProps): JSX.Element => {  
+const Header = ({ themeToggle, showMenu, themeName, closeMenu }: HeaderProps): JSX.Element => {  
   return (
     <HeaderMain $showMenu={showMenu}>
       <Title>
@@ -88,7 +89,7 @@ const Header = ({ themeToggle, showMenu, themeName }: HeaderProps): JSX.Element 
           { themeName === 'light' ? <Moon size={30} /> : <Sun size={30} /> }
           <span>{ themeName === 'light' ? t('Dark Mode') : t('Light Mode') }</span>
         </button>
-        <Navigation />
+        <Navigation closeMenu={closeMenu} />
         <LanguageToggle />
       </Title>
     </HeaderMain>
