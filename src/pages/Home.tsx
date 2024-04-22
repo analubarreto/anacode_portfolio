@@ -21,8 +21,6 @@ const Home = (): JSX.Element => {
   const mainRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    console.log('useEffect')
-
     const handleScroll = () => {
       if (!mainRef.current) return;
       const sections = document.getElementsByClassName('section');
