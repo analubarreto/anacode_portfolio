@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import Welcome from '@/components/Sections/Welcome';
 import Experience from '@/components/Sections/Experience';
 import Projects from '@/components/Sections/Projects';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { useActiveLink } from '@/contexts/ActiveLinkContext';
+import { useMainRef } from '@/contexts/HomeSectionsContext';
 import { links } from '@/data/links';
 
 const Main = styled.main<{ theme: any }>`
@@ -18,12 +19,14 @@ const Main = styled.main<{ theme: any }>`
 
 const Home = (): JSX.Element => {
   const [, setActiveLink] = useActiveLink();
-  const mainRef = useRef<HTMLDivElement>(null);
+  const mainRef = useMainRef();
 
   useEffect(() => {
+    if (mainRef === null || mainRef.current === null) return;
+    
     const handleScroll = () => {
-      if (!mainRef.current) return;
       const sections = document.getElementsByClassName('section');
+
       const currentSection = Array.from(sections).find(section => {
         const rect = section.getBoundingClientRect();
         return rect.top <= 0 && rect.bottom > 0;
@@ -34,14 +37,12 @@ const Home = (): JSX.Element => {
         const link = links.find(link => link.elementId === id) || links[0];
         setActiveLink(link.id);
       }
-      const scrollPosition = mainRef.current.scrollTop;
-      console.log('Current scroll position:', scrollPosition);
     };
 
-    mainRef.current?.addEventListener('scroll', handleScroll);
+    mainRef.current.addEventListener('scroll', handleScroll);
 
     return () => {
-      mainRef.current?.removeEventListener('scroll', handleScroll);
+      mainRef?.current?.removeEventListener('scroll', handleScroll);
     }
   }, []);
 

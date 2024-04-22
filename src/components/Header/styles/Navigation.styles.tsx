@@ -1,7 +1,16 @@
 import styled, { css } from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 
-export const Nav = styled.nav<{ theme: string }>`
+export const Nav = styled.nav<{ theme: string, $isOnTop: boolean }>`
+  background-color: transparent;
+
+  @media (min-width: 1024px) {
+    background-color: ${({ theme, $isOnTop }) => $isOnTop ? 'transparent' : theme.menuBackground};
+    transition: background-color 0.3s ease;
+    padding: 0 2rem;
+    border-radius: 1rem;
+  }
+
   ul {
     display: flex;
     flex-direction: column;
@@ -52,38 +61,45 @@ export const Nav = styled.nav<{ theme: string }>`
   }
 `;
 
-const linkStyles = css<{ theme: string, $isActive: boolean }>`
-  color: ${({ theme }) => theme.menuText};
+const linkStyles = css<{ theme: string, $isActive: boolean, $isOnTop: boolean }>`
   text-decoration: none;
   font-size: 1.4rem;
   position: relative;
   cursor: pointer;
+  color: ${({ theme }) => theme.menuText};
 
   &:after {
     content: '';
     position: absolute;
     bottom: -2px;
     left: 0;
-    width: 100%;
+    width: ${({ $isActive }) => $isActive ? '100%' : '0'};
     height: 2px;
     background-color: ${({ theme, $isActive }) => $isActive ? theme.menuText : 'transparent'};
-    transition: background-color 0.3s ease;
+    transition: width 0.4s ease-in-out;
 
     @media (min-width: 1024px) {
-      background-color: ${({ theme, $isActive }) => $isActive ? theme.text : 'transparent'};
+      background-color: ${
+        ({ theme, $isActive, $isOnTop }) => {
+          if ($isActive) {
+            return $isOnTop ? theme.text : theme.menuText;
+          }
+          return 'transparent'
+        }
+      };
     }
   }
 
   @media (min-width: 1024px) {
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme, $isOnTop }) => $isOnTop ? theme.text : theme.menuText};
     font-size: 1.6rem;
   }
 `;
 
-export const Link = styled(RouterLink)<{ theme: string, $isActive: boolean }>`
+export const Link = styled(RouterLink)<{ theme: string, $isActive: boolean, $isOnTop: boolean }>`
   ${linkStyles}
 `;
 
-export const LinkScroll = styled.a<{ theme: string, $isActive: boolean }>`
+export const LinkScroll = styled.a<{ theme: string, $isActive: boolean, $isOnTop: boolean }>`
   ${linkStyles}
 `;
