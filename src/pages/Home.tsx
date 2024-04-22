@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import Welcome from '@/components/Sections/Welcome';
 import Experience from '@/components/Sections/Experience';
 import Projects from '@/components/Sections/Projects';
@@ -6,17 +5,13 @@ import { useEffect } from 'react';
 import { useActiveLink } from '@/contexts/ActiveLinkContext';
 import { useMainRef } from '@/contexts/HomeSectionsContext';
 import { links } from '@/data/links';
+import { Main } from '@/pages/styles/Home.styles';
 
-const Main = styled.main<{ theme: any }>`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-height: 100vh;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  scroll-snap-type: proximity;
-`;
-
+/**
+ * The Home component represents the home page of the portfolio.
+ * It handles scrolling and updates the active link based on the current section.
+ * @returns The JSX element representing the Home page.
+ */
 const Home = (): JSX.Element => {
   const [, setActiveLink] = useActiveLink();
   const mainRef = useMainRef();

@@ -6,6 +6,13 @@ import { HomeSectionsProvider } from '@/contexts/HomeSectionsContext';
 import { useState } from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
+/**
+ * Global styles for the application.
+ */
+/**
+ * Component that provides global styles for the application.
+ * It sets up CSS variables for responsive breakpoints and defines the global font styles.
+ */
 const GlobalStyle = createGlobalStyle`
   :root {
     --mobile-sm: 375px;
@@ -44,6 +51,13 @@ type ProvidersWrapperProps = {
   children: JSX.Element;
 }
 
+/**
+ * Wrapper component that provides context and theme to its children.
+ * 
+ * @param {ProvidersWrapperProps} props - The component props.
+ * @param {React.ReactNode} props.children - The child components to be wrapped.
+ * @returns {JSX.Element} The wrapped component.
+ */
 const ProvidersWrapper = ({ children }: ProvidersWrapperProps): JSX.Element => {
   const { theme, themeToggle } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
