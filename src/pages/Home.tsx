@@ -1,5 +1,6 @@
 import Welcome from '@/components/Sections/Welcome';
-import Experience from '@/components/Sections/Experience';
+import AboutUs from '@/components/Sections/AboutUs';
+import Services from '@/components/Sections/Services';
 import Projects from '@/components/Sections/Projects';
 import { useEffect } from 'react';
 import { useActiveLink } from '@/contexts/ActiveLinkContext';
@@ -44,7 +45,8 @@ const Home = (): JSX.Element => {
   return (
     <Main ref={mainRef}>
       <Welcome id="welcome" />
-      <Experience id="experience" />
+      <AboutUs id="about-us" />
+      <Services id="services" />
       <Projects id="projects" />
     </Main>
   )

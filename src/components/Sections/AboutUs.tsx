@@ -4,12 +4,12 @@ import styled from 'styled-components';
 // import { useTranslation } from 'react-i18next';
 // import { useTheme } from '@/hooks/useTheme';
 
-type ExperienceProps = {
+type ProjectsProps = {
   id: string;
 };
 
 const Section = styled.section<{ theme: any }>`
-  &.main-experience {
+  &.main-projects {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,16 +21,15 @@ const Section = styled.section<{ theme: any }>`
   }
 `;
 
-const Experience = ({ id }: ExperienceProps): JSX.Element => {
+const AboutUs = ({ id }: ProjectsProps): JSX.Element => {
   // const { t } = useTranslation();
   // const { theme } = useTheme();
 
   return (
-    <Section id={id} className='main-experience section'>
-      <img src="/images/ana_code_logo.svg" alt="loading" />
-      <p>Experience</p>
+    <Section id={id} className='main-projects section'>
+      <p>About Us</p>
     </Section>
   )
 }
 
-export default Experience
+export default AboutUs
