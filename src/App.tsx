@@ -6,7 +6,7 @@ import Blog from '@/pages/Blog';
 import { useTheme } from '@/hooks/useTheme';
 import Header from '@/components/Header/index';
 import HamburgerMenu from '@/components/Header/HamburgerMenu';
-import { ActiveLinkProvider } from '@/contexts/activeLink';
+import { ActiveLinkProvider } from '@/contexts/ActiveLinkContext';
 import { useState } from 'react';
 
 const GlobalStyle = createGlobalStyle`

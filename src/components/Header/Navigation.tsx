@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Link as LinkType } from '@/customTypes/Link';
 import { Nav, Link, LinkScroll } from '@/components/Header/styles/Navigation.styles';
-import { useActiveLink } from '@/contexts/activeLink';
+import { useActiveLink } from '@/contexts/ActiveLinkContext';
 
 const Navigation = (): JSX.Element => {
   const { t } = useTranslation();

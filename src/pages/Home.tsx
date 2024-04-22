@@ -3,7 +3,7 @@ import Welcome from '@/components/Sections/Welcome';
 import Experience from '@/components/Sections/Experience';
 import Projects from '@/components/Sections/Projects';
 import { useEffect, useRef } from 'react';
-import { useActiveLink } from '@/contexts/activeLink';
+import { useActiveLink } from '@/contexts/ActiveLinkContext';
 import { links } from '@/data/links';
 
 const Main = styled.main<{ theme: any }>`
@@ -34,6 +34,8 @@ const Home = (): JSX.Element => {
         const link = links.find(link => link.elementId === id) || links[0];
         setActiveLink(link.id);
       }
+      const scrollPosition = mainRef.current.scrollTop;
+      console.log('Current scroll position:', scrollPosition);
     };
 
     mainRef.current?.addEventListener('scroll', handleScroll);

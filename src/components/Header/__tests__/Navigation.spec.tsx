@@ -4,7 +4,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/jest-globals';
 import '@testing-library/jest-dom';
 import Navigation from '../Navigation';
-import { ActiveLinkProvider, useActiveLink } from '../../../contexts/activeLink';
+import { ActiveLinkProvider, useActiveLink } from '../../../contexts/ActiveLinkContext';
 import { BrowserRouter } from 'react-router-dom';
 
 describe('Navigation', () => {

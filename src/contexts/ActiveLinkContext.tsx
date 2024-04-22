@@ -12,6 +12,7 @@ const ActiveLinkContext = createContext<ActiveLinkContextType | undefined>(undef
 // Define a provider component
 const ActiveLinkProvider = ({ children }: ActiveLinkProviderProps) => {
   const [activeLink, setActiveLink] = useState<number>(1);
+  
   return (
     <ActiveLinkContext.Provider value={[activeLink, setActiveLink]}>
       {children}

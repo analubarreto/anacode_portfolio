@@ -3,7 +3,7 @@ import React from 'react';
 import '@testing-library/jest-dom/jest-globals';
 import '@testing-library/jest-dom';
 import { render, screen, waitFor } from '@testing-library/react';
-import { ActiveLinkProvider, useActiveLink } from '../activeLink';
+import { ActiveLinkProvider, useActiveLink } from '../ActiveLinkContext';
 
 describe('ActiveLinkProvider', () => {
   test('renders children', () => {
