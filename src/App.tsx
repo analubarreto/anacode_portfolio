@@ -6,6 +6,7 @@ import Blog from '@/pages/Blog';
 import { useTheme } from '@/hooks/useTheme';
 import Header from '@/components/Header/index';
 import HamburgerMenu from '@/components/Header/HamburgerMenu';
+import { ActiveLinkProvider } from '@/contexts/activeLink';
 import { useState } from 'react';
 
 const GlobalStyle = createGlobalStyle`
@@ -48,15 +49,17 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Router>
-        <HamburgerMenu isOpen={isOpen} onClickMenu={() => setIsOpen(!isOpen)} />
-        <Header themeToggle={themeToggle} showMenu={isOpen} themeName={theme.name} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route  path="/blog" element={<Blog />} />
-        </Routes>
-      </Router>
+      <ActiveLinkProvider>
+        <GlobalStyle />
+        <Router>
+          <HamburgerMenu isOpen={isOpen} onClickMenu={() => setIsOpen(!isOpen)} />
+          <Header themeToggle={themeToggle} showMenu={isOpen} themeName={theme.name} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route  path="/blog" element={<Blog />} />
+          </Routes>
+        </Router>
+      </ActiveLinkProvider>
     </ThemeProvider>
   )
 }

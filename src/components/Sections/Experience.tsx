@@ -8,7 +8,7 @@ type ExperienceProps = {
   id: string;
 };
 
-const Main = styled.main<{ theme: any }>`
+const Section = styled.section<{ theme: any }>`
   &.main-experience {
     display: flex;
     flex-direction: column;
@@ -26,10 +26,10 @@ const Experience = ({ id }: ExperienceProps): JSX.Element => {
   // const { theme } = useTheme();
 
   return (
-    <Main id={id} className='main-experience'>
+    <Section id={id} className='main-experience section'>
       <img src="/images/ana_code_logo.svg" alt="loading" />
       <p>Experience</p>
-    </Main>
+    </Section>
   )
 }
 

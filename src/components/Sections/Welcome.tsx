@@ -122,7 +122,7 @@ const Welcome = ({ id }: WelcomeProps): JSX.Element => {
   }
 
   return (
-    <Main className='main-welcome' theme={theme} id={id}>
+    <Main className='main-welcome section' theme={theme} id={id}>
       <Section>
         <img src='/images/logo.svg' alt='Ana Code' />
         <Title>

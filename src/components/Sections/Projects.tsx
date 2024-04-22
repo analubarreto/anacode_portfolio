@@ -8,7 +8,7 @@ type ProjectsProps = {
   id: string;
 };
 
-const Main = styled.main<{ theme: any }>`
+const Section = styled.section<{ theme: any }>`
   &.main-projects {
     display: flex;
     flex-direction: column;
@@ -26,9 +26,9 @@ const Projects = ({ id }: ProjectsProps): JSX.Element => {
   // const { theme } = useTheme();
 
   return (
-    <Main id={id} className='main-projects'>
+    <Section id={id} className='main-projects section'>
       <p>Projects</p>
-    </Main>
+    </Section>
   )
 }
 

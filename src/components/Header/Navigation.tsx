@@ -1,13 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { links } from '@/data/links';
-import { useState, useMemo, useEffect } from 'react';
+import { useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Link as LinkType } from '@/customTypes/Link';
 import { Nav, Link, LinkScroll } from '@/components/Header/styles/Navigation.styles';
+import { useActiveLink } from '@/contexts/activeLink';
 
 const Navigation = (): JSX.Element => {
   const { t } = useTranslation();
-  const [activeLink, setActiveLink] = useState(1);
+  const [activeLink, setActiveLink] = useActiveLink();
 
   const currentLocation = useLocation().pathname;
   const useLinkScroll = (link: LinkType) => link.elementId && currentLocation === '/';
