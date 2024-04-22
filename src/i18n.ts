@@ -1,15 +1,21 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
+import enTranslations from './locales/en/translation.json';
+import ptBrTranslations from './locales/pt_br/translation.json';
+
 i18n
-  .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    backend: {
-      loadPath: './src/locales/{{lng}}/{{ns}}.json' // path to your translation files
+    resources: {
+      en: {
+        translation: enTranslations
+      },
+      pt_br: {
+        translation: ptBrTranslations
+      }
     },
     lng: "pt_br",
     fallbackLng: "en",
