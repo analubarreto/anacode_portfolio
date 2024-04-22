@@ -9,6 +9,11 @@ type HomeSectionsProviderProps = {
 const HomeSectionsContext = createContext<HomeSectionsContextType | null>(null);
 
 // Define a provider component
+/**
+ * Provides the context for the home sections.
+ *
+ * @param children - The child components.
+ */
 const HomeSectionsProvider = ({ children }: HomeSectionsProviderProps) => {
   const mainRef = useRef<HTMLDivElement | null>(null);
   

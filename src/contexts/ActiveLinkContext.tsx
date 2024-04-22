@@ -10,6 +10,12 @@ type ActiveLinkContextType = [number, Dispatch<SetStateAction<number>>];
 const ActiveLinkContext = createContext<ActiveLinkContextType | undefined>(undefined);
 
 // Define a provider component
+/**
+ * Provides the active link context to its children components.
+ *
+ * @param {ActiveLinkProviderProps} props - The component props.
+ * @returns {JSX.Element} The rendered component.
+ */
 const ActiveLinkProvider = ({ children }: ActiveLinkProviderProps) => {
   const [activeLink, setActiveLink] = useState<number>(1);
   
