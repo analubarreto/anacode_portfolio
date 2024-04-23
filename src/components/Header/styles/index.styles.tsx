@@ -4,7 +4,7 @@ export const HeaderMain = styled.header<{ $showMenu: boolean, $isOnTop: boolean 
   position: absolute;
   top: 0;
   background-color: ${({ theme, $isOnTop }) => $isOnTop ? 'transparent' : theme.menuBackground};
-  border-radius: 1rem;
+  border-radius: 1rem; 
 
   @media screen and (max-width: 1023px) {
     visibility: ${({ $showMenu }) => ($showMenu ? 'visible' : 'hidden')};
