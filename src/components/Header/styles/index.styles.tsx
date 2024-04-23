@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
-export const HeaderMain = styled.header<{ $showMenu: boolean }>`
+export const HeaderMain = styled.header<{ $showMenu: boolean, $isOnTop: boolean }>`
   position: absolute;
   top: 0;
+  background-color: ${({ theme, $isOnTop }) => $isOnTop ? 'transparent' : theme.menuBackground};
+  border-radius: 1rem;
 
   @media screen and (max-width: 1023px) {
     visibility: ${({ $showMenu }) => ($showMenu ? 'visible' : 'hidden')};
@@ -25,7 +27,7 @@ export const HeaderMain = styled.header<{ $showMenu: boolean }>`
  *
  * @param {Object} theme - The theme object containing color values.
  */
-export const Title = styled.div<{ theme: any }>`
+export const Title = styled.div<{ theme: any, $isOnTop: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,9 +64,10 @@ export const Title = styled.div<{ theme: any }>`
     color: ${({ theme }) => theme.menuText};
     order: 2;
     align-self: flex-start;
+    margin-bottom: 1rem;
 
     @media (min-width: 1024px) {
-      color: ${({ theme }) => theme.text};
+      color: ${({ theme, $isOnTop }) => $isOnTop ? theme.text : theme.menuText};
       order: 0;
       margin-top: 2.5rem;
     }

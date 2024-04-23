@@ -3,7 +3,8 @@ import Navigation from '@/components/Header/Navigation';
 import LanguageToggle from '@/components/Header/LanguageToggle';
 import { t } from 'i18next';
 import { HeaderMain, Title } from '@/components/Header/styles/index.styles';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import { useMainRef } from '@/contexts/HomeSectionsContext';
 
 type HeaderProps = {
   closeMenu: () => void;
@@ -38,15 +39,33 @@ const Header = ({ themeToggle, showMenu, themeName, closeMenu }: HeaderProps): J
     };
   }, [closeMenu]);
 
+  const [isOnTop, setIsOnTop] = useState(true);
+  const mainRef = useMainRef();
+
+  useEffect(() => {
+    if (mainRef === null || mainRef.current === null) return;
+
+    const handleScroll = () => {
+      const currentScrollPosition = mainRef?.current?.scrollTop;
+      if (currentScrollPosition) setIsOnTop(currentScrollPosition < 234);
+    };
+
+    mainRef.current.addEventListener('scroll', handleScroll);
+
+    return () => {
+      mainRef?.current?.removeEventListener('scroll', handleScroll);
+    }
+  }, [])
+
   return (
-    <HeaderMain $showMenu={showMenu} ref={headerRef}>
-      <Title>
+    <HeaderMain $showMenu={showMenu} ref={headerRef} $isOnTop={isOnTop}>
+      <Title $isOnTop={isOnTop}>
         <button className='color-mode-toggle' onClick={themeToggle}>
           { themeName === 'light' ? <Moon size={30} /> : <Sun size={30} /> }
           <span>{ themeName === 'light' ? t('Dark Mode') : t('Light Mode') }</span>
         </button>
-        <Navigation closeMenu={closeMenu} />
-        <LanguageToggle />
+        <Navigation isOnTop={isOnTop} closeMenu={closeMenu} />
+        <LanguageToggle isOnTop={isOnTop} />
       </Title>
     </HeaderMain>
   );

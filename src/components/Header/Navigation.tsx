@@ -1,21 +1,19 @@
 import { useTranslation } from 'react-i18next';
 import { links } from '@/data/links';
-import { useMemo, useEffect,useState } from 'react';
+import { useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Link as LinkType } from '@/customTypes/Link';
 import { Nav, Link, LinkScroll } from '@/components/Header/styles/Navigation.styles';
 import { useActiveLink } from '@/contexts/ActiveLinkContext';
-import { useMainRef } from '@/contexts/HomeSectionsContext';
 
 type NavigationProps = {
   closeMenu: () => void;
+  isOnTop: boolean;
 }
 
-const Navigation = ({ closeMenu }: NavigationProps): JSX.Element => {
+const Navigation = ({ closeMenu, isOnTop }: NavigationProps): JSX.Element => {
   const { t } = useTranslation();
   const [activeLink, setActiveLink] = useActiveLink();
-  const [isOnTop, setIsOnTop] = useState(true);
-  const mainRef = useMainRef();
 
   const currentLocation = useLocation().pathname;
   const useLinkScroll = (link: LinkType) => link.elementId && currentLocation === '/';
@@ -28,21 +26,6 @@ const Navigation = ({ closeMenu }: NavigationProps): JSX.Element => {
     setActiveLink(id);
     closeMenu();
   };
-
-  useEffect(() => {
-    if (mainRef === null || mainRef.current === null) return;
-
-    const handleScroll = () => {
-      const currentScrollPosition = mainRef?.current?.scrollTop;
-      if (currentScrollPosition) setIsOnTop(currentScrollPosition < 234);
-    };
-
-    mainRef.current.addEventListener('scroll', handleScroll);
-
-    return () => {
-      mainRef?.current?.removeEventListener('scroll', handleScroll);
-    }
-  }, [])
 
   return (
     <Nav $isOnTop={isOnTop}>

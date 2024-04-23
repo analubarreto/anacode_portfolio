@@ -5,7 +5,7 @@ export const Nav = styled.nav<{ theme: string, $isOnTop: boolean }>`
   background-color: transparent;
 
   @media (min-width: 1024px) {
-    background-color: ${({ theme, $isOnTop }) => $isOnTop ? 'transparent' : theme.menuBackground};
+    background-color: transparent;
     transition: background-color 0.3s ease;
     padding: 0 2rem;
     border-radius: 1rem;
