@@ -5,6 +5,7 @@ import { t } from 'i18next';
 import { HeaderMain, Title } from '@/components/Header/styles/index.styles';
 import { useRef, useEffect, useState } from 'react';
 import { useMainRef } from '@/contexts/HomeSectionsContext';
+import useClickOutside from '@/hooks/useClickOutside';
 
 type HeaderProps = {
   closeMenu: () => void;
@@ -24,20 +25,7 @@ type HeaderProps = {
  */
 const Header = ({ themeToggle, showMenu, themeName, closeMenu }: HeaderProps): JSX.Element => {  
   const headerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
-        closeMenu();
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [closeMenu]);
+  useClickOutside(headerRef, closeMenu);
 
   const [isOnTop, setIsOnTop] = useState(true);
   const mainRef = useMainRef();
