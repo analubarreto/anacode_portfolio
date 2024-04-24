@@ -14,6 +14,8 @@ export const useTheme = () => {
     timelineElement: '#9C9EAE ',
     menuBackground: '#192140ef',
     menuText: '#ECECF4',
+    imageBackground: '#F8B4C0',
+    linkedIn: '#0072B1'
   }
   
   const DarkTheme = {
@@ -29,6 +31,8 @@ export const useTheme = () => {
     timelineElement: '#9C9EAE ',
     menuBackground: '#ececf4ef',
     menuText: '#192140',
+    imageBackground: '#F8B4C0',
+    linkedIn: '#ECECF4'
   }
 
   const [theme, setTheme] = useState(LightTheme);

@@ -64,6 +64,7 @@ export const Nav = styled.nav<{ theme: string, $isOnTop: boolean }>`
 const linkStyles = css<{ theme: string, $isActive: boolean, $isOnTop: boolean }>`
   text-decoration: none;
   font-size: 1.4rem;
+  text-transform: uppercase;
   position: relative;
   cursor: pointer;
   color: ${({ theme }) => theme.menuText};
