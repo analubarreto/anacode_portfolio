@@ -7,7 +7,7 @@ import Welcome from '../Welcome';
 
 describe('Welcome', () => {
   test('should render the Welcome component with the correct title and subtitle', () => {
-    render(<Welcome />);
+    render(<Welcome id="welcome" />);
 
     const mainTitle = screen.getByTestId('main-title');
     const title = screen.getByTestId('title');
