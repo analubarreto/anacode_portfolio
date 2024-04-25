@@ -12,6 +12,17 @@ type ModalProps = {
   testId?: string;
 };
 
+/**
+ * Modal component that displays information about a team member.
+ *
+ * @component
+ * @param {Object} props - The component props.
+ * @param {Object} props.teamMember - The team member object containing name, image, text, and linkedIn properties.
+ * @param {boolean} props.isModalOpen - A boolean indicating whether the modal is open or not.
+ * @param {Function} props.onClose - The function to be called when the modal is closed.
+ * @param {string} [props.testId='modal'] - The test ID for the modal component.
+ * @returns {JSX.Element} The rendered Modal component.
+ */
 const ModalComponent = ({ teamMember, isModalOpen, onClose, testId = 'modal' }: ModalProps): JSX.Element => {
   const articleRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation();

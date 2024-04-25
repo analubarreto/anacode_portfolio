@@ -10,12 +10,24 @@ type AboutUsPropsType = {
   id: string;
 };
 
+/**
+ * Renders the About Us section.
+ *
+ * @param {AboutUsPropsType} props - The component props.
+ * @returns {JSX.Element} The rendered About Us section.
+ */
 const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [teamMember, setTeamMember] = useState<TeamMember | null>(null);
 
-  const handleModalToggle = (teamMember: TeamMember | null) => {
+  /**
+   * Toggles the modal and sets the selected team member.
+   *
+   * @param {TeamMember | null} teamMember - The selected team member.
+   * @returns {void}
+   */
+  const handleModalToggle = (teamMember: TeamMember | null): void => {
     if (teamMember) setTeamMember(teamMember);
     setIsModalOpen(!isModalOpen);
   };
@@ -24,36 +36,35 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
     <>
       <Modal isModalOpen={isModalOpen} onClose={() => handleModalToggle(null)} teamMember={teamMember} testId='modal' />
       <AboutUsSection id={id} className='main-about-us section' data-testid='about-us'>
-      <h1>{ t('About Us') }</h1>
-      <p>{ t('About Us Text') }</p>
+        <h1>{t('About Us')}</h1>
+        <p>{t('About Us Text')}</p>
 
         <div className='our-team'>
-          <h3 className='our-team__title'>{ t('Our Team') }</h3>
+          <h3 className='our-team__title'>{t('Our Team')}</h3>
 
           <div className='our-team__members'>
-            {
-              team.map((member, index) => (
-                <div className='our-team__members--member' key={index}>
-                  <div className='image-wrapper'>
-                    <img src={`/images/${member.image}`} alt={member.name} />
-                  </div>
-                  <div className='text-wrapper'>
-                    <h4>{ t(member.name) }</h4>
-                    <p>{ t(member.text) } 
-                      <button onClick={() => handleModalToggle(member)}>{ t('Read More') }</button>
-                    </p>
-                    <a href={member.linkedIn} target='_blank' rel='noreferrer'>
-                      <LinkedinLogo className='linkedin' size={40} />
-                    </a>
-                  </div>
+            {team.map((member, index) => (
+              <div className='our-team__members--member' key={index}>
+                <div className='image-wrapper'>
+                  <img src={`/images/${member.image}`} alt={member.name} />
                 </div>
-              ))
-            }
+                <div className='text-wrapper'>
+                  <h4>{t(member.name)}</h4>
+                  <p>
+                    {t(member.text)} 
+                    <button onClick={() => handleModalToggle(member)}>{t('Read More')}</button>
+                  </p>
+                  <a href={member.linkedIn} target='_blank' rel='noreferrer'>
+                    <LinkedinLogo className='linkedin' size={40} />
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </AboutUsSection>
     </>
-  )
-}
+  );
+};
 
 export default AboutUs
