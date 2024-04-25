@@ -5,7 +5,7 @@ import { t } from 'i18next';
 import { HeaderMain, Title } from '@/components/Header/styles/index.styles';
 import { useRef, useEffect, useState } from 'react';
 import { useMainRef } from '@/contexts/HomeSectionsContext';
-import useClickOutside from '@/hooks/useClickOutside';
+import { useClickOutside } from '@/hooks/useClickOutside';
 
 type HeaderProps = {
   closeMenu: () => void;

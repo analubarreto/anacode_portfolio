@@ -1,6 +1,6 @@
 import { Modal } from '@/components/styles/Modal.styles';
 import { useRef } from 'react';
-import useClickOutside from '@/hooks/useClickOutside';
+import { useClickOutside } from '@/hooks/useClickOutside';
 import { TeamMember } from '@/types/TeamMember';
 import { useTranslation } from 'react-i18next';
 import { LinkedinLogo } from '@phosphor-icons/react'
