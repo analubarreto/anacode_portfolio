@@ -12,7 +12,7 @@ type ModalProps = {
   testId?: string;
 };
 
-const ModalComponent = ({ teamMember, isModalOpen, onClose, testId }: ModalProps): JSX.Element => {
+const ModalComponent = ({ teamMember, isModalOpen, onClose, testId = 'modal' }: ModalProps): JSX.Element => {
   const articleRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation();
 
