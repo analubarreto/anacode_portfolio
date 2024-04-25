@@ -8,7 +8,7 @@ export const AboutUsSection = styled.section<{ theme: any }>`
     padding: 4rem 2rem 0 2rem;
 
     @media (min-width: 1024px) {
-      padding: 20rem 10rem 0 10rem;
+      padding: 12rem 10rem 0 10rem;
     }
 
     h1 {
@@ -123,8 +123,11 @@ export const AboutUsSection = styled.section<{ theme: any }>`
               }
             }
 
-            p > span {
+            p > button {
+              color: ${({ theme }) => theme.text};
               font-weight: bold;
+              background-color: transparent;
+              border: none;
             }
           }
 

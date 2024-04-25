@@ -15,7 +15,7 @@ export const useTheme = () => {
     menuBackground: '#192140ef',
     menuText: '#ECECF4',
     imageBackground: '#F8B4C0',
-    linkedIn: '#0072B1'
+    linkedIn: '#0072B1',
   }
   
   const DarkTheme = {
