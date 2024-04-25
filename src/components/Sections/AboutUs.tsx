@@ -22,8 +22,8 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
 
   return (
     <>
-      <Modal isModalOpen={isModalOpen} onClose={() => handleModalToggle(null)} teamMember={teamMember} />
-      <AboutUsSection id={id} className='main-about-us section'>
+      <Modal isModalOpen={isModalOpen} onClose={() => handleModalToggle(null)} teamMember={teamMember} testId='modal' />
+      <AboutUsSection id={id} className='main-about-us section' data-testid='about-us'>
       <h1>{ t('About Us') }</h1>
       <p>{ t('About Us Text') }</p>
 

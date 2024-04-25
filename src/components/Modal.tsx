@@ -9,9 +9,10 @@ type ModalProps = {
   onClose: () => void;
   isModalOpen: boolean;
   teamMember: TeamMember | null;
+  testId?: string;
 };
 
-const ModalComponent = ({ teamMember, isModalOpen, onClose }: ModalProps): JSX.Element => {
+const ModalComponent = ({ teamMember, isModalOpen, onClose, testId }: ModalProps): JSX.Element => {
   const articleRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation();
 
@@ -22,7 +23,7 @@ const ModalComponent = ({ teamMember, isModalOpen, onClose }: ModalProps): JSX.E
     <>
       {
         canOpen && (
-          <Modal $isOpen={isModalOpen}>
+          <Modal $isOpen={isModalOpen} data-testid={testId}>
             <article className='member' ref={articleRef}>
               <h4 className='member__name'>{ t(teamMember?.name) }</h4>
               <div className='member__image-wrapper'>
