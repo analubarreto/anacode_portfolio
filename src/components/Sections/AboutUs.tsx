@@ -16,9 +16,7 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
   const [teamMember, setTeamMember] = useState<TeamMember | null>(null);
 
   const handleModalToggle = (teamMember: TeamMember | null) => {
-    if (!teamMember) return;
-
-    setTeamMember(teamMember);
+    if (teamMember) setTeamMember(teamMember);
     setIsModalOpen(!isModalOpen);
   };
 
