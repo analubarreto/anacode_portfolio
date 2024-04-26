@@ -1,11 +1,10 @@
-import { Moon, Sun } from '@phosphor-icons/react';
 import Navigation from '@/components/Header/Navigation';
 import LanguageToggle from '@/components/Header/LanguageToggle';
-import { t } from 'i18next';
 import { HeaderMain, Title } from '@/components/Header/styles/index.styles';
 import { useRef, useEffect, useState } from 'react';
 import { useMainRef } from '@/contexts/HomeSectionsContext';
 import { useClickOutside } from '@/hooks/useClickOutside';
+import Icon from '@/components/Icon';
 
 type HeaderProps = {
   closeMenu: () => void;
@@ -48,10 +47,8 @@ const Header = ({ themeToggle, showMenu, themeName, closeMenu }: HeaderProps): J
   return (
     <HeaderMain $showMenu={showMenu} ref={headerRef} $isOnTop={isOnTop}>
       <Title $isOnTop={isOnTop}>
-        <button className='color-mode-toggle' onClick={themeToggle}>
-          { themeName === 'light' ? <Moon size={30} /> : <Sun size={30} /> }
-          <span>{ themeName === 'light' ? t('Dark Mode') : t('Light Mode') }</span>
-        </button>
+        <Icon size={3} name={themeName === 'light' ? 'dark_mode' : 'light_mode'} onClick={themeToggle} />
+
         <Navigation isOnTop={isOnTop} closeMenu={closeMenu} />
         <LanguageToggle isOnTop={isOnTop} />
       </Title>
