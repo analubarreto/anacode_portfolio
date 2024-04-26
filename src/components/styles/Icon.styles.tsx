@@ -8,9 +8,11 @@ import styled from 'styled-components';
 export const Icon = styled.span<{ size: number }>`
   font-size: ${({ size }) => size}rem;
   cursor: pointer;
-  transition: color 0.2s;
-
-  &:hover {
-    color: ${({ theme }) => theme.primary};
+  .material-symbols-rounded, .material-icons-round {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 40
   }
 `;

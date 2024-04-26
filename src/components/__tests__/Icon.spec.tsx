@@ -9,7 +9,7 @@ describe('IconComponent', () => {
   it('renders the icon with the correct name', () => {
     const name = 'add';
 
-    const { getByText } = render(<IconComponent size={4} name={name} />);
+    const { getByText } = render(<IconComponent isSymbol={false} size={4} name={name} />);
 
     const iconElement = getByText(name);
 
@@ -18,7 +18,7 @@ describe('IconComponent', () => {
 
   it('calls the onClick function when clicked', () => {
     const onClick = jest.fn();
-    const { getByText } = render(<IconComponent size={4} name="add" onClick={onClick} />);
+    const { getByText } = render(<IconComponent isSymbol={false} size={4} name="add" onClick={onClick} />);
 
     const iconElement = getByText('add');
 
@@ -29,7 +29,7 @@ describe('IconComponent', () => {
 
   it('renders the icon with the correct size', () => {
     const size = 4;
-    const { container } = render(<IconComponent name="add" size={size} />);
+    const { container } = render(<IconComponent isSymbol={false} name="add" size={size} />);
 
     const iconElement = container.querySelector('.material-icons-round');
 
