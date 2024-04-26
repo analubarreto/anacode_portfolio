@@ -11,7 +11,6 @@ export const useClickOutside = (ref: React.RefObject<HTMLElement>, callback: () 
       if (ref.current && !ref.current.contains(event.target as Node)) {
         callback();
       }
-      console.log('click outside');
     };
 
     document.addEventListener('mousedown', handleClickOutside);
