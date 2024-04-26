@@ -70,7 +70,7 @@ export const Title = styled.div<{ theme: any, $isOnTop: boolean }>`
     @media (min-width: 1024px) {
       color: ${({ theme, $isOnTop }) => $isOnTop ? theme.text : theme.menuText};
       order: 0;
-      margin-top: 2.5rem;
+      margin-top: 2rem;
     }
 
     /**

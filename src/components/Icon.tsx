@@ -5,6 +5,7 @@ type IconProps = {
   onClick?: () => void;
   size: number;
   isSymbol: boolean;
+  className?: string;
 };
 
 /**
@@ -16,11 +17,11 @@ type IconProps = {
  * @param {boolean} isSymbol - Indicates whether the icon is a symbol or not.
  * @returns {JSX.Element} The rendered icon component.
  */
-const IconComponent = ({ name, onClick, size=24, isSymbol }: IconProps) => {
+const IconComponent = ({ name, onClick, size=24, isSymbol, className }: IconProps) => {
   const iconClassName = isSymbol ? 'material-symbols-rounded' : 'material-icons-round'
 
   return (
-    <Icon size={size} onClick={onClick} className={iconClassName}>
+    <Icon size={size} onClick={onClick} className={`${iconClassName} ${className}`}>
       { name }
     </Icon>
   )
