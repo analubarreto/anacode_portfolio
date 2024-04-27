@@ -11,10 +11,6 @@ const Welcome = ({ id }: WelcomeProps): JSX.Element => {
   const { t } = useTranslation();
   const { theme } = useTheme();
 
-  const handleSendEmail = () => {
-    window.location.href = 'mailto:anacodesoft@gmail.com'
-  }
-
   return (
     <Main className='main-welcome section' theme={theme} id={id}>
       <Section>
@@ -28,7 +24,7 @@ const Welcome = ({ id }: WelcomeProps): JSX.Element => {
       </Section>
       <Section>
         <p>{ t('Presentation') }</p>
-        <Button onBtnClick={handleSendEmail}>{ t('Contact us') }</Button>
+        <Button href='#contact'>{ t('Contact us') }</Button>
       </Section>
     </Main>
   )

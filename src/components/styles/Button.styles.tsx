@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Btn = styled.button`
+
+const basicStyles = css`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,8 +11,8 @@ export const Btn = styled.button`
   height: 4rem;
   font-size: 2rem;
   margin-top: 3rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow here */
-  transition: transform 0.2s ease-in-out; /* Add transition here */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
 
   &:hover {
     background-color: ${({ theme }) => theme.selectedElement};
@@ -19,10 +20,22 @@ export const Btn = styled.button`
   }
 
   &:active {
-    transform: scale(0.95); /* Add scale transform here */
+    transform: scale(0.95);
   }
 
   @media (min-width: 1024px) {
     font-size: 2.4rem;
   }
+`;
+
+export const Btn = styled.button`
+  ${basicStyles};
+`;
+
+export const LinkBtn = styled.a`
+  ${basicStyles};
+  padding: 0.6em 1.2em;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: #ECECF4;
 `;

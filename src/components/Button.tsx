@@ -1,15 +1,20 @@
-import { Btn } from '@/components/styles/Button.styles';
+import { Btn, LinkBtn } from '@/components/styles/Button.styles';
 
 type ButtonProps = {
   children: React.ReactNode;
-  onBtnClick: () => void;
+  onBtnClick?: () => void;
+  href?: string;
 };
 
-const Button = ({ children, onBtnClick }: ButtonProps): JSX.Element => {
+const Button = ({ children, onBtnClick, href }: ButtonProps): JSX.Element => {
+  const buttonChildren = children?.toString().toLowerCase();
+
+  const showLink = buttonChildren?.includes('contact') || buttonChildren?.includes('fale');
+
   return (
-    <Btn onClick={onBtnClick}>
-      {children}
-    </Btn>
+    showLink
+      ? <LinkBtn href={href}>{children}</LinkBtn>
+      : <Btn onClick={onBtnClick}>{children}</Btn>
   );
 };
 
