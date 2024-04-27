@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const AboutUsSection = styled.section<{ theme: any }>`
+export const AboutUsSection = styled(motion.section)<{ theme: any }>`
   &.main-about-us {
     width: 100vw;
     background-color: ${({ theme }) => theme.body};

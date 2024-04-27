@@ -2,6 +2,7 @@ import Welcome from '@/components/Sections/Welcome';
 import AboutUs from '@/components/Sections/AboutUs';
 import Services from '@/components/Sections/Services';
 import Projects from '@/components/Sections/Projects';
+import Contact from '@/components/Sections/Contact';
 import { useActiveLink } from '@/contexts/ActiveLinkContext';
 import { useMainRef } from '@/contexts/HomeSectionsContext';
 import { Main } from '@/pages/styles/Home.styles';
@@ -25,6 +26,7 @@ const Home = (): JSX.Element => {
       <AboutUs id="about-us" />
       <Services id="services" />
       <Projects id="projects" />
+      <Contact id="contact" />
     </Main>
   )
 }

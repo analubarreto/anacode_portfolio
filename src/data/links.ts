@@ -31,6 +31,13 @@ export const links: Link[] = [
   },
   {
     id: 5,
+    name: 'Contact',
+    elementId: 'contact',
+    href: '#contact',
+    isUnderConstruction: false,
+  },
+  {
+    id: 6,
     name: 'Blog',
     elementId: null,
     href: '/blog',
