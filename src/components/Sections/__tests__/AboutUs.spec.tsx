@@ -17,13 +17,13 @@ describe('AboutUs', () => {
     render(<AboutUs id="about-us" />);
     
     // Get the button element
-    const readMoreButton = screen.getAllByText('Read More');
+    const memberImage = screen.getByTestId('member-image');
     
     // Assert that the modal is initially closed
     expect(screen.queryByTestId('modal')).not.toBeInTheDocument();
     
     // Click the button to open the modal
-    fireEvent.click(readMoreButton[0]);
+    fireEvent.click(memberImage);
     
     // Assert that the modal is now open
     expect(screen.getByTestId('modal')).toBeInTheDocument();
