@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const Main = styled(motion.main)<{ theme: any }>`
+export const Main = styled.main<{ theme: any }>`
   &.main-welcome {
     display: flex;
     flex-direction: column;
@@ -67,7 +67,7 @@ export const Title = styled.div`
   }
 `;
 
-export const Section = styled.section`
+export const Section = styled(motion.section)`
   display: flex;
   flex-direction: column;
   align-items: center;
