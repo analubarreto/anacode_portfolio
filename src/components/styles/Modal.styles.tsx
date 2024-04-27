@@ -2,22 +2,18 @@ import styled, { keyframes } from 'styled-components';
 
 const growAnimation = keyframes`
   from {
-    width: 0;
     height: 0;
   }
   to {
-    width: 100vw;
     height: 100vh;
   }
 `;
 
 const shrinkAnimation = keyframes`
   from {
-    width: 100vw;
     height: 100vh;
   }
   to {
-    width: 0;
     height: 0;
   }
 `;

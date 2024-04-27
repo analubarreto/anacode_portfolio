@@ -4,7 +4,9 @@ import { AboutUsSection } from '@/components/Sections/styles/AboutUs.styles';
 import { LinkedinLogo } from '@phosphor-icons/react'
 import Modal from '@/components/Modal';
 import { team } from '@/data/teamInfo';
+import { aboutInfo } from '@/data/aboutUsInfo';
 import { TeamMember } from '@/types/TeamMember';
+import Icon from '@/components/Icon';
 
 type AboutUsPropsType = {
   id: string;
@@ -33,28 +35,35 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
         id={id} 
         className='main-about-us section' 
         data-testid='about-us'
-        initial={{ scaleX: 0, y: 100 }}
-        whileInView={{ scaleX: 1, y: 0 }}
-        viewport={{ once: false }}
+
       >
         <h1>{t('About Us')}</h1>
-        <p>{t('About Us Text')}</p>
 
-        <div className='our-team'>
+        <section className='who-are-we'>
+          {
+            aboutInfo.map((info, index) => (
+              <div className='who-are-we__info' key={index}>
+                <Icon name={info.icon} size={4.8} isSymbol className='who-are-we__info--icon' />
+                <div>
+                  <h3>{t(info.title).toUpperCase()}</h3>
+                  <p>{t(info.text)}</p>
+                </div>
+              </div>
+            ))
+          }
+        </section>
+
+        <section className='our-team'>
           <h3 className='our-team__title'>{t('Our Team')}</h3>
 
           <div className='our-team__members'>
             {team.map((member, index) => (
-              <div className='our-team__members--member' key={index}>
+              <div className='our-team__members--member' key={index} onClick={() => handleModalToggle(member)}>
                 <div className='image-wrapper'>
                   <img src={`/images/${member.image}`} alt={member.name} />
                 </div>
                 <div className='text-wrapper'>
                   <h4>{t(member.name)}</h4>
-                  <p>
-                    {t(member.text)} 
-                    <button onClick={() => handleModalToggle(member)}>{t('Read More')}</button>
-                  </p>
                   <a href={member.linkedIn} target='_blank' rel='noreferrer'>
                     <LinkedinLogo className='linkedin' size={40} />
                   </a>
@@ -62,7 +71,7 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
               </div>
             ))}
           </div>
-        </div>
+        </section>
       </AboutUsSection>
     </>
   );

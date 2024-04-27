@@ -32,6 +32,59 @@ export const AboutUsSection = styled(motion.section)<{ theme: any }>`
       }
     }
 
+    .who-are-we {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      margin-top: 5rem;
+
+      @media (min-width: 1024px) {
+        flex-direction: row;
+        gap: 10rem;
+      }
+
+      &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        @media (min-width: 1024px) {
+          flex-direction: row;
+          gap: 2rem;
+        }
+
+        h3 {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+          text-transform: uppercase;
+
+          @media (min-width: 1024px) {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+          }
+        }
+
+        p {
+          font-size: 1.4rem;
+          width: 34rem;
+
+          @media (min-width: 1024px) {
+            font-size: 1.6rem;
+            width: 40rem;
+          }
+        }
+        
+        &--icon {
+          color: ${({ theme }) => theme.icon};
+          font-size: 3.6rem;
+
+          @media (min-width: 1024px) {
+            font-size: 4.8rem;
+          }
+        }
+      }
+    }
+
     .our-team {
       display: flex;
       flex-direction: column;
@@ -57,12 +110,11 @@ export const AboutUsSection = styled(motion.section)<{ theme: any }>`
       &__members {
         display: flex;
         width: 100%;
-        flex-wrap: wrap;
         flex-direction: column;
 
         @media screen and (min-width: 1024px) {
           flex-direction: row;
-          flex-wrap: nowrap;
+          justify-content: space-around;
         }
 
         h4 {
@@ -106,20 +158,28 @@ export const AboutUsSection = styled(motion.section)<{ theme: any }>`
 
           @media screen and (min-width: 1024px) {
             align-items: flex-start;
-            flex-direction: row;
             margin-top: 0%;
           }
 
           .text-wrapper {
             display: flex;
-            flex-direction: column;
+
+            h4 {
+              font-size: 1.6rem;
+              margin-bottom: 1rem;
+              text-align: center;
+              width: 33.2rem;
+
+              @media screen and (min-width: 1024px) {
+                font-size: 2rem;
+                margin-bottom: 3rem;
+              }
+            }
 
             .linkedin {
-              margin-top: 2rem;
               color: ${({ theme }) => theme.linkedIn};
 
               @media screen and (min-width: 1024px) {
-                margin-top: 2rem;
                 color: ${({ theme }) => theme.linkedIn};
               }
             }
@@ -134,16 +194,18 @@ export const AboutUsSection = styled(motion.section)<{ theme: any }>`
 
           .image-wrapper {
             position: relative;
-            width: 20.5rem;
-            height: 25.6rem;
+            width: 25rem;
+            height: 25rem;
             overflow: visible;
-            border-radius: 20rem;
+            border-radius: 100%;
             background-color: ${({ theme }) => theme.imageBackground};
             margin-right: 2rem;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
 
             @media screen and (min-width: 1024px) {
               width: 35rem;
-              height: 32rem;
+              height: 35rem;
             }
 
             img {
@@ -154,13 +216,17 @@ export const AboutUsSection = styled(motion.section)<{ theme: any }>`
               position: absolute;
               top: 50%;
               left: 50%;
-              transform: translate(-50%, -57.5%);
+              transform: translate(-50%, -58.2%);
 
               @media screen and (min-width: 1024px) {
                 width: 40rem;
                 height: 40rem;
-                transform: translate(-50%, -60%);
+                transform: translate(-50%, -56%);
               }
+            }
+
+            &:hover {
+              transform: scale(0.8);
             }
           }
         }
