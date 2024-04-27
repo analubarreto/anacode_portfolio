@@ -35,7 +35,9 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
         id={id} 
         className='main-about-us section' 
         data-testid='about-us'
-
+        initial={{ scale: 0, y: 100 }}
+        whileInView={{ scale: 1, y: 0 }}
+        viewport={{ once: false }}
       >
         <h1>{t('About Us')}</h1>
 
