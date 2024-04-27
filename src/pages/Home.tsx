@@ -2,11 +2,10 @@ import Welcome from '@/components/Sections/Welcome';
 import AboutUs from '@/components/Sections/AboutUs';
 import Services from '@/components/Sections/Services';
 import Projects from '@/components/Sections/Projects';
-import { useEffect } from 'react';
 import { useActiveLink } from '@/contexts/ActiveLinkContext';
 import { useMainRef } from '@/contexts/HomeSectionsContext';
-import { links } from '@/data/links';
 import { Main } from '@/pages/styles/Home.styles';
+import { useScrollActiveLink } from '@/hooks/useScrollActiveLink';
 
 /**
  * The Home component represents the home page of the portfolio.
@@ -17,30 +16,8 @@ const Home = (): JSX.Element => {
   const [, setActiveLink] = useActiveLink();
   const mainRef = useMainRef();
 
-  useEffect(() => {
-    if (mainRef === null || mainRef.current === null) return;
-    
-    const handleScroll = () => {
-      const sections = document.getElementsByClassName('section');
-
-      const currentSection = Array.from(sections).find(section => {
-        const rect = section.getBoundingClientRect();
-        return rect.top <= 0 && rect.bottom > 0;
-      });
-
-      if (currentSection) {
-        const id = currentSection.getAttribute('id');
-        const link = links.find(link => link.elementId === id) || links[0];
-        setActiveLink(link.id);
-      }
-    };
-
-    mainRef.current.addEventListener('scroll', handleScroll);
-
-    return () => {
-      mainRef?.current?.removeEventListener('scroll', handleScroll);
-    }
-  }, []);
+  // @ts-ignore
+  useScrollActiveLink(mainRef, setActiveLink);
 
   return (
     <Main ref={mainRef}>
