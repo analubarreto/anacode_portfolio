@@ -21,12 +21,6 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [teamMember, setTeamMember] = useState<TeamMember | null>(null);
 
-  /**
-   * Toggles the modal and sets the selected team member.
-   *
-   * @param {TeamMember | null} teamMember - The selected team member.
-   * @returns {void}
-   */
   const handleModalToggle = (teamMember: TeamMember | null): void => {
     if (teamMember) setTeamMember(teamMember);
     setIsModalOpen(!isModalOpen);
@@ -35,7 +29,14 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
   return (
     <>
       <Modal isModalOpen={isModalOpen} onClose={() => handleModalToggle(null)} teamMember={teamMember} testId='modal' />
-      <AboutUsSection id={id} className='main-about-us section' data-testid='about-us'>
+      <AboutUsSection
+        id={id} 
+        className='main-about-us section' 
+        data-testid='about-us'
+        initial={{ scaleX: 0, y: 100 }}
+        whileInView={{ scaleX: 1, y: 0 }}
+        viewport={{ once: false }}
+      >
         <h1>{t('About Us')}</h1>
         <p>{t('About Us Text')}</p>
 

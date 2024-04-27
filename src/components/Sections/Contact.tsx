@@ -13,7 +13,13 @@ const Contact = ({ id }: ProjectsProps): JSX.Element => {
   // const { theme } = useTheme();
 
   return (
-    <Section id={id} className='main-contact section'>
+    <Section
+      id={id} 
+      className='main-contact section'
+      initial={{ scale: 0, y: 100 }}
+      whileInView={{ scale: 1, y: 0 }}
+      viewport={{ once: false }}
+    >
       <p>Contact</p>
     </Section>
   )

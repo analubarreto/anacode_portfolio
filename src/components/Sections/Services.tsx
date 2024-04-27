@@ -13,7 +13,13 @@ const Services = ({ id }: ProjectsProps): JSX.Element => {
   // const { theme } = useTheme();
 
   return (
-    <Section id={id} className='main-services section'>
+    <Section
+      id={id}
+      className='main-services section'
+      initial={{ scale: 0, y: 100 }}
+      whileInView={{ scale: 1, y: 0 }}
+      viewport={{ once: false }}
+    >
       <p>Services</p>
     </Section>
   )
