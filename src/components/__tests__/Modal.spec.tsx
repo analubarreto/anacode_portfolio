@@ -11,7 +11,6 @@ describe('ModalComponent', () => {
     name: 'John Doe',
     image: 'john-doe.jpg',
     text: 'Lorem ipsum dolor sit amet',
-    textContinuation: 'consectetur adipiscing elit',
     linkedIn: 'https://www.linkedin.com/in/johndoe'
   };
 
