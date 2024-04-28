@@ -33,7 +33,7 @@ const Services = ({ id }: ProjectsProps): JSX.Element => {
                   <h3>{t(service.title).toUpperCase()}</h3>
                 </div>
                 <p className='service__text'>{t(service.description)}</p>
-                <Button>{t('Learn More')}</Button>
+                <Button isLink href='#contact'>{t('Learn More')}</Button>
               </div>
             );
           })

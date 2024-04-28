@@ -4,12 +4,13 @@ type ButtonProps = {
   children: React.ReactNode;
   onBtnClick?: () => void;
   href?: string;
+  isLink?: boolean;
 };
 
-const Button = ({ children, onBtnClick, href }: ButtonProps): JSX.Element => {
+const Button = ({ children, onBtnClick, href, isLink }: ButtonProps): JSX.Element => {
   const buttonChildren = children?.toString().toLowerCase();
 
-  const showLink = buttonChildren?.includes('contact') || buttonChildren?.includes('fale');
+  const showLink = buttonChildren?.includes('contact') || buttonChildren?.includes('fale') || isLink;
 
   return (
     showLink

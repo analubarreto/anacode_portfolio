@@ -6,6 +6,7 @@ export const Section = styled(motion.section)<{ theme: any }>`
     display: flex;
     flex-direction: column;
     width: 100vw;
+    height: 100vh;
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     padding: 4rem 2rem 0 2rem;
