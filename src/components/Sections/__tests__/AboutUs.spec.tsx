@@ -5,7 +5,24 @@ import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
 import AboutUs from '../AboutUs';
 
+// Mock IntersectionObserver
+class MockIntersectionObserver {
+  constructor() {
+    //@ts-ignore
+    this.observe = jest.fn();
+    //@ts-ignore
+    this.disconnect = jest.fn();
+    //@ts-ignore
+    this.unobserve = jest.fn();
+  }
+}
+
 describe('AboutUs', () => {
+  beforeEach(() => {
+    //@ts-ignore
+    global.IntersectionObserver = MockIntersectionObserver;
+  });
+
   test('renders AboutUs component', () => {
     render(<AboutUs id="about-us" />);
     
@@ -17,13 +34,13 @@ describe('AboutUs', () => {
     render(<AboutUs id="about-us" />);
     
     // Get the button element
-    const memberImage = screen.getByTestId('member-image');
+    const memberImage = screen.getAllByTestId('member-image');
     
     // Assert that the modal is initially closed
     expect(screen.queryByTestId('modal')).not.toBeInTheDocument();
     
     // Click the button to open the modal
-    fireEvent.click(memberImage);
+    fireEvent.click(memberImage[0]);
     
     // Assert that the modal is now open
     expect(screen.getByTestId('modal')).toBeInTheDocument();
