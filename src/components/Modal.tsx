@@ -41,7 +41,7 @@ const ModalComponent = ({ teamMember, isModalOpen, onClose, testId = 'modal' }: 
                 <img className='member__image' src={`/images/${teamMember?.image}`} alt= {teamMember?.name} />
               </div>
               <div className='member__text-wrap'>
-                <p>{ t(teamMember?.text) } { t(teamMember?.textContinuation) }</p>
+                <p>{ t(teamMember?.text) }</p>
                 <a href={teamMember.linkedIn} target='_blank' rel='noreferrer'><LinkedinLogo size={40} /></a>
               </div>
             </article>
