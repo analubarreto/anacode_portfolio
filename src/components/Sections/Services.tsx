@@ -27,7 +27,7 @@ const Services = ({ id }: ProjectsProps): JSX.Element => {
         {
           services.map((service) => {
             return (
-              <div key={service.id} className='service'>
+              <div key={service.id} className='service' data-testid='service'>
                 <div className='service__title'>
                   <Icon name={service.icon} size={4.8} isSymbol={service.isIconSymbol || false} className='service__title--icon' />
                   <h3>{t(service.title).toUpperCase()}</h3>
@@ -45,7 +45,7 @@ const Services = ({ id }: ProjectsProps): JSX.Element => {
           {
             servicesAddons.map((serviceInclude, index) => {
               return (
-                <div key={index} className='addon'>
+                <div key={index} className='addon' data-testid='addon'>
                   <Icon name='check_box' size={2.7} isSymbol={true} className='addon__icon' />
                   <p className='addon__text'>{t(serviceInclude)}</p>
                 </div>
