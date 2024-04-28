@@ -4,18 +4,7 @@ import '@testing-library/jest-dom/jest-globals';
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
 import AboutUs from '../AboutUs';
-
-// Mock IntersectionObserver
-class MockIntersectionObserver {
-  constructor() {
-    //@ts-ignore
-    this.observe = jest.fn();
-    //@ts-ignore
-    this.disconnect = jest.fn();
-    //@ts-ignore
-    this.unobserve = jest.fn();
-  }
-}
+import { MockIntersectionObserver } from '../../../mocks/IntersectionObserver';
 
 describe('AboutUs', () => {
   beforeEach(() => {
