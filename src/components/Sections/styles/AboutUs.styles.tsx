@@ -4,12 +4,13 @@ import { motion } from 'framer-motion';
 export const AboutUsSection = styled(motion.section)<{ theme: any }>`
   &.main-about-us {
     width: 100vw;
+    height: 100vh;
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     padding: 4rem 2rem 0 2rem;
 
     @media (min-width: 1024px) {
-      padding: 12rem 10rem 0 10rem;
+      padding: 8rem 10rem 0 10rem;
     }
 
     h1 {
