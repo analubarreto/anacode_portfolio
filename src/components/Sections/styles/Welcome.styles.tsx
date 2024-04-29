@@ -35,7 +35,7 @@ export const Title = styled.div`
       font-size: 4.8rem;
 
       @media (min-width: 1024px) {
-        font-size: 12.8rem;
+        font-size: 10rem;
       }
     }
     span {
