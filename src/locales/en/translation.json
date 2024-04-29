@@ -1,9 +1,24 @@
 {
   "The Bridge Between Dreams and Reality": "The Bridge Between Dreams and Reality",
   "Home": "Home",
+
+
   "Projects": "Projects",
-  "Contact": "Contact",
+  "Projects Page Title": "Our Projects",
+  "Drom Done": "Blog creation, including UI/UX design and development",
+  "Drom Description": "Blog for a software company",
+  "Fan Fic Done": "Blog creation, including UI/UX design and development",
+  "Fan Fic Description": "Blog for a fan fiction writer",
+  "Food App Done": "Landing Page for food app promotion, including UI/UX design and development",
+  "Food App Description": "Landing Page for a food delivery app",
+  "Visit the page": "Visit the page",
+
+
   "Blog": "Blog",
+
+  "Contact": "Contact",
+
+
   "About Us": "Who are we",
   "Our Purpose": "Our Purpose",
   "Our Purpose Text": "Our purpose is to inspire and empower every individual to reach their full potential. We are here to support you on your journey, helping you achieve your dreams and goals",
@@ -16,6 +31,8 @@
   "Ana Luiza Text": "With 5 years of experience as a Software Engineer and a burning passion for technology, Ana Luiza brings a unique approach to website development. Her background in psychology adds an innovative perspective, ensuring that each project is not only functional but also captivating. Forged in a variety of projects and companies, Ana Luiza is a visionary leader who is always one step ahead while sharing her love for cats with the world.",
   "Roger": "Roger Milan: The Quality Expert with a Vision for the Future",
   "Roger Text": "With 4 years of experience in the technology field, Roger Milan is a passionate enthusiast for innovation. As a Quality Expert, he brings a sharp eye for details and exceptional analytical skills to each project. His dedication to excellence ensures that every product developed by our company meets the highest standards, while he continues to drive the team towards the future of technology.",
+
+
   "Services": "Services",
   "Services Page Title": "Our Services",
   "Learn More": "Learn more!",
@@ -39,10 +56,8 @@
   "Blogs Text": "Online platforms for regularly sharing relevant content on various subjects. They help build authority, engage the audience, and drive website traffic.",
   "Maintenance": "Manutenção",
   "Maintenance Text": "A continuous process of updating, fixing technical issues, and ensuring security to guarantee that the website remains functional and safe.",
-  "Software Engineer": "Software Engineer",
-  "My experience": "My experience",
-  "Front-End Developer": "Front-End Developer",
-  "Web Developer": "Web Developer",
+
+  
   "Under construction": "Under construction",
   "Contact us": "Contact us!",
   "Dark Mode": "Dark Mode",

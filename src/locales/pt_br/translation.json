@@ -1,9 +1,25 @@
 {
   "Unblocking your digital potential": "A ponte entre sonhos e realidade",
   "Home": "Home",
+
+
   "Projects": "Projetos",
+  "Projects Page Title": "Nossos Projetos",
+  "Drom Done": "Criação de blog, incluindo design UI/UX e código.",
+  "Drom Description": "Blog para empresa de Software",
+  "Fan Fic Done": "Criação de blog, incluindo design UI/UX e código.",
+  "Fan Fic Description": "Site para escritora de fanfics",
+  "Food App Done": "Ciração de landing page para promoção de aplicativo, incluindo UI/UX design e desenvolvimento",
+  "Food App Description": "Landing page para aplicativo de receitas",	
+  "Visit the page": "Viste a página",
+
+
   "Blog": "Blog",
+
+
   "Contact": "Contato",
+
+
   "About Us": "Quem somos",
   "Our Purpose": "Nosso Propósito",
   "Our Purpose Text": "Nosso propósito é inspirar e capacitar cada indivíduo a alcançar todo o  seu potencial. Estamos aqui para apoiar você em sua jornada, ajudando-o a  realizar seus sonhos e objetivos.",
@@ -16,6 +32,8 @@
   "Ana Luiza Text": "Com 5 anos de experiência como Engenheira de Software e uma paixão  ardente por tecnologia, Ana Luiz traz uma abordagem única para o esenvolvimento de sites. Sua formação em psicologia adiciona uma  perspectiva inovadora, garantindo que cada projeto seja não apenas  funcional, mas também cativante. Forjada em uma variedade de projetos e  empresas, Ana Luiza é uma líder visionária que está sempre um passo à  frente, enquanto compartilha seu amor por gatos com o mundo.",
   "Roger": "Roger Milan: O Especialista em Qualidade com Visão de Futuro",
   "Roger Text": "Com 4 anos de experiência na área de tecnologia, Roger Milan é um  entusiasta apaixonado por inovação. Especialista em Qualidade ele traz um olhar afiado para detalhes e habilidades analíticas excepcionais para  cada projeto. Sua dedicação à excelência garante que cada produto  desenvolvido pela nossa empresa atenda aos mais altos padrões, enquanto  ele continua impulsionando a equipe em direção ao futuro da tecnologia.",
+  
+
   "Services": "Serviços",
   "Services Page Title": "Nossos Serviços",
   "Our Services Include": "Nossos serviços incluem",
@@ -39,10 +57,8 @@
   "Blogs Text": "Plataformas online para compartilhar regularmente conteúdo relevante sobre diversos assuntos. Eles ajudam a construir autoridade, engajar o público e impulsionar o tráfego do site.",
   "Maintenance": "Manutenção",
   "Maintenance Text": "Processo contínuo de atualização, correção de  problemas técnicos e garantia de segurança para garantir que o site  permaneça funcional e seguro.",
-  "Software Engineer": "Engenheira de Software",
-  "My experience": "Minha experiência",
-  "Front-End Developer": "Desenvolvedora Front-End",
-  "Web Developer": "Desenvolvedora Web",
+  
+
   "Under construction": "Em construção",
   "Contact us": "Fale conosco!",
   "Dark Mode": "Modo Escuro",
