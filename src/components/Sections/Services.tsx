@@ -1,5 +1,3 @@
-//@ts-ignore
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Section } from '@/components/Sections/styles/Services.styles';
 import { services, servicesAddons } from '@/data/services';
@@ -17,11 +15,10 @@ const Services = ({ id }: ProjectsProps): JSX.Element => {
     <Section
       id={id}
       className='main-services section'
-      initial={{ scale: 0, y: 100 }}
-      whileInView={{ scale: 1, y: 0 }}
-      viewport={{ once: false }}
     >
-      <h1>{t('Services Page Title')}</h1>
+      <article className='main-services__title'>
+        <h1>{t('Services Page Title')}</h1>
+      </article>
 
       <section className='services-wrapper'>
         {

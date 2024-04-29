@@ -1,18 +1,26 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
-export const Section = styled(motion.section)<{ theme: any }>`
+export const Section = styled.section<{ theme: any }>`
   &.main-services {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-    padding: 4rem 2rem 0 2rem;
 
     @media (min-width: 1024px) {
-      padding: 8rem 10rem 0 10rem;
+      height: 110vh;
+    }
+
+    .main-services__title {
+      background-color: ${({ theme }) => theme.icon};
+      width: 100vw;
+      padding: 4rem 2rem 0 2rem;
+      color: ${({ theme }) => theme.body};
+
+      @media (min-width: 1024px) {
+        padding: 8rem 10rem 0 10rem;
+      }
     }
 
     .services-wrapper {
@@ -20,11 +28,13 @@ export const Section = styled(motion.section)<{ theme: any }>`
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(2, 1fr);
       gap: 2rem;
+      padding: 2rem 2rem 0 2rem;
 
       @media (min-width: 1024px) {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         margin-top: 3rem;
+        padding: 2rem 10rem 0 10rem;
       }
 
       .service {
@@ -59,10 +69,12 @@ export const Section = styled(motion.section)<{ theme: any }>`
       display: flex;
       flex-direction: column;
       margin-top: 3rem;
+      padding: 4rem 2rem 0 2rem;
 
       @media (min-width: 1024px) {
         justify-content: space-between;
         margin-top: 5rem;
+        padding: 4rem 10rem 0 10rem;
       }
 
       h3 {
