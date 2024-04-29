@@ -21,10 +21,10 @@ const Welcome = ({ id }: WelcomeProps): JSX.Element => {
           ease: 'easeInOut',
         }}
       >
-        <img src='/images/logo.svg' alt='Ana Code' />
+        <img src='/images/logo.svg' alt='Drom Code' />
         <Title>
           <div className='main-title' data-testid='main-title'>
-            <h1 data-testid='title'>Ana Code</h1>
+            <h1 data-testid='title'>Dröm Code</h1>
           </div>
           <h3 data-testid='subtitle'>{ t('Unblocking your digital potential').toUpperCase() }</h3>
         </Title>

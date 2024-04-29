@@ -14,7 +14,7 @@ describe('Welcome', () => {
     const subtitle = screen.getByTestId('subtitle');
 
     expect(mainTitle).toBeInTheDocument();
-    expect(title).toHaveTextContent('Ana Code');
+    expect(title).toHaveTextContent('Dröm Code');
     expect(subtitle).toHaveTextContent('UNBLOCKING YOUR DIGITAL POTENTIAL');
   });
 });
