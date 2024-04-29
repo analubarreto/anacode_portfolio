@@ -24,7 +24,7 @@ export const MenuIcon = styled.button<{ $open: boolean }>`
    * Represents the lines of the hamburger menu icon.
    */
   .menu-lines {
-    display: block;
+    display: ${({ $open }) => ($open ? 'none' : 'block')};
     height: 4px;
     width: 100%;
     border-radius: 10px;

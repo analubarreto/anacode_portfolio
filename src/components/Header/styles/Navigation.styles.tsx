@@ -16,7 +16,7 @@ export const Nav = styled.nav<{ theme: string, $isOnTop: boolean }>`
     flex-direction: column;
     gap: 2rem;
     list-style: none;
-    margin-top: 6rem;
+    margin-top: 3rem;
 
     @media (min-width: 1024px) {
       gap: 0;
