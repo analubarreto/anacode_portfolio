@@ -8,23 +8,34 @@ export const Section = styled.section<{ theme: any }>`
     width: 100vw;
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-    padding: 4rem 2rem 0 2rem;
+    padding: 8rem 2rem 0 2rem;
 
     @media (min-width: 1024px) {
       padding: 16rem 10rem 0 10rem;
     }
 
     .carousel-wrap {
-      margin-top: 12rem;
+      margin-top: 4rem;
+
+      @media screen and (min-width: 1024px) {
+        margin-top: 12rem;
+      }
     }
   }
 `;
 
 export const CarouselItem = styled.div`
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 75vw;
+  width: 90vw;
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 75vw;
+  }
 
   .carousel-item__data {
     display: flex;
@@ -43,6 +54,11 @@ export const CarouselItem = styled.div`
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
+      height: 25rem;
+
+      @media screen and (min-width: 1024px) {
+        justify-content: space-between;
+      }
 
       h3 {
         font-size: 2.4rem;
@@ -78,8 +94,12 @@ export const CarouselItem = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 40rem;
       margin-top: 3rem;
+      width: 30rem;
+
+      @media screen and (min-width: 1024px) {
+        width: 40rem;
+      }
     }
   }
 `;
@@ -88,11 +108,20 @@ export const CarouselImage = styled.img<{ $animate: boolean }>`
   border-radius: 2rem;
   transform: rotate(-20deg) translateY(0);
   transition: transform 0.5s ease, opacity 0.5s ease;
+  width: 30rem;
+  margin-bottom: 2rem;
+  order: -1;
 
   ${({ $animate }) => $animate && css`
     transform: rotate(-20deg) translateY(-100);
     opacity: 1;
   `}
+
+  @media screen and (min-width: 1024px) {
+    margin-top: 0;
+    width: 40rem;
+    order: 1;
+  }
 `;
 
 export const ArrowIcon = styled(Icon)<{ $isDisabled: boolean }>`

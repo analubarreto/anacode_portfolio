@@ -21,7 +21,7 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Food App Blog",
+    title: "Food App",
     description: "Food App Description",
     whatWasDone: "Food App Done",
     image: "https://picsum.photos/400",
