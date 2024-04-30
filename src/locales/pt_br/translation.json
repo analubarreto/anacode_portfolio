@@ -21,17 +21,17 @@
 
 
   "About Us": "Quem somos",
-  "Our Purpose": "Nosso Propósito",
-  "Our Purpose Text": "Nosso propósito é inspirar e capacitar cada indivíduo a alcançar todo o  seu potencial. Estamos aqui para apoiar você em sua jornada, ajudando-o a  realizar seus sonhos e objetivos.",
+  "Our Purpose": "Nossa Missão",
+  "Our Purpose Text": "Nossa missão é inspirar e capacitar cada indivíduo a alcançar todo o seu potencial. Estamos aqui para apoiá-lo em sua jornada, ajudando-o a realizar seus sonhos e objetivos com confiança e orientação.",
   "Our Vision": "Nossa Visão",
-  "Our Vision Text": "Queremos ser a companhia em que você confia para todas as suas  necessidades digitais. Nosso objetivo é ser uma fonte confiável de  orientação e recursos, ajudando-o a navegar no mundo digital com confiança e sucesso.",
+  "Our Vision Text": "Desejamos ser a sua guia confiável no mundo digital, ajudando-o a navegar com confiança e sucesso. Conte conosco para atender todas as suas necessidades digitais.",
   "Why Choose Us": "Por que nos escolher?",
-  "Why Choose Us Text": "Nossa abordagem é centrada em você. Não se trata apenas de fornecer  serviços, mas sim de construir uma parceria duradoura. Nossa equipe está  aqui para oferecer suporte personalizado e soluções adaptadas às suas  necessidades específicas.",
+  "Why Choose Us Text": "Nossa abordagem é toda sobre você. Não se trata apenas de oferecer serviços, mas de construir uma parceria duradoura. Estamos aqui para fornecer apoio personalizado e soluções adaptadas às suas necessidades específicas, guiando você com confiança em direção aos seus objetivos.",
   "Our Team": "Nosso Time",
   "Ana Luiza": "Ana Luiza: A Mente Criativa por Trás da Inovação Tecnológica",
-  "Ana Luiza Text": "Com 5 anos de experiência como Engenheira de Software e uma paixão  ardente por tecnologia, Ana Luiz traz uma abordagem única para o esenvolvimento de sites. Sua formação em psicologia adiciona uma  perspectiva inovadora, garantindo que cada projeto seja não apenas  funcional, mas também cativante. Forjada em uma variedade de projetos e  empresas, Ana Luiza é uma líder visionária que está sempre um passo à  frente, enquanto compartilha seu amor por gatos com o mundo.",
+  "Ana Luiza Text": "Com 5 anos de dedicação como Engenheira de Software e uma paixão genuína pela tecnologia, Ana Luiza traz uma abordagem fresca para o desenvolvimento de sites. Sua formação em psicologia adiciona uma perspectiva única, garantindo que cada projeto seja não só funcional, mas também envolvente. Com sua experiência diversificada em vários projetos e empresas, Ana Luiza é uma líder inspiradora, sempre um passo à frente, enquanto compartilha seu amor pelos felinos com o mundo.",
   "Roger": "Roger Milan: O Especialista em Qualidade com Visão de Futuro",
-  "Roger Text": "Com 4 anos de experiência na área de tecnologia, Roger Milan é um  entusiasta apaixonado por inovação. Especialista em Qualidade ele traz um olhar afiado para detalhes e habilidades analíticas excepcionais para  cada projeto. Sua dedicação à excelência garante que cada produto  desenvolvido pela nossa empresa atenda aos mais altos padrões, enquanto  ele continua impulsionando a equipe em direção ao futuro da tecnologia.",
+  "Roger Text": "Com 4 anos imerso no mundo da tecnologia, Roger Milan é um entusiasta  apaixonado por inovação. Especializado em Qualidade, ele traz um olhar  meticuloso para os detalhes e habilidades analíticas excepcionais para  cada projeto. Sua busca pela excelência garante que cada produto  desenvolvido pela nossa empresa atenda aos mais altos padrões, enquanto  ele lidera a equipe em direção ao futuro da tecnologia, mantendo uma  visão pura e otimista.",
   
 
   "Services": "Serviços",
@@ -46,21 +46,21 @@
   "Pamphlet": "Panfleto digital ensinando a mexer no Github",
   "Seven Days": "Sete dias de suporte após a entrega",
   "Thirty Percent": "30% de desconto no primeiro ano de manutenção",
-  "Learn More": "Saiba mais!",
+  "Learn More": "Explore mais!",
   "Landing Pages": "Páginas de Destino",
-  "Landing Pages Text": "Uma página da web projetada para converter visitantes  em leads ou clientes. Ela tem um objetivo claro, como capturar  informações de contato ou promover um produto/serviço. Com design  atraente e conteúdo persuasivo, seu objetivo é motivar os visitantes a  agir imediatamente.",
-  "Web Design": "Web Design (UI/UX)",
-  "Web Design Text": "Focado na experiência do usuário (UX) e na interface (UI) de  produtos digitais. UX visa tornar a interação intuitiva, enquanto UI  trata do aspecto visual e funcionalidade. Juntos, são essenciais para  criar produtos digitais envolventes",
+  "Landing Pages Text": "Uma landing page é como um convite irresistível para uma jornada. Com  design cativante e palavras persuasivas, ela motiva os visitantes a agir  imediatamente.",
+  "Web Design": "Design UI/UX",
+  "Web Design Text": "O design UI/UX é a mágica por trás de uma experiência digital intuitiva e  visualmente deslumbrante. É como um abraço acolhedor em um mundo  digitalmente encantador.",
   "Corporate Web Sites": "Sites Corporativos",
-  "Corporate Web Sites Text": "São a presença online de uma empresa, oferecendo informações sobre seus produtos/serviços, equipe e contatos. São essenciais para estabelecer uma forte presença na web e se comunicar com o público-alvo.",
+  "Corporate Web Sites Text": "Um website corporativo é mais do que uma presença online; é um convite para uma conversa, onde os sonhos de negócios se conectam com o mundo.",
   "Blogs": "Blogs",
-  "Blogs Text": "Plataformas online para compartilhar regularmente conteúdo relevante sobre diversos assuntos. Eles ajudam a construir autoridade, engajar o público e impulsionar o tráfego do site.",
+  "Blogs Text": "Um blog é um refúgio para os curiosos, onde ideias são cultivadas e compartilhadas. É um convite para explorar os reinos do pensamento humano.",
   "Maintenance": "Manutenção",
-  "Maintenance Text": "Processo contínuo de atualização, correção de  problemas técnicos e garantia de segurança para garantir que o site  permaneça funcional e seguro.",
+  "Maintenance Text": "Manter um site é como cuidar de um jardim encantado. É um compromisso contínuo de preservar sua beleza e funcionalidade, protegendo-o contra invasores indesejados.",
   
 
   "Under construction": "Em construção",
-  "Contact us": "Fale conosco!",
+  "Contact us": "Vamos conversar?",
   "Dark Mode": "Modo Escuro",
   "Light Mode": "Modo Claro"
 }
