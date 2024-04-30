@@ -5,6 +5,8 @@ export const Section = styled.section<{ theme: any }>`
   &.main-projects {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
@@ -12,6 +14,11 @@ export const Section = styled.section<{ theme: any }>`
 
     @media (min-width: 1024px) {
       padding: 16rem 10rem 0 10rem;
+      height: 100vh;
+    }
+
+    h1 {
+      align-self: flex-start;
     }
 
     .carousel-wrap {
@@ -24,7 +31,7 @@ export const Section = styled.section<{ theme: any }>`
   }
 `;
 
-export const CarouselItem = styled.div`
+export const CarouselItem = styled.div<{ $animate: boolean, $isNext: boolean | null }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,22 +106,24 @@ export const CarouselItem = styled.div`
 
       @media screen and (min-width: 1024px) {
         width: 40rem;
+        margin-top: 6rem;
       }
     }
   }
 `;
 
-export const CarouselImage = styled.img<{ $animate: boolean }>`
+export const CarouselImage = styled.img<{ $animate: boolean, $isNext: boolean | null }>`
   border-radius: 2rem;
-  transform: rotate(-20deg) translateY(0);
-  transition: transform 0.5s ease, opacity 0.5s ease;
   width: 30rem;
   margin-bottom: 2rem;
   order: -1;
+  filter: blur(0%);
 
-  ${({ $animate }) => $animate && css`
-    transform: rotate(-20deg) translateY(-100);
+  ${({ $animate, $isNext }) => $animate && css`
     opacity: 1;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    transform: translateX(${ $isNext ? '10rem' : '-10rem' });
+    transform-origin: ${ $isNext ? 'left' : 'right' };
   `}
 
   @media screen and (min-width: 1024px) {
