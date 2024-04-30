@@ -43,7 +43,7 @@ const Projects = ({ id }: ProjectsProps): JSX.Element => {
       <article className='carousel-wrap'>
         {
           pages.map((project, index) => (
-            <CarouselItem $animate={animate} $isNext={isNext} key={index}>
+            <CarouselItem $animate={animate} $isNext={isNext} key={index} data-testid='carousel-item'>
               <div className='carousel-item__data'>
                 <div className='carousel-item__data--info'>
                   <h3>{ project.title }</h3>
@@ -53,12 +53,14 @@ const Projects = ({ id }: ProjectsProps): JSX.Element => {
                 </div>
                 <div className='carousel-item__data--arrows'>
                   <ArrowIcon
+                    dataTestId="next-button"
                     $isDisabled={disablePrev}
                     onClick={handlePrevClick}
                     name='arrow_circle_left' 
                     size={4}
                     isSymbol />
                   <ArrowIcon
+                    dataTestId="prev-button"
                     $isDisabled={disableNext}
                     onClick={handleNextClick}
                     name='arrow_circle_right' 
