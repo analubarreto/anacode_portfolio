@@ -28,9 +28,9 @@
   "Why Choose Us": "Por que nos escolher?",
   "Why Choose Us Text": "Nossa abordagem é toda sobre você. Não se trata apenas de oferecer serviços, mas de construir uma parceria duradoura. Estamos aqui para fornecer apoio personalizado e soluções adaptadas às suas necessidades específicas, guiando você com confiança em direção aos seus objetivos.",
   "Our Team": "Nosso Time",
-  "Ana Luiza": "Ana Luiza: A Mente Criativa por Trás da Inovação Tecnológica",
+  "Ana Luiza": "Ana Luiza: A Inspiração Por Trás da Inovação Tecnológica",
   "Ana Luiza Text": "Com 5 anos de dedicação como Engenheira de Software e uma paixão genuína pela tecnologia, Ana Luiza traz uma abordagem fresca para o desenvolvimento de sites. Sua formação em psicologia adiciona uma perspectiva única, garantindo que cada projeto seja não só funcional, mas também envolvente. Com sua experiência diversificada em vários projetos e empresas, Ana Luiza é uma líder inspiradora, sempre um passo à frente, enquanto compartilha seu amor pelos felinos com o mundo.",
-  "Roger": "Roger Milan: O Especialista em Qualidade com Visão de Futuro",
+  "Roger": "Roger Milan: O Guardião da Qualidade com Olhos no Amanhã",
   "Roger Text": "Com 4 anos imerso no mundo da tecnologia, Roger Milan é um entusiasta  apaixonado por inovação. Especializado em Qualidade, ele traz um olhar  meticuloso para os detalhes e habilidades analíticas excepcionais para  cada projeto. Sua busca pela excelência garante que cada produto  desenvolvido pela nossa empresa atenda aos mais altos padrões, enquanto  ele lidera a equipe em direção ao futuro da tecnologia, mantendo uma  visão pura e otimista.",
   
 
@@ -60,7 +60,14 @@
   
 
   "Under construction": "Em construção",
-  "Contact us": "Vamos conversar?",
+
+  "Contact Us": "Vamos conversar?",
+  "Working Hours": "Horários de atendimento",
+  "Monday to Friday": "Segunda a Sexta",
+  "Sat, Sun, Holidays": "Sáb, Dom, Feriados",
+  "Closed": "Fechado",
+  "Support": "Suporte",
+
   "Dark Mode": "Modo Escuro",
   "Light Mode": "Modo Claro"
 }

@@ -26,9 +26,9 @@
   "Why Choose Us": "Why Choose Us",
   "Why Choose Us Text": "Our approach is all about you. It's not just about offering services, but about building a lasting partnership. We are here to provide personalized support and solutions tailored to your specific needs, guiding you confidently towards your goals.",
   "Our Team": "Our Team",
-  "Ana Luiza": "Ana Luiza: A Creative Mind Behind Technological Innovation",
+  "Ana Luiza": "Ana Luiza: The Inspiration Behind Technological Innovation",
   "Ana Luiza Text": "With 5 years of dedication as a Software Engineer and a genuine passion for technology, Ana Luiza brings a fresh approach to website development. Her background in psychology adds a unique perspective, ensuring each project is not only functional but also engaging. With her diverse experience across multiple projects and companies, Ana Luiza is an inspiring leader, always one step ahead, while sharing her love for felines with the world.",
-  "Roger": "Roger Milan: The Quality Expert with a Vision for the Future",
+  "Roger": "Roger Milan: The Guardian of Quality with Eyes on Tomorrow",
   "Roger Text": "With 4 years immersed in the world of technology, Roger Milan is an enthusiast passionate about innovation. Specializing in Quality, he brings a meticulous eye for detail and exceptional analytical skills to each project. His pursuit of excellence ensures that every product developed by our company meets the highest standards, as he leads the team towards the future of technology while maintaining a pure and optimistic vision.",
 
 
@@ -58,7 +58,15 @@
 
   
   "Under construction": "Under construction",
-  "Contact us": "Let's talk?",
+
+  "Contact Us": "Let's talk?",
+  "Working Hours": "Working Hours",
+  "Monday to Friday": "Monday to Friday",
+  "Sat, Sun, Holidays": "Sat, Sun, Holidays",
+  "Closed": "Closed",
+  "Support": "Support",
+
+
   "Dark Mode": "Dark Mode",
   "Light Mode": "Light Mode"
 }
