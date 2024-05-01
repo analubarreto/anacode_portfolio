@@ -8,12 +8,12 @@ export const Section = styled.section<{ theme: any }>`
     justify-content: center;
     align-items: center;
     width: 100vw;
-    background-color: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text};
+    background-color: ${({ theme }) => theme.icon};
+    color: ${({ theme }) => theme.body};
     padding: 8rem 2rem 0 2rem;
 
     @media (min-width: 1024px) {
-      padding: 16rem 10rem 0 10rem;
+      padding: 12rem 10rem 15rem 10rem;
       height: 100vh;
     }
 
@@ -50,7 +50,7 @@ export const CarouselItem = styled.div<{ $animate: boolean, $isNext: boolean | n
     justify-content: space-between;
     width: 100%;
     padding: 2rem;
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.body};
 
     @media (min-width: 1024px) {
       padding: 2rem 10rem;
@@ -135,5 +135,5 @@ export const CarouselImage = styled.img<{ $animate: boolean, $isNext: boolean | 
 
 export const ArrowIcon = styled(Icon)<{ $isDisabled: boolean }>`
   cursor: ${({ $isDisabled }) => $isDisabled ? 'not-allowed' : 'pointer' };
-  color: ${({ theme, $isDisabled }) => $isDisabled ? theme.disabled : theme.icon };
+  color: ${({ theme, $isDisabled }) => $isDisabled ? theme.disabled : theme.body };
 `;

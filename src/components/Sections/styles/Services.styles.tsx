@@ -74,7 +74,7 @@ export const Section = styled.section<{ theme: any }>`
       @media (min-width: 1024px) {
         justify-content: space-between;
         margin-top: 5rem;
-        padding: 4rem 10rem 0 10rem;
+        padding: 4rem 10rem 15rem 10rem;
       }
 
       h3 {
