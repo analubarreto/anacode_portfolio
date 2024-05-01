@@ -42,7 +42,7 @@ const ModalComponent = ({ teamMember, isModalOpen, onClose, testId = 'modal' }: 
               </div>
               <div className='member__text-wrap'>
                 <p>{ t(teamMember?.text) }</p>
-                <a href={teamMember.linkedIn} target='_blank' rel='noreferrer'><LinkedinLogo size={40} /></a>
+                <a href={teamMember.linkedIn} target='_blank' rel='noopener noreferrer'><LinkedinLogo size={40} /></a>
               </div>
             </article>
           </Modal>
