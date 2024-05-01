@@ -1,5 +1,3 @@
-//@ts-ignore
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Section, CompanyInfo } from '@/components/Sections/styles/Contact.styles';
 
@@ -7,6 +5,12 @@ type ProjectsProps = {
   id: string;
 };
 
+/**
+ * Renders the Contact section of the portfolio.
+ *
+ * @param {ProjectsProps} props - The component props.
+ * @returns {JSX.Element} The rendered Contact section.
+ */
 const Contact = ({ id }: ProjectsProps): JSX.Element => {
   const { t } = useTranslation();
 
