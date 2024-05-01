@@ -45,12 +45,11 @@ const Header = ({ themeToggle, showMenu, themeName, closeMenu }: HeaderProps): J
   }, [])
 
   return (
-    <HeaderMain $showMenu={showMenu} ref={headerRef} $isOnTop={isOnTop}>
-      <Title $isOnTop={isOnTop}>
+    <HeaderMain $showMenu={showMenu} ref={headerRef}>
+      <Title>
         <Icon className='color-mode-toggle' isSymbol size={3} name={themeName === 'light' ? 'dark_mode' : 'light_mode'} onClick={themeToggle} />
-
-        <Navigation isOnTop={isOnTop} closeMenu={closeMenu} />
-        <LanguageToggle isOnTop={isOnTop} />
+        <Navigation closeMenu={closeMenu} />
+        <LanguageToggle isOnTop={isOnTop} className='language-toggle' />
       </Title>
     </HeaderMain>
   );

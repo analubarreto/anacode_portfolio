@@ -8,10 +8,9 @@ import { useActiveLink } from '@/contexts/ActiveLinkContext';
 
 type NavigationProps = {
   closeMenu: () => void;
-  isOnTop: boolean;
 }
 
-const Navigation = ({ closeMenu, isOnTop }: NavigationProps): JSX.Element => {
+const Navigation = ({ closeMenu }: NavigationProps): JSX.Element => {
   const { t } = useTranslation();
   const [activeLink, setActiveLink] = useActiveLink();
 
@@ -28,7 +27,7 @@ const Navigation = ({ closeMenu, isOnTop }: NavigationProps): JSX.Element => {
   };
 
   return (
-    <Nav $isOnTop={isOnTop}>
+    <Nav>
       <ul>
         {
           links.map(link => (
@@ -39,7 +38,6 @@ const Navigation = ({ closeMenu, isOnTop }: NavigationProps): JSX.Element => {
                     href={linkScrollHref(link)}
                     onClick={handleLinkClick(link.id)}
                     $isActive={activeLink === link.id}
-                    $isOnTop={isOnTop}
                   >
                     {t(link.name)}
                   </LinkScroll>
@@ -48,7 +46,6 @@ const Navigation = ({ closeMenu, isOnTop }: NavigationProps): JSX.Element => {
                     to={link.href}
                     $isActive={activeLink === link.id}
                     onClick={handleLinkClick(link.id)}
-                    $isOnTop={isOnTop}
                   >
                     {t(link.name)}
                   </Link>

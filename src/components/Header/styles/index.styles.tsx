@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
-export const HeaderMain = styled.header<{ $showMenu: boolean, $isOnTop: boolean }>`
+export const HeaderMain = styled.header<{ $showMenu: boolean }>`
   position: absolute;
   top: 0;
-  background-color: ${({ theme, $isOnTop }) => $isOnTop ? 'transparent' : theme.menuBackground};
-  border-radius: 1rem; 
-  z-index: 1;
+  background-color: ${({ theme }) => theme.body};
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  width: 95vw;
+  margin: 1rem auto 0 auto;
+  border-radius: 2rem; 
+  z-index: 3;
 
   @media screen and (max-width: 1023px) {
     visibility: ${({ $showMenu }) => ($showMenu ? 'visible' : 'hidden')};
@@ -28,7 +31,7 @@ export const HeaderMain = styled.header<{ $showMenu: boolean, $isOnTop: boolean 
  *
  * @param {Object} theme - The theme object containing color values.
  */
-export const Title = styled.div<{ theme: any, $isOnTop: boolean }>`
+export const Title = styled.div<{ theme: any }>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,16 +62,17 @@ export const Title = styled.div<{ theme: any, $isOnTop: boolean }>`
    * Styles for the color mode toggle button.
    */
   .color-mode-toggle {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: ${({ theme }) => theme.menuText};
-    order: 2;
-    align-self: flex-start;
-    margin-bottom: 1rem;
+    display: none;
 
     @media (min-width: 1024px) {
-      color: ${({ theme, $isOnTop }) => $isOnTop ? theme.text : theme.menuText};
+      display: block;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      order: 2;
+      align-self: flex-start;
+      margin-bottom: 1rem;
+      color: ${({ theme }) => theme.text};
       order: 0;
       margin-top: 2rem;
     }
@@ -84,6 +88,14 @@ export const Title = styled.div<{ theme: any, $isOnTop: boolean }>`
       @media (min-width: 1024px) {
         visibility: hidden;
       }
+    }
+  }
+
+  .language-toggle {
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: block;
     }
   }
 `;

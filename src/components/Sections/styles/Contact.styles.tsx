@@ -10,7 +10,7 @@ export const Section = styled(motion.section)<{ theme: any }>`
     width: 100vw;
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
-    padding: 8rem 2rem 5rem 2rem;
+    padding: 8rem 2rem 7rem 2rem;
 
     @media screen and (min-width: 1024px) {
       padding: 12rem 10rem 15rem 10rem;
@@ -62,7 +62,7 @@ export const Section = styled(motion.section)<{ theme: any }>`
 export const CompanyInfo = styled.article`
   display: flex;
   flex-direction: column;
-  height: 30rem;
+  height: 34rem;
   justify-content: space-between;
   background-color: #DCA1B0;
   padding: 2rem;

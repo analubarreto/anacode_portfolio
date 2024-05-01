@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 
-export const Nav = styled.nav<{ theme: string, $isOnTop: boolean }>`
+export const Nav = styled.nav<{ theme: string }>`
   background-color: transparent;
 
   @media (min-width: 1024px) {
@@ -61,7 +61,7 @@ export const Nav = styled.nav<{ theme: string, $isOnTop: boolean }>`
   }
 `;
 
-const linkStyles = css<{ theme: string, $isActive: boolean, $isOnTop: boolean }>`
+const linkStyles = css<{ theme: string, $isActive: boolean }>`
   text-decoration: none;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -81,9 +81,9 @@ const linkStyles = css<{ theme: string, $isActive: boolean, $isOnTop: boolean }>
 
     @media (min-width: 1024px) {
       background-color: ${
-        ({ theme, $isActive, $isOnTop }) => {
+        ({ theme, $isActive }) => {
           if ($isActive) {
-            return $isOnTop ? theme.text : theme.menuText;
+            return theme.text;
           }
           return 'transparent'
         }
@@ -92,15 +92,15 @@ const linkStyles = css<{ theme: string, $isActive: boolean, $isOnTop: boolean }>
   }
 
   @media (min-width: 1024px) {
-    color: ${({ theme, $isOnTop }) => $isOnTop ? theme.text : theme.menuText};
+    color: ${({ theme }) => theme.text };
     font-size: 1.6rem;
   }
 `;
 
-export const Link = styled(RouterLink)<{ theme: string, $isActive: boolean, $isOnTop: boolean }>`
+export const Link = styled(RouterLink)<{ theme: string, $isActive: boolean }>`
   ${linkStyles}
 `;
 
-export const LinkScroll = styled.a<{ theme: string, $isActive: boolean, $isOnTop: boolean }>`
+export const LinkScroll = styled.a<{ theme: string, $isActive: boolean }>`
   ${linkStyles}
 `;

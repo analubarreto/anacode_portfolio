@@ -5,9 +5,10 @@ import { Button, Wrapper } from '@/components/Header/styles/LanguageToggle.style
 
 type LanguageToggleProps = {
   isOnTop: boolean;
+  className?: string;
 }
 
-const LanguageToggle = ({ isOnTop }: LanguageToggleProps): JSX.Element => {
+const LanguageToggle = ({ isOnTop, className }: LanguageToggleProps): JSX.Element => {
   const { i18n } = useTranslation();
   const [activeLanguage, setActiveLanguage] = useState('pt_br');
      
@@ -19,7 +20,7 @@ const LanguageToggle = ({ isOnTop }: LanguageToggleProps): JSX.Element => {
   }
 
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       {
         languageList.map(language => (
           <Button

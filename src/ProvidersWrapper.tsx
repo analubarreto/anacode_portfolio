@@ -5,6 +5,8 @@ import { ActiveLinkProvider } from '@/contexts/ActiveLinkContext';
 import { HomeSectionsProvider } from '@/contexts/HomeSectionsContext';
 import { useState } from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import LanguageToggle from '@/components/Header/LanguageToggle';
+import Icon from '@/components/Icon';
 
 /**
  * Global styles for the application.
@@ -45,6 +47,32 @@ const GlobalStyle = createGlobalStyle`
       font-family: "Montserrat", sans-serif;
     }
   }
+
+  .mobile-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: ${({ theme }) => theme.body};
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 2rem;
+    width: 95vw;
+    margin: 1rem auto 0 auto;
+
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+
+    .options-wrap {
+      display: flex;
+      align-items: center;
+    }
+  }
 `;
 
 type ProvidersWrapperProps = {
@@ -62,10 +90,19 @@ const ProvidersWrapper = ({ children }: ProvidersWrapperProps): JSX.Element => {
   const { theme, themeToggle } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
+  const themeName = theme.name;
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <HamburgerMenu isOpen={isOpen} onClickMenu={() => setIsOpen(!isOpen)} />
+      <div className='mobile-top-bar'>
+        <HamburgerMenu isOpen={isOpen} onClickMenu={() => setIsOpen(!isOpen)} />
+
+        <div className='options-wrap'>
+          <Icon className='color-mode-toggle' isSymbol size={3} name={themeName === 'light' ? 'dark_mode' : 'light_mode'} onClick={themeToggle} />
+          <LanguageToggle isOnTop={true} />
+        </div>
+      </div>
       <ActiveLinkProvider>
         <HomeSectionsProvider>
           <Header themeToggle={themeToggle} showMenu={isOpen} themeName={theme.name} closeMenu={() => setIsOpen(false)} />
