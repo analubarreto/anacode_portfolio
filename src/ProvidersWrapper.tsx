@@ -3,11 +3,13 @@ import Header from '@/components/Header/index';
 import HamburgerMenu from '@/components/Header/HamburgerMenu';
 import { ActiveLinkProvider } from '@/contexts/ActiveLinkContext';
 import { HomeSectionsProvider } from '@/contexts/HomeSectionsContext';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import LanguageToggle from '@/components/Header/LanguageToggle';
 import Icon from '@/components/Icon';
 import { useLocation } from 'react-router-dom';
+import { analytics } from '@/firebase/firebase.ts';
+import { logEvent } from 'firebase/analytics';
 
 /**
  * Global styles for the application.
@@ -99,6 +101,10 @@ const ProvidersWrapper = ({ children }: ProvidersWrapperProps): JSX.Element => {
 
   const themeName = theme.name;
   const pathName = location.pathname;
+
+  useEffect(() => {
+    logEvent(analytics, 'page_view', {});
+  },[location.pathname]);
 
   return (
     <ThemeProvider theme={theme}>
