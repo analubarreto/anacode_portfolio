@@ -28,7 +28,7 @@ const Header = ({ themeToggle, showMenu, themeName, closeMenu }: HeaderProps): J
   return (
     <HeaderMain $showMenu={showMenu} ref={headerRef}>
       <Title>
-        <Icon className='color-mode-toggle' isSymbol size={3} name={themeName === 'light' ? 'dark_mode' : 'light_mode'} onClick={themeToggle} />
+        <Icon hasPointer className='color-mode-toggle' isSymbol size={3} name={themeName === 'light' ? 'dark_mode' : 'light_mode'} onClick={themeToggle} />
         <Navigation closeMenu={closeMenu} />
         <LanguageToggle className='language-toggle' />
       </Title>

@@ -109,7 +109,7 @@ const ProvidersWrapper = ({ children }: ProvidersWrapperProps): JSX.Element => {
             <HamburgerMenu isOpen={isOpen} onClickMenu={() => setIsOpen(true)} />
             <div className="options-wrap">
               <LanguageToggle />
-              <Icon className='color-mode-toggle' isSymbol name={themeName === 'light' ? 'dark_mode' : 'light_mode'} size={2.5} onClick={themeToggle} />
+              <Icon hasPointer className='color-mode-toggle' isSymbol name={themeName === 'light' ? 'dark_mode' : 'light_mode'} size={2.5} onClick={themeToggle} />
             </div>
           </div>
         )
