@@ -16,7 +16,7 @@ export const Button = styled.button<{ theme: string, $isActive: boolean, $isOnTo
   margin-top: 1rem;
 
   @media (min-width: 1024px) {
-    color: ${({ theme, $isOnTop }) => $isOnTop ? theme.text : theme.menuText};
+    color: ${({ theme }) => theme.text };
     margin-top: 0;
     margin-left: 1.6rem;
     width: 10rem;

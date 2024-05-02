@@ -21,6 +21,7 @@ export const HeaderMain = styled.header<{ $showMenu: boolean }>`
 
   @media screen and (min-width: 1024px) {
     min-width: 14rem;
+    width: 60vw;
     right: 0;
     left: 0;
   }
@@ -35,7 +36,7 @@ export const Title = styled.div<{ theme: any }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   padding: 0 1.6rem;
   color: ${({ theme }) => theme.menuText};

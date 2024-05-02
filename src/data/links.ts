@@ -36,11 +36,11 @@ export const links: Link[] = [
     href: '#contact',
     isUnderConstruction: false,
   },
-  {
-    id: 6,
-    name: 'Blog',
-    elementId: null,
-    href: '/blog',
-    isUnderConstruction: true,
-  },
+  // {
+  //   id: 6,
+  //   name: 'Blog',
+  //   elementId: null,
+  //   href: '/blog',
+  //   isUnderConstruction: true,
+  // },
 ]

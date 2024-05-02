@@ -21,7 +21,7 @@ export const Nav = styled.nav<{ theme: string }>`
     @media (min-width: 1024px) {
       gap: 0;
       flex-direction: row;
-      margin-top: 2rem;
+      margin-top: 0;
     }
 
     li {
