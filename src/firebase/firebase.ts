@@ -3,13 +3,13 @@ import { getAnalytics } from 'firebase/analytics';
 require('dotenv').config();
 
 const firebaseConfig = {
-  apiKey: process.env.DROM_FIREBASE_API_KEY,
-  authDomain: process.env.DROM_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.DROM_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.DROM_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.DROM_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.DROM_FIREBASE_APP_ID,
-  measurementId: process.env.DROM_FIREBASE_MEASUREMENT_ID,
+  apiKey: 'AIzaSyDGqSshaE-DiKyOfccxLZ47CdyKM_fjN_Q',
+  authDomain: 'drom-code.firebaseapp.com',
+  projectId: 'drom-code',
+  storageBucket: 'drom-code.appspot.com',
+  messagingSenderId: '118823425993',
+  appId: '1:118823425993:web:2d51868d820ecf88727a18',
+  measurementId: 'G-TSMPFG0YHX',
 };
 
 const app = initializeApp(firebaseConfig);
