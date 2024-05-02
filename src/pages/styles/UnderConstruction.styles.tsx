@@ -8,21 +8,41 @@ export const MainDiv = styled.div`
   width: 100vw;
 
   h1 {
-    width: 98.8rem;
+    width: 35rem;
     text-align: center;
     margin-top: 2.4rem;
+    font-size: 2.4rem;
+
+    @media screen and (min-width: 1024px) {
+      width: 98.8rem;
+      text-align: center;
+      margin-top: 1.4rem;
+      font-size: 4rem;
+    }
   }
 
   p {
-    width: 66rem;
+    width: 35rem;
     text-align: center;
-    font-size: 2.4rem;
-    margin-top: 1.6rem;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+
+    @media screen and (min-width: 1024px) {
+      width: 66rem;
+      text-align: center;
+      font-size: 2.4rem;
+      margin-top: 1.6rem;
+    }
   }
 
   img {
-    width: 49rem;
-    height: 51.1rem;
+    width: 30rem;
+    height: 30.7rem;
     margin: 0 auto;
+
+    @media screen and (min-width: 1024px) {
+      width: 49rem;
+      height: 51.1rem;
+    }
   }
 `;
