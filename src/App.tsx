@@ -3,6 +3,7 @@ import './App.css';
 import Home from '@/pages/Home';
 import Blog from '@/pages/Blog';
 import ProvidersWrapper from '@/ProvidersWrapper';
+import UnderConstruction from '@/pages/UnderConstruction';
 
 /**
  * The root component of the application.
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path='/under-construction' element={<UnderConstruction />} />
         </Routes>
       </ProvidersWrapper>
     </Router>

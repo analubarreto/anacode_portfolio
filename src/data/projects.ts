@@ -7,7 +7,7 @@ export const projects: Project[] = [
     description: "Drom Description",
     whatWasDone: "Drom Done",
     image: "https://picsum.photos/id/123/400",
-    url: "#",
+    url: "/under-construction",
     isUnderConstruction: true,
   },
   {
@@ -16,7 +16,7 @@ export const projects: Project[] = [
     description: "Fan Fic Description",
     whatWasDone: "Fan Fic Done",
     image: "https://picsum.photos/id/345/400",
-    url: "#",
+    url: "/under-construction",
     isUnderConstruction: true,
   },
   {
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     description: "Food App Description",
     whatWasDone: "Food App Done",
     image: "https://picsum.photos/id/234/400",
-    url: "#",
+    url: "/under-construction",
     isUnderConstruction: true,
   },
 ];
