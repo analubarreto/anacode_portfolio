@@ -37,7 +37,7 @@ const Contact = ({ id }: ProjectsProps): JSX.Element => {
 
           <div>
             <h3>{ t('Support') }</h3>
-            <a href="mailto:dromcoders@gmail.com" target="_blank">dromcoders@gmail.com</a>
+            <a href="mailto:help@dromcode.com" target="_blank">help@dromcode.com</a>
             <span>
               <a href="https://w.app/anadromcode" target="_blank">WhatsApp Ana</a>
               <a href="https://w.app/rogerdromcode" target='_blank'>WhatsApp Roger</a>
