@@ -1,8 +1,7 @@
 import Navigation from '@/components/Header/Navigation';
 import LanguageToggle from '@/components/Header/LanguageToggle';
 import { HeaderMain, Title } from '@/components/Header/styles/index.styles';
-import { useRef, useEffect, useState } from 'react';
-import { useMainRef } from '@/contexts/HomeSectionsContext';
+import { useRef } from 'react';
 import { useClickOutside } from '@/hooks/useClickOutside';
 import Icon from '@/components/Icon';
 
@@ -26,30 +25,12 @@ const Header = ({ themeToggle, showMenu, themeName, closeMenu }: HeaderProps): J
   const headerRef = useRef<HTMLDivElement>(null);
   useClickOutside(headerRef, closeMenu);
 
-  const [isOnTop, setIsOnTop] = useState(true);
-  const mainRef = useMainRef();
-
-  useEffect(() => {
-    if (mainRef === null || mainRef.current === null) return;
-
-    const handleScroll = () => {
-      const currentScrollPosition = mainRef?.current?.scrollTop;
-      if (currentScrollPosition) setIsOnTop(currentScrollPosition < 234);
-    };
-
-    mainRef.current.addEventListener('scroll', handleScroll);
-
-    return () => {
-      mainRef?.current?.removeEventListener('scroll', handleScroll);
-    }
-  }, [])
-
   return (
     <HeaderMain $showMenu={showMenu} ref={headerRef}>
       <Title>
         <Icon className='color-mode-toggle' isSymbol size={3} name={themeName === 'light' ? 'dark_mode' : 'light_mode'} onClick={themeToggle} />
         <Navigation closeMenu={closeMenu} />
-        <LanguageToggle isOnTop={isOnTop} className='language-toggle' />
+        <LanguageToggle className='language-toggle' />
       </Title>
     </HeaderMain>
   );

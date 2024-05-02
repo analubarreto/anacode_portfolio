@@ -72,6 +72,11 @@ const GlobalStyle = createGlobalStyle`
     .options-wrap {
       display: flex;
       align-items: center;
+      
+      .color-mode-toggle {
+        color: ${({ theme }) => theme.text};
+        margin-top: 1rem;
+      }
     }
   }
 `;
@@ -101,10 +106,10 @@ const ProvidersWrapper = ({ children }: ProvidersWrapperProps): JSX.Element => {
       {
         pathName !== '/under-construction' && (
           <div className="mobile-top-bar">
-            <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+            <HamburgerMenu isOpen={isOpen} onClickMenu={() => setIsOpen(true)} />
             <div className="options-wrap">
               <LanguageToggle />
-              <Icon name={themeName === 'light' ? 'sun' : 'moon'} size={2.5} onClick={themeToggle} />
+              <Icon className='color-mode-toggle' isSymbol name={themeName === 'light' ? 'dark_mode' : 'light_mode'} size={2.5} onClick={themeToggle} />
             </div>
           </div>
         )

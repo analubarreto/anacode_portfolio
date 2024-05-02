@@ -4,11 +4,10 @@ import { useMemo, useState } from 'react';
 import { Button, Wrapper } from '@/components/Header/styles/LanguageToggle.styles';
 
 type LanguageToggleProps = {
-  isOnTop: boolean;
   className?: string;
 }
 
-const LanguageToggle = ({ isOnTop, className }: LanguageToggleProps): JSX.Element => {
+const LanguageToggle = ({ className }: LanguageToggleProps): JSX.Element => {
   const { i18n } = useTranslation();
   const [activeLanguage, setActiveLanguage] = useState('pt_br');
      
@@ -27,7 +26,6 @@ const LanguageToggle = ({ isOnTop, className }: LanguageToggleProps): JSX.Elemen
             $isActive={activeLanguage === language.code}
             key={language.id}
             onClick={() => toggleLanguage(language.code)}
-            $isOnTop={isOnTop}
           >
             {language.name}
           </Button>
