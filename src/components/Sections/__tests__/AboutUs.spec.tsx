@@ -4,14 +4,8 @@ import '@testing-library/jest-dom/jest-globals';
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
 import AboutUs from '../AboutUs';
-import { MockIntersectionObserver } from '../../../mocks/IntersectionObserver';
 
 describe('AboutUs', () => {
-  beforeEach(() => {
-    //@ts-ignore
-    global.IntersectionObserver = MockIntersectionObserver;
-  });
-
   test('renders AboutUs component', () => {
     render(<AboutUs id="about-us" />);
     
