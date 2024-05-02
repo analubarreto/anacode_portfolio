@@ -4,4 +4,5 @@ export type TeamMember = {
   text: string;
   image: string;
   linkedIn: string;
+  ariaLabel: string;
 };

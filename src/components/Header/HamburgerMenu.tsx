@@ -15,7 +15,7 @@ type HamburguerMenuType = {
  */
 const HamburguerMenu = ({ isOpen, onClickMenu }: HamburguerMenuType) => {
   return (
-    <MenuIcon $open={isOpen} onClick={onClickMenu} data-testid='menu-icon'>
+    <MenuIcon $open={isOpen} onClick={onClickMenu} data-testid='menu-icon' className='hamburger_menu'>
       <div className="menu-lines" />
       <div className="menu-lines" />
       <div className="menu-lines" />

@@ -55,14 +55,16 @@ export const Title = styled.div`
       }
     }
   }
-  h3 {
+  h2 {
     font-size: 1.4rem;
     letter-spacing: 0rem;
-    color: ${({ theme }) => theme.subtext};
+    color: ${({ theme }) => theme.text};
+    font-family: "Montserrat", sans-serif;
 
     @media (min-width: 1024px) {
       font-size: 2.1rem;
       letter-spacing: 0.2rem;
+      color: ${({ theme }) => theme.subtext};
     }
   }
 `;
