@@ -74,7 +74,7 @@ const linkStyles = css<{ theme: string, $isActive: boolean }>`
     position: absolute;
     bottom: -2px;
     left: 0;
-    width: ${({ $isActive }) => $isActive ? '100%' : '0'};
+    /* width: ${({ $isActive }) => $isActive ? '100%' : '0'}; */
     height: 2px;
     background-color: ${({ theme, $isActive }) => $isActive ? theme.menuText : 'transparent'};
     transition: width 0.4s ease-in-out;
