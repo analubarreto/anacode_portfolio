@@ -68,27 +68,12 @@ const linkStyles = css<{ theme: string, $isActive: boolean }>`
   position: relative;
   cursor: pointer;
   color: ${({ theme }) => theme.menuText};
+  transform: scale(1);
 
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    /* width: ${({ $isActive }) => $isActive ? '100%' : '0'}; */
-    height: 2px;
-    background-color: ${({ theme, $isActive }) => $isActive ? theme.menuText : 'transparent'};
-    transition: width 0.4s ease-in-out;
-
-    @media (min-width: 1024px) {
-      background-color: ${
-        ({ theme, $isActive }) => {
-          if ($isActive) {
-            return theme.text;
-          }
-          return 'transparent'
-        }
-      };
-    }
+  &:hover {
+    color: ${({ theme }) => theme.icon};
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
   }
 
   @media (min-width: 1024px) {
