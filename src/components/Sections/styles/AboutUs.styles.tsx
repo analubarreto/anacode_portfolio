@@ -38,7 +38,7 @@ export const AboutUsSection = styled.section<{ theme: any }>`
       gap: 4rem;
       margin-top: 5rem;
 
-      @media (min-width: 768px) {
+      @media (min-width: 768px) and (max-width: 1023px) {
         display: grid;
         grid-template-columns: 1fr 1fr;
       }

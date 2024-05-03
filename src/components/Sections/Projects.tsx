@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import { Section, ArrowIcon, CarouselItem, CarouselImage } from '@/components/Sections/styles/Projects.styles';
-import Button from '@/components/Button';
+// import Button from '@/components/Button';
 import { projects } from '@/data/projects';
 import { usePagination } from '@/hooks/usePagination';
 
@@ -10,10 +10,12 @@ type ProjectsProps = {
 };
 
 const Projects = ({ id }: ProjectsProps): JSX.Element => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [animate, setAnimate] = useState(false);
+  const [image, setImage] = useState<string>('');
   const [isNext, setIsNext] = useState<boolean | null>(null);
   const { pages, handlePrev, handleNext, disablePrev, disableNext } = usePagination(projects);
+;
 
   useEffect(() => {
     setAnimate(true);
@@ -22,6 +24,12 @@ const Projects = ({ id }: ProjectsProps): JSX.Element => {
     }, 500); // Adjust the duration of the animation as needed
     return () => clearTimeout(timer);
   }, [pages]);
+
+  useEffect(() => {
+    const currentLanguage = i18n.language;
+    console.log(currentLanguage)
+    setImage(currentLanguage === 'pt_br' ? '/images/under-construcution.webp' : '/images/under-constrcution-enUS.webp');
+  }, []);
 
   const handleNextClick = () => {
     setIsNext(true);
@@ -49,7 +57,7 @@ const Projects = ({ id }: ProjectsProps): JSX.Element => {
                   <h3>{ project.title }</h3>
                   <p className='description'>{ t(project.description) }</p>
                   <p className='what-was-done'>{ t(project.whatWasDone) }</p>
-                  <Button isLink href={project.url}>Visite a página</Button>
+                  {/* <Button isLink href={project.url}>Visite a página</Button> */}
                 </div>
                 <div className='carousel-item__data--arrows'>
                   <ArrowIcon
@@ -71,7 +79,7 @@ const Projects = ({ id }: ProjectsProps): JSX.Element => {
               <CarouselImage
                 $isNext={isNext}
                 $animate={animate}
-                src={project.image} 
+                src={image} 
                 alt={project.title} />
             </CarouselItem>
           ))
