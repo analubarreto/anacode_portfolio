@@ -26,7 +26,7 @@ const Services = ({ id }: ProjectsProps): JSX.Element => {
             return (
               <div key={service.id} className='service' data-testid='service'>
                 <div className='service__title'>
-                  <Icon name={service.icon} size={4.8} isSymbol={service.isIconSymbol || false} className='service__title--icon' />
+                  <Icon hasPointer={false} name={service.icon} size={4.8} isSymbol={service.isIconSymbol || false} className='service__title--icon' />
                   <h3>{t(service.title).toUpperCase()}</h3>
                 </div>
                 <p className='service__text'>{t(service.description)}</p>

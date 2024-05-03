@@ -7,7 +7,7 @@ type IconProps = {
   isSymbol: boolean;
   className?: string;
   dataTestId?: string;
-  hasPointer?: boolean;
+  hasPointer: boolean;
 };
 
 /**
@@ -23,7 +23,7 @@ const IconComponent = ({ name, onClick, size=24, isSymbol, className, dataTestId
   const iconClassName = isSymbol ? 'material-symbols-rounded' : 'material-icons-round'
 
   return (
-    <Icon $ShasPointer={hasPointer} size={size} onClick={onClick} className={`${iconClassName} ${className}`} data-testid={dataTestId}>
+    <Icon size={size} onClick={onClick} className={`${iconClassName} ${className}`} data-testid={dataTestId} $hasPointer={hasPointer}>
       { name }
     </Icon>
   )

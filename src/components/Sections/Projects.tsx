@@ -61,6 +61,7 @@ const Projects = ({ id }: ProjectsProps): JSX.Element => {
                 </div>
                 <div className='carousel-item__data--arrows'>
                   <ArrowIcon
+                    hasPointer
                     dataTestId="next-button"
                     $isDisabled={disablePrev}
                     onClick={handlePrevClick}
@@ -68,6 +69,7 @@ const Projects = ({ id }: ProjectsProps): JSX.Element => {
                     size={4}
                     isSymbol />
                   <ArrowIcon
+                    hasPointer
                     dataTestId="prev-button"
                     $isDisabled={disableNext}
                     onClick={handleNextClick}
