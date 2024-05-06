@@ -57,7 +57,6 @@ const Projects = ({ id }: ProjectsProps): JSX.Element => {
                   <h3>{ project.title }</h3>
                   <p className='description'>{ t(project.description) }</p>
                   <p className='what-was-done'>{ t(project.whatWasDone) }</p>
-                  {/* <Button isLink href={project.url}>Visite a página</Button> */}
                 </div>
                 <div className='carousel-item__data--arrows'>
                   <ArrowIcon

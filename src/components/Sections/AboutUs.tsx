@@ -63,7 +63,7 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
                 </div>
                 <div className='text-wrapper'>
                   <h4>{t(member.name)}</h4>
-                  <a href={member.linkedIn} target='_blank' rel='noopener noreferrer'>
+                  <a aria-label={`${t('Linked In Aria Label')} ${t(member.name)} ${t('On LinkedIn')}`} href={member.linkedIn} target='_blank' rel='noopener noreferrer'>
                     <LinkedinLogo className='linkedin' size={40} />
                   </a>
                 </div>

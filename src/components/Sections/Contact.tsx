@@ -37,11 +37,11 @@ const Contact = ({ id }: ProjectsProps): JSX.Element => {
 
           <div>
             <h3>{ t('Support') }</h3>
-            <a href="mailto:help@dromcode.com" target="_blank">help@dromcode.com</a>
+            <a aria-label={t('Send us an Email')} href="mailto:help@dromcode.com" target="_blank">help@dromcode.com</a>
             <span>
-              <a href="https://w.app/anadromcode" target="_blank">WhatsApp Ana</a>
-              <a href="https://w.app/rogerdromcode" target='_blank'>WhatsApp Roger</a>
-              <a href="https://www.instagram.com/drom_code/" target='_blank' rel='noopener noreferrer'>@drom_code</a>
+              <a aria-label={t('Lets talk on whatsapp')} href="https://w.app/anadromcode" target="_blank">WhatsApp Ana</a>
+              <a aria-label={t('Lets talk on whatsapp')} href="https://w.app/rogerdromcode" target='_blank'>WhatsApp Roger</a>
+              <a aria-label={t('Know more about us')} href="https://www.instagram.com/drom_code/" target='_blank' rel='noopener noreferrer'>@drom_code</a>
             </span>
           </div>
         </CompanyInfo>

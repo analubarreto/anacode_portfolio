@@ -5,17 +5,18 @@ type ButtonProps = {
   onBtnClick?: () => void;
   href?: string;
   isLink?: boolean;
+  ariaLabel: string;
 };
 
-const Button = ({ children, onBtnClick, href, isLink }: ButtonProps): JSX.Element => {
+const Button = ({ children, onBtnClick, href, isLink, ariaLabel }: ButtonProps): JSX.Element => {
   const buttonChildren = children?.toString().toLowerCase();
 
   const showLink = buttonChildren?.includes('contact') || buttonChildren?.includes('fale') || isLink;
 
   return (
     showLink
-      ? <LinkBtn href={href}>{children}</LinkBtn>
-      : <Btn onClick={onBtnClick}>{children}</Btn>
+      ? <LinkBtn aria-label={ariaLabel} href={href}>{children}</LinkBtn>
+      : <Btn aria-label={ariaLabel} onClick={onBtnClick}>{children}</Btn>
   );
 };
 

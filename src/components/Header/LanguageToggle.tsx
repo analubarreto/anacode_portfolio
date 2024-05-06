@@ -18,11 +18,14 @@ const LanguageToggle = ({ className }: LanguageToggleProps): JSX.Element => {
     setActiveLanguage(newLanguage);
   }
 
+  const ariaLabel = `toggle-de-idioma-${activeLanguage}`;
+
   return (
     <Wrapper className={className}>
       {
         languageList.map(language => (
           <Button
+            aria-label={ariaLabel}
             $isActive={activeLanguage === language.code}
             key={language.id}
             onClick={() => toggleLanguage(language.code)}

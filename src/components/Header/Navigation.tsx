@@ -35,6 +35,7 @@ const Navigation = ({ closeMenu }: NavigationProps): JSX.Element => {
               {
                 useLinkScroll(link) ? (
                   <LinkScroll
+                    aria-label={`${t('Navigation Aria Label')} ${t(link.name)}`}
                     href={linkScrollHref(link)}
                     onClick={handleLinkClick(link.id)}
                     $isActive={activeLink === link.id}
@@ -43,6 +44,7 @@ const Navigation = ({ closeMenu }: NavigationProps): JSX.Element => {
                   </LinkScroll>
                 ) : (
                   <Link
+                    aria-label={`${t('Navigation Aria Label')} ${t(link.name)}`}
                     to={link.href}
                     $isActive={activeLink === link.id}
                     onClick={handleLinkClick(link.id)}

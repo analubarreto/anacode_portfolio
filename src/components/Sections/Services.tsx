@@ -35,7 +35,7 @@ const Services = ({ id }: ProjectsProps): JSX.Element => {
           })
         }
       </section>
-      <Button isLink href='#contact'>{t('Contact Us')}</Button>
+      <Button ariaLabel={t('Aria Service Contact Button')} isLink href='#contact'>{t('Contact Us')}</Button>
       <section className='services-addons'>
         <h3>{t('Our Services Include')}</h3>
         <div className='addon-wrapper'>
