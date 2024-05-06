@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Section = styled.section<{ theme: any }>`
   &.main-services {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     width: 100vw;
     background-color: ${({ theme }) => theme.body};

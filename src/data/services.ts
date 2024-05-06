@@ -31,6 +31,13 @@ export const services: Service[] = [
   },
   {
     id: 5,
+    title: 'E-commerce',
+    icon: 'store',
+    isIconSymbol: true,
+    description: 'E-Commerce Text'
+  },
+  {
+    id: 6,
     title: 'Maintenance',
     icon: 'engineering',
     isIconSymbol: true,

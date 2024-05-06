@@ -15,6 +15,6 @@ describe('Welcome', () => {
 
     expect(mainTitle).toBeInTheDocument();
     expect(title).toHaveTextContent('Dröm Code');
-    expect(subtitle).toHaveTextContent('UNBLOCKING YOUR DIGITAL POTENTIAL');
+    expect(subtitle).toHaveTextContent('THE BRIDGE BETWEEN DREAMS AND REALITY');
   });
 });

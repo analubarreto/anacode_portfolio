@@ -5,9 +5,9 @@ import styled from 'styled-components';
  *
  * @param size - The size of the icon in rem units.
  */
-export const Icon = styled.span<{ size: number }>`
+export const Icon = styled.span<{ size: number, $hasPointer: boolean }>`
   font-size: ${({ size }) => size}rem;
-  cursor: pointer;
+  cursor: ${({ $hasPointer }) => $hasPointer ? 'pointer' : 'default'};
   .material-symbols-rounded, .material-icons-round {
     font-variation-settings:
     'FILL' 0,
