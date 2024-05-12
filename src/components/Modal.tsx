@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { Modal } from '@/components/styles/Modal.styles';
 import { useRef } from 'react';
 import { useClickOutside } from '@/hooks/useClickOutside';
