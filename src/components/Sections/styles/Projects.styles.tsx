@@ -28,6 +28,60 @@ export const Section = styled.section<{ theme: any }>`
         margin-top: 12rem;
       }
     }
+
+    .banner {
+      background-color: ${({ theme }) => theme.banner};
+      border-radius: 3rem;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 3rem;
+      height: 45rem;
+      
+      @media screen and (min-width: 1024px) {
+        padding: 2rem 3rem;
+        flex-direction: row;
+        margin-bottom: 0;
+        height: auto;
+        justify-content: space-between;
+      }
+
+      img {
+        width: 24rem;
+        height: 15rem;
+        margin-bottom: 2rem;
+
+        @media screen and (min-width: 1024px) {
+          margin-bottom: 0;
+        }
+      }
+
+      .text-btn-wrap {
+        margin-left: 2rem;
+        h1 {
+          color: ${({ theme }) => theme.subtext};
+          font-size: 2rem;
+
+          @media screen and (min-width: 1024px) {
+            font-size: 3.2rem;
+          }
+        }
+
+        p {
+          color: ${({ theme }) => theme.text};
+          font-size: 1.6rem;
+          margin-top: 1rem;
+
+          @media screen and (min-width: 1024px) {
+            font-size: 2rem;
+            margin-top: 1.5rem;
+            width: 96rem;
+          }
+        }
+      }
+    }
   }
 `;
 
@@ -137,3 +191,70 @@ export const ArrowIcon = styled(Icon)<{ $isDisabled: boolean }>`
   cursor: ${({ $isDisabled }) => $isDisabled ? 'not-allowed' : 'pointer' };
   color: ${({ theme, $isDisabled }) => $isDisabled ? theme.disabled : theme.body };
 `;
+
+export const ModalContent = styled.div`
+  background-color: ${({ theme }) => theme.body};
+  padding: 2rem;
+  border-radius: 2.4rem;
+  margin: 0 1rem;
+
+  @media screen and (min-width: 1024px) {
+    width: 98rem;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .explanation-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    h1 {
+      font-size: 2rem;
+
+      @media screen and (min-width: 1024px) {
+        font-size: 2.4rem;
+      }
+    }
+
+    p {
+      font-size: 1.4rem;
+
+      @media screen and (min-width: 1024px) {
+        font-size: 1.6rem;
+      }
+    }
+
+    div {
+      @media screen and (min-width: 1024px) {
+        margin-right: 3rem;
+      }
+    }
+  }
+`

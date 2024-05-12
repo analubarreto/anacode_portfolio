@@ -8,8 +8,9 @@ import { LinkedinLogo } from '@phosphor-icons/react'
 type ModalProps = {
   onClose: () => void;
   isModalOpen: boolean;
-  teamMember: TeamMember | null;
+  teamMember?: TeamMember | null;
   testId?: string;
+  children?: React.ReactNode;
 };
 
 /**
@@ -23,28 +24,34 @@ type ModalProps = {
  * @param {string} [props.testId='modal'] - The test ID for the modal component.
  * @returns {JSX.Element} The rendered Modal component.
  */
-const ModalComponent = ({ teamMember, isModalOpen, onClose, testId = 'modal' }: ModalProps): JSX.Element => {
+const ModalComponent = ({ teamMember, isModalOpen, onClose, testId = 'modal', children }: ModalProps): JSX.Element => {
   const articleRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation();
 
   useClickOutside(articleRef, onClose);
 
-  const canOpen = isModalOpen && teamMember;
+  const canOpen = teamMember ? isModalOpen && teamMember : isModalOpen;
   return (
     <>
       {
         canOpen && (
           <Modal $isOpen={isModalOpen} data-testid={testId}>
-            <article className='member' ref={articleRef}>
-              <h4 className='member__name'>{ t(teamMember?.name) }</h4>
-              <div className='member__image-wrapper'>
-                <img className='member__image' src={`/images/${teamMember?.image}`} alt= {teamMember?.name} />
-              </div>
-              <div className='member__text-wrap'>
-                <p>{ t(teamMember?.text) }</p>
-                <a href={teamMember.linkedIn} target='_blank' rel='noopener noreferrer' aria-label={teamMember.ariaLabel}><LinkedinLogo size={40} /></a>
-              </div>
+            {
+              !children ?
+              <article className='member' ref={articleRef}>
+                <h4 className='member__name'>{ t(teamMember?.name) }</h4>
+                <div className='member__image-wrapper'>
+                  <img className='member__image' src={`/images/${teamMember?.image}`} alt= {teamMember?.name} />
+                </div>
+                <div className='member__text-wrap'>
+                  <p>{ t(teamMember?.text) }</p>
+                  <a href={teamMember.linkedIn} target='_blank' rel='noopener noreferrer' aria-label={teamMember.ariaLabel}><LinkedinLogo size={40} /></a>
+                </div>
+            </article> :
+            <article ref={articleRef}>
+              {children}
             </article>
+            }
           </Modal>
         )
       }
