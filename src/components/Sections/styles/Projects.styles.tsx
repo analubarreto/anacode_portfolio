@@ -121,9 +121,10 @@ export const CarouselItem = styled.div<{ $animate: boolean, $isNext: boolean | n
         justify-content: space-between;
       }
 
-      h3 {
+      h2 {
         font-size: 2.4rem;
         margin-bottom: 1rem;
+        font-family: "Montserrat", sans-serif;
 
         @media screen and (min-width: 1024px) {
           font-size: 3.2rem;

@@ -58,7 +58,7 @@ export const AboutUsSection = styled.section<{ theme: any }>`
           gap: 2rem;
         }
 
-        h3 {
+        h2 {
           font-size: 1.6rem;
           margin-bottom: 1rem;
           text-transform: uppercase;

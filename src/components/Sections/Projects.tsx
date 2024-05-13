@@ -75,7 +75,7 @@ const Projects = ({ id }: ProjectsProps): JSX.Element => {
               <CarouselItem $animate={animate} $isNext={isNext} key={index} data-testid='carousel-item'>
                 <div className='carousel-item__data'>
                   <div className='carousel-item__data--info'>
-                    <h3>{ project.title }</h3>
+                    <h2>{ project.title }</h2>
                     <p className='description'>{ t(project.description) }</p>
                     <p className='what-was-done'>{ t(project.whatWasDone) }</p>
                   </div>

@@ -44,7 +44,7 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
               <div className='who-are-we__info' key={index}>
                 <Icon hasPointer={false} name={info.icon} size={4.8} isSymbol className='who-are-we__info--icon' />
                 <div>
-                  <h3>{t(info.title).toUpperCase()}</h3>
+                  <h2>{t(info.title).toUpperCase()}</h2>
                   <p>{t(info.text)}</p>
                 </div>
               </div>

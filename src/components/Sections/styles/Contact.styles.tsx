@@ -75,4 +75,14 @@ export const CompanyInfo = styled.article`
     border-radius: 2rem;
     margin-top: 5rem;
   }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-family: "Montserrat", sans-serif;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 2rem;
+    }
+  }
 `;

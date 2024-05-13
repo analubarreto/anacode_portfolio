@@ -56,10 +56,6 @@ body, html{
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Lobster Two", sans-serif;
-}
-
 a {
   text-decoration: none;
   color: inherit;

@@ -28,7 +28,7 @@ const Contact = ({ id }: ProjectsProps): JSX.Element => {
 
         <CompanyInfo>
           <div>
-            <h3>{ t('Working Hours') }</h3>
+            <h2>{ t('Working Hours') }</h2>
             <p>{ t('Monday to Friday') }</p>
             <p>09:00 - 18:00</p>
             <p>{ t('Sat, Sun, Holidays') }</p>
@@ -36,7 +36,7 @@ const Contact = ({ id }: ProjectsProps): JSX.Element => {
           </div>
 
           <div>
-            <h3>{ t('Support') }</h3>
+            <h2>{ t('Support') }</h2>
             <a aria-label={t('Send us an Email')} href="mailto:help@dromcode.com" target="_blank">help@dromcode.com</a>
             <span>
               <a aria-label={t('Lets talk on whatsapp')} href="https://w.app/anadromcode" target="_blank">WhatsApp Ana</a>
