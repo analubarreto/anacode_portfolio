@@ -3,7 +3,6 @@ import AboutUs from '@/components/Sections/AboutUs';
 import Services from '@/components/Sections/Services';
 import Projects from '@/components/Sections/Projects';
 import Contact from '@/components/Sections/Contact';
-import { useActiveLink } from '@/contexts/ActiveLinkContext';
 import { useMainRef } from '@/contexts/HomeSectionsContext';
 import { Main } from '@/pages/styles/Home.styles';
 import { useScrollActiveLink } from '@/hooks/useScrollActiveLink';
@@ -14,11 +13,10 @@ import { useScrollActiveLink } from '@/hooks/useScrollActiveLink';
  * @returns The JSX element representing the Home page.
  */
 const Home = (): JSX.Element => {
-  const [, setActiveLink] = useActiveLink();
   const mainRef = useMainRef();
 
   // @ts-ignore
-  useScrollActiveLink(mainRef, setActiveLink);
+  useScrollActiveLink(mainRef);
 
   return (
     <Main ref={mainRef}>
