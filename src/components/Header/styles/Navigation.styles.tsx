@@ -33,7 +33,7 @@ export const Nav = styled.nav<{ theme: string }>`
       }
     }
 
-    section {
+    li {
       display: flex;
       flex-direction: row;
       margin-right: 3rem;

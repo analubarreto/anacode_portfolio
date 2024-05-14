@@ -21,7 +21,7 @@ const Navigation = ({ closeMenu }: NavigationProps): JSX.Element => {
       <ul>
         {
           links.map(link => (
-            <section key={link.id}>
+            <li key={link.id}>
               {
                 useLinkScroll(link) ? (
                   <LinkScroll
@@ -44,7 +44,7 @@ const Navigation = ({ closeMenu }: NavigationProps): JSX.Element => {
               {
                 link.isUnderConstruction && <span>{t('Under construction')}</span>
               }
-            </section>
+            </li>
           )
         )}
       </ul>

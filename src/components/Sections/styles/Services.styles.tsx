@@ -56,7 +56,8 @@ export const Section = styled.section<{ theme: any }>`
           align-items: center;
           margin-bottom: 1.6rem;
 
-          h3 {
+          h2 {
+            font-family: 'Montserrat', sans-serif;
             margin-left: 1.6rem;
             font-size: 2.4rem;
           }
