@@ -61,7 +61,7 @@ export const Nav = styled.nav<{ theme: string }>`
   }
 `;
 
-const linkStyles = css<{ theme: string, $isActive: boolean }>`
+const linkStyles = css<{ theme: string }>`
   text-decoration: none;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -82,10 +82,10 @@ const linkStyles = css<{ theme: string, $isActive: boolean }>`
   }
 `;
 
-export const Link = styled(RouterLink)<{ theme: string, $isActive: boolean }>`
+export const Link = styled(RouterLink)<{ theme: string }>`
   ${linkStyles}
 `;
 
-export const LinkScroll = styled.a<{ theme: string, $isActive: boolean }>`
+export const LinkScroll = styled.a<{ theme: string }>`
   ${linkStyles}
 `;

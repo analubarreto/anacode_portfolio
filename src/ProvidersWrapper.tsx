@@ -1,7 +1,6 @@
 import { useTheme } from '@/hooks/useTheme';
 import Header from '@/components/Header/index';
 import HamburgerMenu from '@/components/Header/HamburgerMenu';
-import { ActiveLinkProvider } from '@/contexts/ActiveLinkContext';
 import { HomeSectionsProvider } from '@/contexts/HomeSectionsContext';
 import { useState, useEffect } from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
@@ -120,16 +119,14 @@ const ProvidersWrapper = ({ children }: ProvidersWrapperProps): JSX.Element => {
           </div>
         )
       }
-      <ActiveLinkProvider>
-        <HomeSectionsProvider>
-          {
-            pathName !== '/under-construction' && (
-              <Header themeToggle={themeToggle} showMenu={isOpen} themeName={theme.name} closeMenu={() => setIsOpen(false)} />
-            )
-          }
-          {children}
-        </HomeSectionsProvider>
-      </ActiveLinkProvider>
+      <HomeSectionsProvider>
+        {
+          pathName !== '/under-construction' && (
+            <Header themeToggle={themeToggle} showMenu={isOpen} themeName={theme.name} closeMenu={() => setIsOpen(false)} />
+          )
+        }
+        {children}
+      </HomeSectionsProvider>
     </ThemeProvider>
   );
 }
