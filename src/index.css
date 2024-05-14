@@ -1,5 +1,6 @@
 @import 'material-symbols';
 @import 'material-icons/iconfont/material-icons.css';
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Montserrat:ital@0;1&display=swap');
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
