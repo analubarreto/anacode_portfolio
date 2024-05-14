@@ -39,8 +39,8 @@ const Contact = ({ id }: ProjectsProps): JSX.Element => {
             <h2>{ t('Support') }</h2>
             <a aria-label={t('Send us an Email')} href="mailto:help@dromcode.com" target="_blank">help@dromcode.com</a>
             <span>
-              <a aria-label={t('Lets talk on whatsapp')} href="https://w.app/anadromcode" target="_blank">WhatsApp Ana</a>
-              <a aria-label={t('Lets talk on whatsapp')} href="https://w.app/rogerdromcode" target='_blank'>WhatsApp Roger</a>
+              <a aria-label={t('Lets talk on whatsapp')} href="	https://wa.me/+5519982770698" target="_blank">WhatsApp Ana</a>
+              <a aria-label={t('Lets talk on whatsapp')} href="https://wa.me/+5511986546691" target='_blank'>WhatsApp Roger</a>
               <a aria-label={t('Know more about us')} href="https://www.instagram.com/drom_code/" target='_blank' rel='noopener noreferrer'>@drom_code</a>
             </span>
           </div>
