@@ -9,9 +9,6 @@ export const MenuIcon = styled.button<{ $open: boolean }>`
   display: block;
   height: 3.4rem;
   width: 5rem;
-  /* position: absolute;
-  top: 1.6rem;
-  left: 1.6rem; */
   z-index: 2;
   display: flex;
   border: none;
