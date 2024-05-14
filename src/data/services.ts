@@ -3,10 +3,10 @@ import { Service } from '@/types/Service';
 export const services: Service[] = [
   {
     id: 1,
-    title: 'Landing Pages',
-    icon: 'contact_page',
+    title: 'Web Apps',
+    icon: 'code',
     isIconSymbol: true,
-    description: 'Landing Pages Text'
+    description: 'Web Apps Text'
   },
   {
     id: 2,
