@@ -12,10 +12,10 @@
     "test:w": "jest --watch"
   },
   "dependencies": {
-    "@types/node": "^20.12.11",
+    "@types/node": "^20.12.12",
     "classnames": "^2.5.1",
-    "firebase": "^10.11.1",
-    "framer-motion": "^11.1.9",
+    "firebase": "^10.12.0",
+    "framer-motion": "^11.2.0",
     "i18next": "^23.11.4",
     "i18next-browser-languagedetector": "^7.2.1",
     "i18next-http-backend": "^2.5.1",
