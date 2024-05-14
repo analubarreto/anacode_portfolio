@@ -5,7 +5,6 @@ import Projects from '@/components/Sections/Projects';
 import Contact from '@/components/Sections/Contact';
 import { useMainRef } from '@/contexts/HomeSectionsContext';
 import { Main } from '@/pages/styles/Home.styles';
-import { useScrollActiveLink } from '@/hooks/useScrollActiveLink';
 
 /**
  * The Home component represents the home page of the portfolio.
@@ -14,9 +13,6 @@ import { useScrollActiveLink } from '@/hooks/useScrollActiveLink';
  */
 const Home = (): JSX.Element => {
   const mainRef = useMainRef();
-
-  // @ts-ignore
-  useScrollActiveLink(mainRef);
 
   return (
     <Main ref={mainRef}>
