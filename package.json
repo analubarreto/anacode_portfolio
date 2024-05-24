@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@types/node": "^20.12.12",
+    "@vercel/speed-insights": "^1.0.11",
     "classnames": "^2.5.1",
     "firebase": "^10.12.0",
     "framer-motion": "^11.2.0",
