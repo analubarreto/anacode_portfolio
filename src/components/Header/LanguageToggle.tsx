@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { languages } from '@/data/language';
 import { useState } from 'react';
-import { Button, Wrapper } from '@/components/Header/styles/LanguageToggle.styles';
+import { ToggleButton, Wrapper } from '@/components/Header/styles/LanguageToggle.styles';
 
 type LanguageToggleProps = {
   className?: string;
@@ -22,14 +22,14 @@ const LanguageToggle = ({ className }: LanguageToggleProps): JSX.Element => {
     <Wrapper className={className}>
       {
         languages.map(language => (
-          <Button
+          <ToggleButton
             aria-label={ariaLabel}
             $isActive={activeLanguage === language.code}
             key={language.id}
             onClick={() => toggleLanguage(language.code)}
           >
             {language.name}
-          </Button>
+          </ToggleButton>
         ))
       }
   </Wrapper>

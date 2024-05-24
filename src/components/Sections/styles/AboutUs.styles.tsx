@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+export const AboutUsWrapper = styled.div``;
+
 export const AboutUsSection = styled.section<{ theme: any }>`
   &.main-about-us {
     width: 100vw;
@@ -97,16 +99,16 @@ export const AboutUsSection = styled.section<{ theme: any }>`
       justify-content: space-between;
       margin-top: 5rem;
 
-      @media (min-width: 1024px) {
-        
-      }
-
       &__title {
         font-size: 1.6rem;
         margin-bottom: 4rem;
         text-transform: uppercase;
 
         @media screen and (min-width: 1024px) {
+          font-size: 1.8rem;
+        }
+
+        @media screen and (min-width: 1660px) {
           font-size: 2.4rem;
           margin-bottom: 7rem;
         }
@@ -209,6 +211,11 @@ export const AboutUsSection = styled.section<{ theme: any }>`
             cursor: pointer;
 
             @media screen and (min-width: 1024px) {
+              width: 28rem;
+              height: 28rem;
+            }
+
+            @media screen and (min-width: 1660px) {
               width: 35rem;
               height: 35rem;
             }
@@ -224,6 +231,12 @@ export const AboutUsSection = styled.section<{ theme: any }>`
               transform: translate(-50%, -58.2%);
 
               @media screen and (min-width: 1024px) {
+                width: 32rem;
+                height: 32rem;
+                transform: translate(-50%, -56%);
+              }
+
+              @media screen and (min-width: 1660px) {
                 width: 40rem;
                 height: 40rem;
                 transform: translate(-50%, -56%);

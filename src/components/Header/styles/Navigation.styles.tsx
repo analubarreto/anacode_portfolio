@@ -3,6 +3,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 export const Nav = styled.nav<{ theme: string }>`
   background-color: transparent;
+  width: max-content;
 
   @media (min-width: 1024px) {
     background-color: transparent;
@@ -49,7 +50,6 @@ export const Nav = styled.nav<{ theme: string }>`
         color: ${({ theme }) => theme.tagText};
         padding: 0.5rem 1rem;
         border-radius: 1.4rem;
-        width: max-content;
         height: max-content;
 
         @media (min-width: 1024px) {
@@ -64,7 +64,6 @@ export const Nav = styled.nav<{ theme: string }>`
 const linkStyles = css<{ theme: string }>`
   text-decoration: none;
   font-size: 1.4rem;
-  text-transform: uppercase;
   position: relative;
   cursor: pointer;
   color: ${({ theme }) => theme.menuText};

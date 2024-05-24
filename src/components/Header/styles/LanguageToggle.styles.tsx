@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   align-items: center;
 `
 
-export const Button = styled.button<{ theme: string, $isActive: boolean }>`
+export const ToggleButton = styled.button<{ theme: string, $isActive: boolean }>`
   background-color: transparent;
   border: none;
   color: ${({ theme }) => theme.text};

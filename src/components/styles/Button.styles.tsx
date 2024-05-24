@@ -9,7 +9,7 @@ const basicStyles = css`
   background-color: ${({ theme }) => theme.element};
   width: max-content;
   height: 4rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-top: 3rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease-in-out;
@@ -24,7 +24,7 @@ const basicStyles = css`
   }
 
   @media (min-width: 1024px) {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 `;
 

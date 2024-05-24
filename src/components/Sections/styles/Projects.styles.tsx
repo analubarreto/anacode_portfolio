@@ -39,7 +39,7 @@ export const Section = styled.section<{ theme: any }>`
       flex-direction: column;
       margin-bottom: 3rem;
       height: 45rem;
-      
+
       @media screen and (min-width: 1024px) {
         padding: 2rem 3rem;
         flex-direction: row;
@@ -62,10 +62,10 @@ export const Section = styled.section<{ theme: any }>`
         margin-left: 2rem;
         h1 {
           color: ${({ theme }) => theme.subtext};
-          font-size: 2rem;
+          font-size: 1.6rem;
 
           @media screen and (min-width: 1024px) {
-            font-size: 3.2rem;
+            font-size: 2rem;
           }
         }
 
@@ -75,9 +75,9 @@ export const Section = styled.section<{ theme: any }>`
           margin-top: 1rem;
 
           @media screen and (min-width: 1024px) {
-            font-size: 2rem;
+            font-size: 1.6rem;
             margin-top: 1.5rem;
-            width: 96rem;
+            max-width: 96rem;
           }
         }
       }

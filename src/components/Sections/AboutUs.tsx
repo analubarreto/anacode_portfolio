@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { AboutUsSection } from '@/components/Sections/styles/AboutUs.styles';
+import { AboutUsSection, AboutUsWrapper } from '@/components/Sections/styles/AboutUs.styles';
 import { LinkedinLogo } from '@phosphor-icons/react'
 import Modal from '@/components/Modal';
 import { team } from '@/data/teamInfo';
@@ -29,7 +29,7 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
   };
 
   return (
-    <>
+    <AboutUsWrapper>
       <Modal isModalOpen={isModalOpen} onClose={() => handleModalToggle(null)} teamMember={teamMember} testId='modal' />
       <AboutUsSection
         id={id} 
@@ -72,7 +72,7 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
           </div>
         </section>
       </AboutUsSection>
-    </>
+    </AboutUsWrapper>
   );
 };
 
