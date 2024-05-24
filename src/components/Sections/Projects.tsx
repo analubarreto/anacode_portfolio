@@ -109,7 +109,7 @@ const Projects = ({ id }: ProjectsProps): JSX.Element => {
        </article>
 
         <article className='banner'>
-          <img src="/images/helping-hand.webp" alt="" />
+          <img loading='lazy' src="/images/helping-hand.webp" alt="" />
           <div className='text-btn-wrap'>
             <h1>{t('Campaign Title')}</h1>
             <p>{t('Campaign Text')}</p>

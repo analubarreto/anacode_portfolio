@@ -59,7 +59,7 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
             {team.map((member, index) => (
               <div className='our-team__members--member' key={index} onClick={() => handleModalToggle(member)}>
                 <div className='image-wrapper' data-testid='member-image'>
-                  <img src={`/images/${member.image}`} alt={member.name} />
+                  <img loading='lazy' src={`/images/${member.image}`} alt={member.name} />
                 </div>
                 <div className='text-wrapper'>
                   <h4>{t(member.name)}</h4>

@@ -42,7 +42,7 @@ const ModalComponent = ({ teamMember, isModalOpen, onClose, testId = 'modal', ch
               <article className='member' ref={articleRef}>
                 <h4 className='member__name'>{ t(teamMember?.name) }</h4>
                 <div className='member__image-wrapper'>
-                  <img className='member__image' src={`/images/${teamMember?.image}`} alt= {teamMember?.name} />
+                  <img loading='lazy' className='member__image' src={`/images/${teamMember?.image}`} alt= {teamMember?.name} />
                 </div>
                 <div className='member__text-wrap'>
                   <p>{ t(teamMember?.text) }</p>

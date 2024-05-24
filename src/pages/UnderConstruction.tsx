@@ -11,7 +11,7 @@ const UnderConstruction = (): JSX.Element => {
 
   return (
     <MainDiv>
-      <img src='/images/under_construction-no-bg.webp' alt="" />
+      <img loading='lazy' src='/images/under_construction-no-bg.webp' alt={ t('Under Construction') } />
       <h1>{ t('Under Construction') }</h1>
       <p>{ t('Under Construction Sub') }</p>
       <Button ariaLabel={t('Under Constrction Button')} isLink href="/">{ t('Go back') }</Button>

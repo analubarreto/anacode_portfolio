@@ -21,7 +21,7 @@ const Welcome = ({ id }: WelcomeProps): JSX.Element => {
           ease: 'easeInOut',
         }}
       >
-        <img src='/images/logo.webp' alt='Drom Code' />
+        <img loading='lazy' src='/images/logo.webp' alt='Drom Code' />
         <Title>
           <div className='main-title' data-testid='main-title'>
             <h1 data-testid='title'>Dröm Code</h1>
