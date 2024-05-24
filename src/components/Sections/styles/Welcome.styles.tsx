@@ -62,9 +62,9 @@ export const Title = styled.div`
     font-family: "Montserrat", sans-serif;
 
     @media (min-width: 1024px) {
-      font-size: 2.1rem;
+      font-size: 2.7rem;
       letter-spacing: 0.2rem;
-      color: ${({ theme }) => theme.subtext};
+      color: ${({ theme }) => theme.text};
     }
   }
 `;

@@ -26,7 +26,7 @@ const Welcome = ({ id }: WelcomeProps): JSX.Element => {
           <div className='main-title' data-testid='main-title'>
             <h1 data-testid='title'>Dröm Code</h1>
           </div>
-          <h2 data-testid='subtitle'>{ t('The Bridge Between Dreams and Reality').toUpperCase() }</h2>
+          <h2 data-testid='subtitle'>{ t('The Bridge Between Dreams and Reality') }</h2>
         </Title>
       </Section>
     </Main>
