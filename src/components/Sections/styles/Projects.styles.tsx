@@ -12,7 +12,7 @@ export const Section = styled.section<{ theme: any }>`
     color: ${({ theme }) => theme.body};
     padding: 8rem 2rem 0 2rem;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1440px) {
       padding: 12rem 10rem 15rem 10rem;
       height: 100vh;
     }
@@ -24,7 +24,7 @@ export const Section = styled.section<{ theme: any }>`
     .carousel-wrap {
       margin-top: 4rem;
 
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 1440px) {
         margin-top: 12rem;
       }
     }
@@ -39,8 +39,8 @@ export const Section = styled.section<{ theme: any }>`
       flex-direction: column;
       margin-bottom: 3rem;
       height: 45rem;
-
-      @media screen and (min-width: 1024px) {
+      
+      @media screen and (min-width: 1440px) {
         padding: 2rem 3rem;
         flex-direction: row;
         margin-bottom: 0;
@@ -53,7 +53,7 @@ export const Section = styled.section<{ theme: any }>`
         height: 15rem;
         margin-bottom: 2rem;
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1440px) {
           margin-bottom: 0;
         }
       }
@@ -64,8 +64,8 @@ export const Section = styled.section<{ theme: any }>`
           color: ${({ theme }) => theme.subtext};
           font-size: 1.6rem;
 
-          @media screen and (min-width: 1024px) {
-            font-size: 2rem;
+          @media screen and (min-width: 1440px) {
+            font-size: 3.2rem;
           }
         }
 
@@ -74,8 +74,8 @@ export const Section = styled.section<{ theme: any }>`
           font-size: 1.6rem;
           margin-top: 1rem;
 
-          @media screen and (min-width: 1024px) {
-            font-size: 1.6rem;
+          @media screen and (min-width: 1440px) {
+            font-size: 2rem;
             margin-top: 1.5rem;
             max-width: 96rem;
           }
