@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 export const AboutUsSection = styled.section<{ theme: any }>`
@@ -53,7 +54,7 @@ export const AboutUsSection = styled.section<{ theme: any }>`
         flex-direction: column;
         gap: 1rem;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1750px) {
           flex-direction: row;
           gap: 2rem;
         }
@@ -63,7 +64,7 @@ export const AboutUsSection = styled.section<{ theme: any }>`
           margin-bottom: 1rem;
           text-transform: uppercase;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 1750px) {
             font-size: 2rem;
             margin-bottom: 1.5rem;
           }
@@ -73,7 +74,7 @@ export const AboutUsSection = styled.section<{ theme: any }>`
           font-size: 1.4rem;
           width: 34rem;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 1750px) {
             font-size: 1.6rem;
             width: 40rem;
           }
@@ -83,7 +84,7 @@ export const AboutUsSection = styled.section<{ theme: any }>`
           color: ${({ theme }) => theme.icon};
           font-size: 3.6rem;
 
-          @media (min-width: 1024px) {
+          @media (min-width: 1750px) {
             font-size: 4.8rem;
           }
         }
@@ -177,7 +178,7 @@ export const AboutUsSection = styled.section<{ theme: any }>`
 
               @media screen and (min-width: 1024px) {
                 font-size: 2rem;
-                margin-bottom: 3rem;
+                margin-bottom: 4rem;
               }
             }
 
@@ -209,8 +210,8 @@ export const AboutUsSection = styled.section<{ theme: any }>`
             cursor: pointer;
 
             @media screen and (min-width: 1024px) {
-              width: 35rem;
-              height: 35rem;
+              width: 28rem;
+              height: 28rem;
             }
 
             img {
@@ -224,8 +225,8 @@ export const AboutUsSection = styled.section<{ theme: any }>`
               transform: translate(-50%, -58.2%);
 
               @media screen and (min-width: 1024px) {
-                width: 40rem;
-                height: 40rem;
+                width: 32rem;
+                height: 32rem;
                 transform: translate(-50%, -56%);
               }
             }
