@@ -8,7 +8,12 @@ export const AboutUsSection = styled.section<{ theme: any }>`
     color: ${({ theme }) => theme.text};
     padding: 4rem 2rem 0 2rem;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      padding: 4rem 5rem 0 5rem;
+      height: 150vh;
+    }
+
+    @media (min-width: 1440px) {
       padding: 8rem 10rem 0 10rem;
       height: 110vh;
     }
@@ -17,7 +22,7 @@ export const AboutUsSection = styled.section<{ theme: any }>`
       font-size: 3.2rem;
       margin-bottom: 1.5rem;
 
-      @media (min-width: 1024px) {
+      @media (min-width: 1440px) {
         font-size: 4rem;
         margin-bottom: 2rem;
       }
@@ -27,7 +32,7 @@ export const AboutUsSection = styled.section<{ theme: any }>`
       font-size: 1.6rem;
       width: 34rem;
 
-      @media (min-width: 1024px) {
+      @media (min-width: 1440px) {
         font-size: 2rem;
         width: 80rem;
       }
@@ -44,7 +49,12 @@ export const AboutUsSection = styled.section<{ theme: any }>`
         grid-template-columns: 1fr 1fr;
       }
 
-      @media (min-width: 1024px) {
+      @media (min-width: 1024px) and (max-width: 1439px) {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+      }
+
+      @media (min-width: 1440px) {
         flex-direction: row;
         gap: 10rem;
       }
@@ -98,16 +108,12 @@ export const AboutUsSection = styled.section<{ theme: any }>`
       justify-content: space-between;
       margin-top: 5rem;
 
-      @media (min-width: 1024px) {
-        
-      }
-
       &__title {
         font-size: 1.6rem;
         margin-bottom: 4rem;
         text-transform: uppercase;
 
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1440px) {
           font-size: 2.4rem;
           margin-bottom: 7rem;
         }
@@ -209,14 +215,14 @@ export const AboutUsSection = styled.section<{ theme: any }>`
             transition: transform 0.3s ease-in-out;
             cursor: pointer;
 
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1440px) {
               width: 28rem;
               height: 28rem;
             }
 
             img {
-              width: 30rem;
-              height: 30rem;
+              width: 120%;
+              height: 120%;
               border-radius: 20rem;
               object-fit: cover;
               position: absolute;
@@ -224,9 +230,9 @@ export const AboutUsSection = styled.section<{ theme: any }>`
               left: 50%;
               transform: translate(-50%, -58.2%);
 
-              @media screen and (min-width: 1024px) {
-                width: 32rem;
-                height: 32rem;
+              @media screen and (min-width: 1440px) {
+                width: 114%;
+                height: 114%;
                 transform: translate(-50%, -56%);
               }
             }

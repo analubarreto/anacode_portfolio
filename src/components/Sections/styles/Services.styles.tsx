@@ -10,7 +10,7 @@ export const Section = styled.section<{ theme: any }>`
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1440px) {
       height: 110vh;
     }
 
