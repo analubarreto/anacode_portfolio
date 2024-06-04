@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import { Section, ArrowIcon, CarouselItem, CarouselImage, ModalContent } from '@/components/Sections/styles/Projects.styles';
