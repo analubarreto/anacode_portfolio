@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useMemo } from 'react';
 import { links } from '@/data/links';
 import { useLocation } from 'react-router-dom';
 import { Link as LinkType } from '@/customTypes/Link';
@@ -14,7 +15,9 @@ const Navigation = ({ closeMenu }: NavigationProps): JSX.Element => {
   const currentLocation = useLocation().pathname;
   const useLinkScroll = (link: LinkType) => link.elementId && currentLocation === '/';
 
-  const linkScrollHref = (link: LinkType) => useLinkScroll(link) ? `#${link.elementId}` : link.href;
+  const linkScrollHref = useMemo(() => {
+    return (link: LinkType) => useLinkScroll(link) ? `#${link.elementId}` : link.href;
+  }, [currentLocation]);
 
   return (
     <Nav>

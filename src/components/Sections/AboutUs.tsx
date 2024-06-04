@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { AboutUsSection, AboutUsWrapper } from '@/components/Sections/styles/AboutUs.styles';
+import { AboutUsSection } from '@/components/Sections/styles/AboutUs.styles';
 import { LinkedinLogo } from '@phosphor-icons/react'
 import Modal from '@/components/Modal';
 import { team } from '@/data/teamInfo';
@@ -29,7 +29,7 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
   };
 
   return (
-    <AboutUsWrapper>
+    <>
       <Modal isModalOpen={isModalOpen} onClose={() => handleModalToggle(null)} teamMember={teamMember} testId='modal' />
       <AboutUsSection
         id={id} 
@@ -59,7 +59,7 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
             {team.map((member, index) => (
               <div className='our-team__members--member' key={index} onClick={() => handleModalToggle(member)}>
                 <div className='image-wrapper' data-testid='member-image'>
-                  <img loading='lazy' src={`/images/${member.image}`} alt={member.name} />
+                  <img src={`/images/${member.image}`} alt={member.name} />
                 </div>
                 <div className='text-wrapper'>
                   <h4>{t(member.name)}</h4>
@@ -72,7 +72,7 @@ const AboutUs = ({ id }: AboutUsPropsType): JSX.Element => {
           </div>
         </section>
       </AboutUsSection>
-    </AboutUsWrapper>
+    </>
   );
 };
 
