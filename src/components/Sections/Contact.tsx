@@ -25,7 +25,6 @@ const Contact = ({ id }: ProjectsProps): JSX.Element => {
       <h1>{ t('Contact Us') }</h1>
 
       <section>
-
         <CompanyInfo>
           <div>
             <h2>{ t('Working Hours') }</h2>
