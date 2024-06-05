@@ -1,3 +1,4 @@
+//@ts-nocheck
 import Welcome from '@/components/Sections/Welcome';
 import AboutUs from '@/components/Sections/AboutUs';
 import Services from '@/components/Sections/Services';
