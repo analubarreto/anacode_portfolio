@@ -61,17 +61,15 @@ export const Section = styled(motion.section)<{ theme: any }>`
 
 export const CompanyInfo = styled.article`
   display: flex;
-  flex-direction: column;
-  height: 34rem;
   justify-content: space-between;
   background-color: #DCA1B0;
   padding: 2rem;
   border-radius: 2rem;
+  margin-bottom: 3rem;
 
   @media screen and (min-width: 1024px) {
-    height: 100%;
     width: 50rem;
-    height: 40rem;
+    margin-bottom: 3rem;
     border-radius: 2rem;
     margin-top: 5rem;
   }
@@ -79,10 +77,65 @@ export const CompanyInfo = styled.article`
   h2 {
     font-size: 1.6rem;
     margin-bottom: 1rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Alice", serif;
 
     @media screen and (min-width: 1024px) {
       font-size: 2rem;
+    }
+  }
+`;
+
+export const Banner = styled.article `
+    background-color: ${({ theme }) => theme.banner};
+    border-radius: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    height: 45rem;
+  
+  @media screen and (min-width: 1440px) {
+    padding: 2rem 3rem;
+    flex-direction: row;
+    margin-bottom: 0;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  img {
+    width: 24rem;
+    height: 15rem;
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: 1440px) {
+      margin-bottom: 0;
+    }
+  }
+
+  .text-btn-wrap {
+    margin-left: 2rem;
+    h1 {
+      color: ${({ theme }) => theme.subtext};
+      font-size: 1.6rem;
+
+      @media screen and (min-width: 1440px) {
+        font-size: 3.2rem;
+      }
+    }
+
+    p {
+      color: ${({ theme }) => theme.text};
+      font-size: 1.6rem;
+      margin-top: 1rem;
+
+      @media screen and (min-width: 1440px) {
+        font-size: 2rem;
+        margin-top: 1.5rem;
+        max-width: 96rem;
+      }
     }
   }
 `;

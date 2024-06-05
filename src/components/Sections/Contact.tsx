@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Section, CompanyInfo } from '@/components/Sections/styles/Contact.styles';
+import { Section, CompanyInfo, Banner } from '@/components/Sections/styles/Contact.styles';
 
 type ProjectsProps = {
   id: string;
@@ -45,6 +45,14 @@ const Contact = ({ id }: ProjectsProps): JSX.Element => {
           </div>
         </CompanyInfo>
       </section>
+
+      <Banner className='banner'>
+        <img loading='lazy' src="/images/helping-hand.webp" alt="" />
+        <div className='text-btn-wrap'>
+          <h1>{t('Campaign Title')}</h1>
+          <p>{t('Campaign Text')}</p>
+        </div>
+      </Banner>
     </Section>
   )
 }
