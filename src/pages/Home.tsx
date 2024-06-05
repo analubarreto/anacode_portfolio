@@ -25,13 +25,13 @@ const Home = (): JSX.Element => {
       <Services id="services" />
       <Projects id="projects" />
       <Contact id="contact" />
-      <PopupWidget
+      {/* <PopupWidget
         url="https://calendly.com/dromcoders"
         rootElement={document.getElementById("main")}
         text={t('For Your Future')}
         textColor="#F2F2F2"
         color="#F18B9C"
-      />
+      /> */}
     </Main>
   )
 }
