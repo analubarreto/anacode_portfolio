@@ -1,4 +1,3 @@
-//@ts-nocheck
 import Welcome from '@/components/Sections/Welcome';
 import AboutUs from '@/components/Sections/AboutUs';
 import Services from '@/components/Sections/Services';
@@ -8,6 +7,7 @@ import { useMainRef } from '@/contexts/HomeSectionsContext';
 import { Main } from '@/pages/styles/Home.styles';
 import { PopupWidget } from "react-calendly";
 import { useTranslation } from'react-i18next';
+import { useState, useEffect } from 'react';
 
 /**
  * The Home component represents the home page of the portfolio.
@@ -17,6 +17,13 @@ import { useTranslation } from'react-i18next';
 const Home = (): JSX.Element => {
   const mainRef = useMainRef();
   const { t } = useTranslation();
+  const [mainSection, setMainSection] = useState(null);
+
+  useEffect(() => {
+    const main = document.getElementById('main');
+    // @ts-ignore
+    setMainSection(main)
+  }, []);
 
   return (
     <Main id='main' ref={mainRef}>
@@ -25,13 +32,16 @@ const Home = (): JSX.Element => {
       <Services id="services" />
       <Projects id="projects" />
       <Contact id="contact" />
-      {/* <PopupWidget
-        url="https://calendly.com/dromcoders"
-        rootElement={document.getElementById("main")}
-        text={t('For Your Future')}
-        textColor="#F2F2F2"
-        color="#F18B9C"
-      /> */}
+      {
+        mainSection && 
+        <PopupWidget
+          url="https://calendly.com/dromcoders"
+          rootElement={mainSection}
+          text={t('For Your Future')}
+          textColor="#F2F2F2"
+          color="#F18B9C"
+        />
+      }
     </Main>
   )
 }
