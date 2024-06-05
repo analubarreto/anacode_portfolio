@@ -72,43 +72,8 @@ const Projects = ({ id }: ProjectsProps): JSX.Element => {
         <h1>{t('Projects Page Title')}</h1>
 
         <article className='carousel-wrap'>
-          {
-            pages.map((project, index) => (
-              <CarouselItem $animate={animate} $isNext={isNext} key={index} data-testid='carousel-item'>
-                <div className='carousel-item__data'>
-                  <div className='carousel-item__data--info'>
-                    <h2>{ project.title }</h2>
-                    <p className='description'>{ t(project.description) }</p>
-                    <p className='what-was-done'>{ t(project.whatWasDone) }</p>
-                  </div>
-                  <div className='carousel-item__data--arrows'>
-                    <ArrowIcon
-                      hasPointer
-                      dataTestId="next-button"
-                      $isDisabled={disablePrev}
-                      onClick={handlePrevClick}
-                      name='arrow_circle_left' 
-                      size={4}
-                      isSymbol />
-                    <ArrowIcon
-                      hasPointer
-                      dataTestId="prev-button"
-                      $isDisabled={disableNext}
-                      onClick={handleNextClick}
-                      name='arrow_circle_right' 
-                      size={4} 
-                      isSymbol />
-                  </div>
-                </div>
-                <CarouselImage
-                  $isNext={isNext}
-                  $animate={animate}
-                  src={image} 
-                  alt={project.title} />
-              </CarouselItem>
-            ))
-          }
-       </article>
+          <h2>Logo mais teremos projetos fresquinhos para mostrar para vocês!</h2>
+        </article>
 
         <article className='banner'>
           <img loading='lazy' src="/images/helping-hand.webp" alt="" />

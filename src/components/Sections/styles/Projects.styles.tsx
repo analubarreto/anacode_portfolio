@@ -22,10 +22,26 @@ export const Section = styled.section<{ theme: any }>`
     }
 
     .carousel-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-top: 4rem;
+      margin-bottom: 4rem;
+      font-size: 1.6rem;
+      
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        width: 100%;
+        text-align: center;
+
+        @media screen and (min-width: 1440px) {
+          width: 50%;
+        }
+      }
 
       @media screen and (min-width: 1440px) {
         margin-top: 12rem;
+        font-size: 2.4rem;
       }
     }
 
